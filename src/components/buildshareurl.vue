@@ -1,0 +1,93 @@
+<template>
+
+    <span class="label">Share your build: </span>
+    <tooltip :text="'Copied!'" :hover="false" :show="showTooltip">
+    <input class="urltextbox" type="text" readonly v-bind:value="shareURL" v-on:focus="$event.target.select()" ref="urltextbox">
+    <div class="iconwrapper" @click="copyURL">
+    <font-awesome-icon icon="clipboard"/>
+    
+    </div>
+    </tooltip>
+
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+import tooltip from './tooltip.vue'
+
+export default defineComponent({
+    name: "buildshareurl",
+    components: {tooltip},
+    props: {
+        classId: {
+            type: Number,
+            required: true
+        },
+        selectedPerkIds: {
+            type: Array,
+            required: true
+        },
+        prestige: {
+            type: Number,
+            required: true
+        }
+    },
+    data() {
+        return {
+            showTooltip: false
+        }
+    },
+    methods: {
+        buildURL: function() {
+            let host = window.location.host;
+            let classString = String(this.classId);
+            let perkIdString = /^([0-3]{1})(,[0-3]{1}){0,}?$/.exec(String(this.selectedPerkIds))![0];
+            let prestigeString = String(this.prestige);
+            let URL = host + "/" + classString + "/" + perkIdString + "/" + prestigeString;
+            return URL;
+            
+        },
+        copyURL: function() {
+            (this.$refs.urltextbox as any).focus();
+            navigator.clipboard.writeText(this.buildURL());
+            this.showTooltip = true;
+            var self = this;
+            setTimeout(function(){self.showTooltip = false}, 2000)
+        }
+    },
+    computed: 
+    {
+        shareURL(): any {
+            return this.buildURL();
+        }
+    }
+})
+</script>
+
+<style lang="less" scoped>
+    .label {
+        display: block;
+    }
+
+    .urltextbox {
+        width: 215px;
+        padding: 5px;
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .iconwrapper {
+        display: inline-block;
+        background-color: darkred;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: white;
+        &:hover {
+            background-color: lighten(darkred, 10);
+            cursor: pointer;
+        }
+    }
+</style>

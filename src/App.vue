@@ -1,19 +1,17 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <router-view />
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
+<script lang="ts">
+import { Options, Vue } from 'vue-class-component';
+import Wwzplanner from './components/Wwzplanner.vue';
+@Options({
   components: {
-    HelloWorld
-  }
-}
+    Wwzplanner,
+  },
+})
+
+export default class App extends Vue {}
 </script>
 
 <style>
@@ -23,6 +21,14 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  overflow: hidden;
 }
+
+body {
+  height: 100vh;
+  background-color:rgb(129, 126, 126);
+  overflow: hidden;
+}
+
+
 </style>
