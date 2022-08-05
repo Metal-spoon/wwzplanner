@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue';
 import Vue from 'vue'
-import Wwzplanner from './components/Wwzplanner.vue';
+import planner from './components/planner.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faClipboard } from '@fortawesome/free-solid-svg-icons';
@@ -11,8 +11,8 @@ library.add(faClipboard);
 
 
 const routes = [
-    { path: "/:class?/:perks?/:prestige?", component: Wwzplanner},
-    { path: "/", component: Wwzplanner}
+    { path: "/:class?/:perks?/:prestige?", component: planner},
+    { path: "/", component: planner}
 ]
 
 const router = createRouter({
