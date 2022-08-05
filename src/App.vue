@@ -4,10 +4,10 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import Wwzplanner from './components/Wwzplanner.vue';
+import planner from './components/planner.vue';
 @Options({
   components: {
-    Wwzplanner,
+    planner,
   },
 })
 
@@ -29,6 +29,4 @@ body {
   background-color:rgb(129, 126, 126);
   overflow: hidden;
 }
-
-
 </style>

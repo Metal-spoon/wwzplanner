@@ -12,6 +12,7 @@
 </template>
 
 <script lang="ts">
+import { store } from '@/store';
 import { defineComponent } from 'vue'
 import tooltip from './tooltip.vue'
 
@@ -23,10 +24,6 @@ export default defineComponent({
             type: Number,
             required: true
         },
-        selectedPerkIds: {
-            type: Array,
-            required: true
-        },
         prestige: {
             type: Number,
             required: true
@@ -34,14 +31,15 @@ export default defineComponent({
     },
     data() {
         return {
-            showTooltip: false
+            showTooltip: false,
+            store
         }
     },
     methods: {
         buildURL: function() {
             let host = window.location.host;
             let classString = String(this.classId);
-            let perkIdString = /^([0-3]{1})(,[0-3]{1}){0,}?$/.exec(String(this.selectedPerkIds))![0];
+            let perkIdString = /^([0-3]{1})(,[0-3]{1}){0,}?$/.exec(String(store.selectedPerkIds))![0];
             let prestigeString = String(this.prestige);
             let URL = host + "/" + classString + "/" + perkIdString + "/" + prestigeString;
             return URL;
