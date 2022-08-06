@@ -21,7 +21,6 @@
   </div>
   <div>
     <buildshareurl :classId="selectedClassId" :prestige="prestige"/>
-    
   </div>
 
 </template>

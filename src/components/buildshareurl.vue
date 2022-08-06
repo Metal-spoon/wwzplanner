@@ -1,6 +1,6 @@
 <template>
-
-    <span class="label">Share your build: </span>
+<div class='share-wrapper'>
+    <b class="label">Share your build: </b>
     <tooltip :text="'Copied!'" :hover="false" :show="showTooltip">
     <input class="urltextbox" type="text" readonly v-bind:value="shareURL" v-on:focus="$event.target.select()" ref="urltextbox">
     <div class="iconwrapper" @click="copyURL">
@@ -8,7 +8,7 @@
     
     </div>
     </tooltip>
-
+</div>
 </template>
 
 <script lang="ts">
@@ -63,6 +63,9 @@ export default defineComponent({
 </script>
 
 <style lang="less" scoped>
+    .share-wrapper {
+        margin-top: 10px;
+    }
     .label {
         display: block;
     }
