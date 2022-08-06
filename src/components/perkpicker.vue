@@ -21,9 +21,8 @@
       </ul>
 </div>
   </div>
-  <div class='row'>
-    <perkinfo :perk="hoveredPerk"/>
-  </div>
+    <perkinfo class="picker-perkinfo" :perk="hoveredPerk"/>
+ 
 </template>
 
 <script lang='ts'>
@@ -167,6 +166,13 @@ export default defineComponent({
 </script>
 
 <style lang='less' scoped>
+.picker-perkinfo {
+  position: sticky;
+  bottom: 0px;
+  background-color: #817E7E;
+  padding: 5px;
+}
+
 .perk-selection {
   display: flex;
   flex-direction: row;
