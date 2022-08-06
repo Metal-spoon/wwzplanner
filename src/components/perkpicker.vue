@@ -10,28 +10,32 @@
           <div
             class="image-wrapper"
             v-bind:class="{ selectedperk: perk.selected }"
+            @click="selectPerk(perkIndex, column, columnIndex)"
+            @mouseenter="hoveredPerk = perk"
+            @mouseleave="hoveredPerk = defaultHoveredPerk"
           >
-            <tooltip v-bind:perk="perk" :hover="true">
               <img
                 class="perk-image"
                 :src="perk.icon"
-                v-on:click="selectPerk(perkIndex, column, columnIndex)"
+                
               />
-            </tooltip>
           </div>
         </li>
       </ul>
     </div>
   </div>
+  <div class='row'>
+    <perkinfo :perk="hoveredPerk"/>
+  </div>
 </template>
 
 <script lang='ts'>
 import { defineComponent } from "vue";
-import tooltip from "./tooltip.vue"
 import { store } from "@/store"
+import Perkinfo from "./perkinfo.vue";
 export default defineComponent({
   name: "perkpicker",
-  components: {tooltip},
+  components: {Perkinfo},
   props: {
     selectedClass: {
       type: Object,
@@ -50,7 +54,10 @@ export default defineComponent({
     data() {
       return {
         selectedPerks: new Array<Object>(9),
-        store
+        store,
+        defaultHoveredPerk: {Name: 'Nothing', Description: "Hover over a perk to see it's info"},
+        hoveredPerk: {Name: 'Nothing', Description: "Hover over a perk to see it's info"}
+        
       }
     },
     created() {
@@ -142,6 +149,7 @@ export default defineComponent({
     },
     selectedClass: {
       handler() {
+        this.hoveredPerk = this.defaultHoveredPerk
         this.updateBaseperks();
         this.updatePerks();
       },
@@ -163,18 +171,20 @@ export default defineComponent({
   > ul {
     list-style-type: none;
     padding: 0px;
-    > li {
-      padding: 5px;
-    }
   }
-  .perk-image {
+  .image-wrapper {
     display: block;
-    filter: brightness(0.5);
+    padding: 5px;
+    > img {
+      filter: brightness(0.5);
+    }
     &:hover {
+      cursor: pointer;
+      > img {
       filter: brightness(1.5) drop-shadow(2px 2px 0 white)
         drop-shadow(-2px 2px 0 white) drop-shadow(2px -2px 0 white)
         drop-shadow(-2px -2px 0 white);
-      cursor: pointer;
+      }
     }
   }
   .selectedperk {
@@ -194,5 +204,8 @@ export default defineComponent({
       top: 0%;
     }
   }
+
 }
+
+
 </style>
