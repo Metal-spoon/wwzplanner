@@ -1,6 +1,7 @@
 <template>
-<div class="wrapper">
-  
+<div class="flex-wrapper">
+  <h1>World War Z build planner
+  </h1>
   <div>
     <select v-model="selected" id="classlist">
       <option
@@ -15,13 +16,14 @@
     <span>Prestige:</span>
     <input type="number" min="0" max="4" v-model="prestige" />
   </div>
-  </div>
-  <div class="row">
+  
+  <div class="flex-wrapper">
   <perkpicker :selectedClass="selected" :prestige="prestige" :perkParam="perkParam"/>
   </div>
   <div>
     <buildshareurl :classId="selectedClassId" :prestige="prestige"/>
   </div>
+</div>
 
 </template>
 
@@ -30,8 +32,11 @@
   text-align: center;
   
 }
-.wrapper {
-  padding: 50px;
+.flex-wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
 }
 </style>
 

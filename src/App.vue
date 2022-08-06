@@ -22,11 +22,20 @@ export default class App extends Vue {}
   text-align: center;
   color: #2c3e50;
   overflow: hidden;
+  height: 100%;
 }
 
 body {
   height: 100vh;
   background-color:rgb(129, 126, 126);
   overflow: hidden;
+  margin: 0;
 }
+
+@media (max-width: 800px) {
+  #app {
+      overflow: scroll !important
+    }
+}
+
 </style>
