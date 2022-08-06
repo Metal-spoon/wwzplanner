@@ -1,11 +1,9 @@
 <template>
   <div class="perk-selection">
-    <div
-      class="perk-column"
-      v-for="(column, columnIndex) in groupedPerks"
-      :key="columnIndex"
-    >
-      <ul>
+    <div class ="perk-segment" v-for="n in 7" :key="n">
+      <ul class="perk-column"
+      v-for="(column, columnIndex) in getSegment(n - 1)"
+      :key="columnIndex">
         <li v-for="(perk, perkIndex) in column" :key="perkIndex">
           <div
             class="image-wrapper"
@@ -17,12 +15,11 @@
               <img
                 class="perk-image"
                 :src="perk.icon"
-                
               />
           </div>
         </li>
       </ul>
-    </div>
+</div>
   </div>
   <div class='row'>
     <perkinfo :perk="hoveredPerk"/>
@@ -134,6 +131,15 @@ export default defineComponent({
         store.selectedPerkIds[index] = Number(perkIndexString);
       });
     },
+    getSegment: function(segment: number) {
+      let length = segment % 2 === 0 ? 1 : 3;
+      let startIndex = (segment / 2) * 3 + (segment / 2) * 1;
+      startIndex = segment % 2 === 0 ? startIndex : startIndex - 1;
+      let sliced = this.groupedPerks.slice(startIndex, startIndex + length)
+      return sliced
+
+      
+    }
   },
     computed: {
     groupedPerks(): Array<Array<any>> {
@@ -160,23 +166,36 @@ export default defineComponent({
 );
 </script>
 
-<style lang=less scoped>
+<style lang='less' scoped>
 .perk-selection {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  max-width: 100%;
 }
 
-.perk-column {
-  display: inline-table;
-  vertical-align: top;
-  > ul {
+.perk-segment {
+  display: flex;
+  flex-direction: row;
+}
+
+.perk-column { 
+    display: flex;
+  flex-direction: column;
     list-style-type: none;
     padding: 0px;
-  }
+  
   .image-wrapper {
     display: block;
     padding: 5px;
+    
     > img {
       filter: brightness(0.5);
+      width: 100%;
+    max-width: 100px;
+    min-width: 50px;
+    height: auto;
     }
     &:hover {
       cursor: pointer;
@@ -205,7 +224,24 @@ export default defineComponent({
     }
   }
 
-}
+  
 
+}
+@media (max-width: 800px) {
+  .perk-selection {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+    .perk-segment{
+      flex-direction: column;
+    }
+    .perk-column {
+      flex-direction: row;
+      margin: 0;
+    }
+
+    
+  }
 
 </style>
