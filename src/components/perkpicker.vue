@@ -1,8 +1,7 @@
 <template>
   <div class="perk-selection">
-    <div class ="perk-segment" v-for="n in 7" :key="n">
       <ul class="perk-column"
-      v-for="(column, columnIndex) in getSegment(n - 1)"
+      v-for="(column, columnIndex) in groupedPerks"
       :key="columnIndex">
         <li v-for="(perk, perkIndex) in column" :key="perkIndex">
           <div
@@ -19,22 +18,23 @@
           </div>
         </li>
       </ul>
-</div>
+
   </div>
     <perkinfo class="picker-perkinfo" :perk="hoveredPerk"/>
- 
 </template>
 
 <script lang='ts'>
 import { defineComponent } from "vue";
 import { store } from "@/store"
 import Perkinfo from "./perkinfo.vue";
+import { perk } from "@/models/perk"
+import { wwzclass } from "@/models/wwzclass";
 export default defineComponent({
   name: "perkpicker",
   components: {Perkinfo},
   props: {
     selectedClass: {
-      type: Object,
+      type: wwzclass,
       required: true
     },
     prestige: {
@@ -49,7 +49,6 @@ export default defineComponent({
     },
     data() {
       return {
-        selectedPerks: new Array<Object>(9),
         store,
         defaultHoveredPerk: {Name: 'Nothing', Description: "Hover over a perk to see it's info"},
         hoveredPerk: {Name: 'Nothing', Description: "Hover over a perk to see it's info"}
@@ -74,12 +73,12 @@ export default defineComponent({
         perk.selected = false;
       });
       column[perkIndex].selected = true;
-      this.selectedPerks[columnIndex - columnIndexOffset] = column[perkIndex];
+      store.selectedPerks[columnIndex - columnIndexOffset] = column[perkIndex];
       store.selectedPerkIds[columnIndex - columnIndexOffset] = perkIndex + 1;
     },
 
-    groupPerks: function (array: Array<any>) {
-      var result: Array<Array<any>> = [];
+    groupPerks: function (array: Array<perk>) {
+      var result: Array<Array<perk>> = [];
       for (let index = 0; index < 13; index++) {
         result.push([]);
       }
@@ -106,12 +105,12 @@ export default defineComponent({
     },
     updatePerks: function(){
       store.selectedPerkIds.forEach((perkId, index) => {
-         if (Number(perkId) !== 0) { 
+        if (Number(perkId) !== 0) { 
           let columnIndexOffset = Math.ceil((index + 1) / 3);
           let column = this.groupedPerks[index + columnIndexOffset];
           let perkIndex = Number(perkId) - 1;
           column[perkIndex].selected = true;
-          this.selectedPerks[index] = column[perkIndex];
+          store.selectedPerks[index] = column[perkIndex];
           
         }
       });
@@ -124,20 +123,11 @@ export default defineComponent({
           let column = this.groupedPerks[index + columnIndexOffset];
           let perkIndex = Number(perkIndexString) - 1;
           column[perkIndex].selected = true;
-          this.selectedPerks[index] = column[perkIndex];
+          store.selectedPerks[index] = column[perkIndex];
           
         }
         store.selectedPerkIds[index] = Number(perkIndexString);
       });
-    },
-    getSegment: function(segment: number) {
-      let length = segment % 2 === 0 ? 1 : 3;
-      let startIndex = (segment / 2) * 3 + (segment / 2) * 1;
-      startIndex = segment % 2 === 0 ? startIndex : startIndex - 1;
-      let sliced = this.groupedPerks.slice(startIndex, startIndex + length)
-      return sliced
-
-      
     }
   },
     computed: {
@@ -154,7 +144,7 @@ export default defineComponent({
     },
     selectedClass: {
       handler() {
-        this.hoveredPerk = this.defaultHoveredPerk
+        this.hoveredPerk = this.defaultHoveredPerk;
         this.updateBaseperks();
         this.updatePerks();
       },
@@ -179,11 +169,6 @@ export default defineComponent({
   justify-content: center;
   align-content: center;
   max-width: 100%;
-}
-
-.perk-segment {
-  display: flex;
-  flex-direction: row;
 }
 
 .perk-column { 
@@ -238,10 +223,7 @@ export default defineComponent({
     flex-direction: column;
     flex-wrap: wrap;
   }
-
-    .perk-segment{
-      flex-direction: column;
-    }
+  
     .perk-column {
       flex-direction: row;
       margin: 0;

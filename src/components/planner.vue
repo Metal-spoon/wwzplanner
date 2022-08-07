@@ -3,12 +3,11 @@
   <h1>World War Z build planner
   </h1>
   <div>
-    <select v-model="selected" id="classlist">
+    <select id="classlist" @change="selectClass(parseInt($event.target.value))">
       <option
         v-for="(wwzclass, classIndex) in classData"
-        :value="wwzclass"
+        :value="classIndex"
         :key="classIndex"
-        @click="selectedClassId = classIndex"
       >
         {{ wwzclass.name }}
       </option>
@@ -18,7 +17,10 @@
   </div>
   
   <div class="flex-wrapper">
-  <perkpicker :selectedClass="selected" :prestige="prestige" :perkParam="perkParam"/>
+  <perkpicker :selectedClass="selectedClass" :prestige="prestige" :perkParam="perkParam"/>
+  </div>
+  <div>
+    <buildoverview :selectedClass="selectedClass" />
   </div>
   <div>
     <buildshareurl :classId="selectedClassId" :prestige="prestige"/>
@@ -45,21 +47,30 @@ import { defineComponent } from "vue";
 import perkpicker from './perkpicker.vue'
 import buildshareurl from './buildshareurl.vue';
 import json from "../assets/data.json";
+import  buildoverview from './buildoverview.vue'
+import { wwzclass } from "@/models/wwzclass";
+import { plainToInstance } from "class-transformer";
 
 export default defineComponent({
   name: "planner",
-  components: {perkpicker, buildshareurl},
-  data() {
+  components: {perkpicker, buildshareurl, buildoverview},
+  data() : {
+    classData: wwzclass[],
+    selectedClass: wwzclass,
+    selectedClassId: number,
+    prestige: number,
+    perkParam: string
+  }{
     return {
-      classData: json.classdata,
-      selected: json.classdata[0],
+      classData: plainToInstance(wwzclass, json.classdata),
+      selectedClass: new wwzclass(),
       selectedClassId: 0,
       prestige: 0,
       perkParam: ''
     };
   },
   created() {
-
+    this.selectedClass = this.classData[0]
     if (this.$route.path === "/") return;
     console.log(this.$route);
     let classParam = String(this.$route.params.class);
@@ -68,7 +79,7 @@ export default defineComponent({
 
     if (this.verifyParameters(classParam,perkParam,prestigeParam)) {
       this.prestige = Number(prestigeParam);
-      this.selected = this.classData[Number(classParam)]
+      this.selectedClass = this.classData[Number(classParam)] as wwzclass
       this.perkParam = String(perkParam);
     } else {
       this.$router.push("/");
@@ -103,6 +114,12 @@ export default defineComponent({
 
       
     },
+    selectClass: function(classIndex: number) {
+      console.log(classIndex)
+      this.selectedClass.resetPerks()
+      this.selectedClassId = classIndex
+      this.selectedClass = this.classData[classIndex]
+    }
   },
   
 });
