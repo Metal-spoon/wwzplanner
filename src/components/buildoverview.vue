@@ -5,7 +5,7 @@
             <img class="perk-icon" :src="baseperk.icon" />
             <div class="perk-text">
             <b>{{baseperk.Name}}</b>
-            <span>{{baseperk.Description}}</span>
+            <span class="perk-description">{{baseperk.Description}}</span>
             </div>
         </li>
      </ul>
@@ -14,7 +14,7 @@
             <img class="perk-icon" :src="perk.icon" />
             <div class="perk-text perk-text-selected">
             <b>{{perk.Name}}</b>
-            <span>{{perk.Description}}</span>
+            <span class="perk-description">{{perk.Description}}</span>
             </div>
         </li>
      </ul>
@@ -79,11 +79,11 @@ export default defineComponent({
     text-align: left;
     padding-left: 5px;
     padding-right: 10px;
-    max-width: 4000px;
+    
    }
 
-   .perk-text-selected {
-   
+   .perk-description {
+    max-width: 400px;
    }
 
    
