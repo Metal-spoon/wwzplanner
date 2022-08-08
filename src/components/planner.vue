@@ -16,17 +16,17 @@
     </select>
     <span>Prestige:</span>
     
-    <input type="number" min="0" max="4" v-model="prestige" />
+    <input type="number" min="0" max="4" v-model="store.prestige" />
     </div>
      <buildoverview :selectedClass="selectedClass" />
   </div>
-  <perkpicker :selectedClass="selectedClass" :prestige="prestige" :perkParam="perkParam"/>
+  <perkpicker :selectedClass="selectedClass" :prestige="store.prestige" :perkParam="perkParam"/>
   </div>
   <div>
    
   </div>
   <div>
-    <buildshareurl :classId="selectedClassId" :prestige="prestige"/>
+    <buildshareurl />
   </div>
 </div>
 
@@ -62,6 +62,7 @@ import json from "../assets/data.json";
 import  buildoverview from './buildoverview.vue'
 import { wwzclass } from "@/models/wwzclass";
 import { plainToInstance } from "class-transformer";
+import { store } from "../store"
 
 export default defineComponent({
   // eslint-disable-next-line
@@ -70,28 +71,25 @@ export default defineComponent({
   data() : {
     classData: wwzclass[],
     selectedClass: wwzclass,
-    selectedClassId: number,
-    prestige: number,
-    perkParam: string
+    perkParam: string,
+    store: any
   }{
     return {
       classData: plainToInstance(wwzclass, json.classdata),
       selectedClass: new wwzclass(),
-      selectedClassId: 0,
-      prestige: 0,
-      perkParam: ''
+      perkParam: '',
+      store
     };
   },
   created() {
     this.selectedClass = this.classData[0]
     if (this.$route.path === "/") return;
-    console.log(this.$route);
     let classParam = String(this.$route.params.class);
     let perkParam = String(this.$route.params.perks);
     let prestigeParam = String(this.$route.params.prestige);
 
     if (this.verifyParameters(classParam,perkParam,prestigeParam)) {
-      this.prestige = Number(prestigeParam);
+      store.prestige = Number(prestigeParam);
       this.selectedClass = this.classData[Number(classParam)] as wwzclass
       this.perkParam = String(perkParam);
     } else {
@@ -130,7 +128,7 @@ export default defineComponent({
     selectClass: function(classIndex: number) {
       console.log(classIndex)
       this.selectedClass.resetPerks()
-      this.selectedClassId = classIndex
+      store.selectedClassId = classIndex
       this.selectedClass = this.classData[classIndex]
     }
   },

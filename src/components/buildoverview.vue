@@ -83,6 +83,7 @@ export default defineComponent({
    }
 
    .perk-info {
+    margin: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
