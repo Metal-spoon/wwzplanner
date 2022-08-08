@@ -17,7 +17,7 @@ import { defineComponent } from 'vue'
 import tooltip from './tooltip.vue'
 
 export default defineComponent({
-    name: "buildshareurl",
+    name: "BuildShareUrl",
     components: {tooltip},
     props: {
         classId: {

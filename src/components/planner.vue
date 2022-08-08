@@ -2,7 +2,9 @@
 <div class="flex-wrapper">
   <h1>World War Z build planner
   </h1>
-  <div>
+  <div class="content-wrapper">
+    <div class=flex-row>
+      <div>
     <select id="classlist" @change="selectClass(parseInt($event.target.value))">
       <option
         v-for="(wwzclass, classIndex) in classData"
@@ -13,14 +15,15 @@
       </option>
     </select>
     <span>Prestige:</span>
+    
     <input type="number" min="0" max="4" v-model="prestige" />
+    </div>
+     <buildoverview :selectedClass="selectedClass" />
   </div>
-  
-  <div class="flex-wrapper">
   <perkpicker :selectedClass="selectedClass" :prestige="prestige" :perkParam="perkParam"/>
   </div>
   <div>
-    <buildoverview :selectedClass="selectedClass" />
+   
   </div>
   <div>
     <buildshareurl :classId="selectedClassId" :prestige="prestige"/>
@@ -30,16 +33,25 @@
 </template>
 
 <style lang="less" scoped>
-.row {
-  text-align: center;
-  
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
+
 .flex-wrapper {
   display: flex;
-  justify-content: center;
-  align-content: center;
+  justify-items: center;
+  align-items: center;
   flex-direction: column;
 }
+
+.content-wrapper {
+  max-width: fit-content;
+
+}
+
 </style>
 
 <script lang='ts'>
@@ -52,7 +64,8 @@ import { wwzclass } from "@/models/wwzclass";
 import { plainToInstance } from "class-transformer";
 
 export default defineComponent({
-  name: "planner",
+  // eslint-disable-next-line
+  name: "Planner",
   components: {perkpicker, buildshareurl, buildoverview},
   data() : {
     classData: wwzclass[],

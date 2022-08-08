@@ -16,7 +16,7 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-    name: "tooltip",
+    name: "ToolTip",
     props: {
         perk: {
             type: Object,

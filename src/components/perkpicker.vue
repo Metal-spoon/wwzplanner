@@ -30,7 +30,7 @@ import Perkinfo from "./perkinfo.vue";
 import { perk } from "@/models/perk"
 import { wwzclass } from "@/models/wwzclass";
 export default defineComponent({
-  name: "perkpicker",
+  name: "PerkPicker",
   components: {Perkinfo},
   props: {
     selectedClass: {
