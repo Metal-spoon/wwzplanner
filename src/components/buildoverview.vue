@@ -1,72 +1,165 @@
 <template>
-    <div class="component-wrapper">
-        <h2 class="component-title"> Build overview </h2>
-        <b> Selected perks: </b>
-        <div class="perk-info" v-for="(perk, perkIndex) in selectedPerks" :key="perkIndex">
-            <div v-if="perk">
-            <div class="image-wrapper">
-            <img
-              class="perk-image"
-              :src="perk.icon"
-              
-            />
+<div class="modal" v-show="showModal">
+        <div class="modal-content">
+            <div class="flex-row modal-title">
+            <b>Build overview</b>
+            <div class="x-button" @click="showModal = false"><font-awesome-icon size="2x" icon="xmark" /></div>
             </div>
-            <div class="perk-description">
-            <div><b>{{perk.Name}}</b></div>
-            <span>{{perk.Description}} </span>
+    <div class="flex-column">
+     <ul class="perk-grid baseperk-grid">
+        
+        <li class="perk-info" v-for="baseperk in basePerks" :key="baseperk">
+            <img class="perk-icon" :src="baseperk.icon" />
+            <div class="perk-text">
+            <b>{{baseperk.Name}}</b>
+            <span class="perk-description">{{baseperk.Description}}</span>
             </div>
+        </li>
+     </ul>
+     <ul class="perk-grid">
+        <li class="perk-info" v-for="perk in selectedPerks" :key="perk">
+            <img class="perk-icon" :src="perk.icon" />
+            <div class="perk-text perk-text-selected">
+            <b>{{perk.Name}}</b>
+            <span class="perk-description">{{perk.Description}}</span>
             </div>
-        </div>
+        </li>
+     </ul>
+     </div>
+     <buildshareurl />
     </div>
+</div>
+<div class="button" @click="showModal = true">Show build summary</div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent  } from 'vue'
+import { store } from '@/store'
+import { wwzclass } from '@/models/wwzclass'
+import buildshareurl from './buildshareurl.vue'
 
 export default defineComponent({
-    name: "buildoverview",
+  components: { buildshareurl },
+    name: "BuildOverview",
     props: {
-        selectedPerks: {
-            type: Array,
+        selectedClass: {
+            type: wwzclass,
             required: true
         }
     },
+    data() {
+        return {
+            store,
+            showModal: false
+        }
+    },
     computed: {
-        
+        basePerks: function() {
+            return this.selectedClass.perks.filter((perk) => perk.isBase && perk.selected).sort()
+        },
+        selectedPerks: function() {
+            return this.selectedClass.perks.filter((perk) => !perk.isBase && perk.selected)
+        }
     },
 })
 </script>
 
 <style lang="less" scoped>
-    .component-wrapper {
-         display: inline-block;
-    text-align: center;
-  margin-left: 20px;
-  vertical-align: top;
-  background-color: red;
-  padding: 10px;
-  width: 16%;
-    }
+   .perk-grid {
+    display: grid;
+    list-style: none;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding-left: 0px;
+    margin: 0;
+   }
 
-    .component-title {
-        border-bottom: 2px solid black;
-    }
+   .baseperk-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   }
 
-    .perk-info {
-        text-align: left;
-    }
+   .perk-icon {
+    max-width: 75px;
+   }
 
-    .perk-image {
-        width: 56px;
+   .perk-info {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   }
+   .perk-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 5px;
+    padding-right: 10px;
+    
+   }
+    .flex-column {
+        display: flex;
+        flex-direction: column;
     }
+   .flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    flex-wrap: wrap;
+   }
 
-    .image-wrapper {
-        display: inline-block;
-    }
+   .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0, 0.8);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   }
 
-    .perk-description {
-        display: inline-block;
-        vertical-align: top;
-        padding: 10px
+
+   .modal-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #808080;
+    padding: 10px;
+    margin: 20px;
+    max-height: 100%;
+    overflow-y: scroll;
+   }
+
+   .x-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    color: white;
+    &:hover {
+        cursor: pointer;
+        background-color: lighten(darkred, 10);
     }
+    > svg {
+        width: 1em;
+    }
+    background-color: darkred;
+    z-index: 999;
+   }
+
+   .button {
+    background-color: darkred;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    max-width: fit-content;
+    &:hover {
+        cursor: pointer;
+        background-color: lighten(darkred, 10);
+    }
+   }
 </style>

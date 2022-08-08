@@ -1,13 +1,16 @@
+import 'reflect-metadata'
 import { createApp } from 'vue'
 import App from './App.vue';
 import Vue from 'vue'
 import planner from './components/planner.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faClipboard } from '@fortawesome/free-solid-svg-icons';
+import { faClipboard, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
+
 library.add(faClipboard);
+library.add(faXmark)
 
 
 const routes = [

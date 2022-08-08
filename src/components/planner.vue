@@ -2,42 +2,56 @@
 <div class="flex-wrapper">
   <h1>World War Z build planner
   </h1>
-  <div>
-    <select v-model="selected" id="classlist">
+  <div class="content-wrapper">
+    <div class=flex-row>
+      <div>
+    <select id="classlist" @change="selectClass(parseInt($event.target.value))">
       <option
         v-for="(wwzclass, classIndex) in classData"
-        :value="wwzclass"
+        :value="classIndex"
         :key="classIndex"
-        @click="selectedClassId = classIndex"
       >
         {{ wwzclass.name }}
       </option>
     </select>
     <span>Prestige:</span>
-    <input type="number" min="0" max="4" v-model="prestige" />
+    
+    <input type="number" min="0" max="4" v-model="store.prestige" />
+    </div>
+     <buildoverview :selectedClass="selectedClass" />
   </div>
-  
-  <div class="flex-wrapper">
-  <perkpicker :selectedClass="selected" :prestige="prestige" :perkParam="perkParam"/>
+  <perkpicker :selectedClass="selectedClass" :prestige="store.prestige" :perkParam="perkParam"/>
   </div>
   <div>
-    <buildshareurl :classId="selectedClassId" :prestige="prestige"/>
+   
+  </div>
+  <div>
+    <buildshareurl />
   </div>
 </div>
 
 </template>
 
 <style lang="less" scoped>
-.row {
-  text-align: center;
-  
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
+
 .flex-wrapper {
   display: flex;
-  justify-content: center;
-  align-content: center;
+  justify-items: center;
+  align-items: center;
   flex-direction: column;
 }
+
+.content-wrapper {
+  max-width: fit-content;
+
+}
+
 </style>
 
 <script lang='ts'>
@@ -45,30 +59,38 @@ import { defineComponent } from "vue";
 import perkpicker from './perkpicker.vue'
 import buildshareurl from './buildshareurl.vue';
 import json from "../assets/data.json";
+import  buildoverview from './buildoverview.vue'
+import { wwzclass } from "@/models/wwzclass";
+import { plainToInstance } from "class-transformer";
+import { store } from "../store"
 
 export default defineComponent({
-  name: "planner",
-  components: {perkpicker, buildshareurl},
-  data() {
+  // eslint-disable-next-line
+  name: "Planner",
+  components: {perkpicker, buildshareurl, buildoverview},
+  data() : {
+    classData: wwzclass[],
+    selectedClass: wwzclass,
+    perkParam: string,
+    store: any
+  }{
     return {
-      classData: json.classdata,
-      selected: json.classdata[0],
-      selectedClassId: 0,
-      prestige: 0,
-      perkParam: ''
+      classData: plainToInstance(wwzclass, json.classdata),
+      selectedClass: new wwzclass(),
+      perkParam: '',
+      store
     };
   },
   created() {
-
+    this.selectedClass = this.classData[0]
     if (this.$route.path === "/") return;
-    console.log(this.$route);
     let classParam = String(this.$route.params.class);
     let perkParam = String(this.$route.params.perks);
     let prestigeParam = String(this.$route.params.prestige);
 
     if (this.verifyParameters(classParam,perkParam,prestigeParam)) {
-      this.prestige = Number(prestigeParam);
-      this.selected = this.classData[Number(classParam)]
+      store.prestige = Number(prestigeParam);
+      this.selectedClass = this.classData[Number(classParam)] as wwzclass
       this.perkParam = String(perkParam);
     } else {
       this.$router.push("/");
@@ -103,6 +125,12 @@ export default defineComponent({
 
       
     },
+    selectClass: function(classIndex: number) {
+      console.log(classIndex)
+      this.selectedClass.resetPerks()
+      store.selectedClassId = classIndex
+      this.selectedClass = this.classData[classIndex]
+    }
   },
   
 });

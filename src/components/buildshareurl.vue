@@ -17,7 +17,7 @@ import { defineComponent } from 'vue'
 import tooltip from './tooltip.vue'
 
 export default defineComponent({
-    name: "buildshareurl",
+    name: "BuildShareUrl",
     components: {tooltip},
     props: {
         classId: {
@@ -38,9 +38,9 @@ export default defineComponent({
     methods: {
         buildURL: function() {
             let host = window.location.host;
-            let classString = String(this.classId);
+            let classString = String(store.selectedClassId);
             let perkIdString = /^([0-3]{1})(,[0-3]{1}){0,}?$/.exec(String(store.selectedPerkIds))![0];
-            let prestigeString = String(this.prestige);
+            let prestigeString = String(store.prestige);
             let URL = host + "/" + classString + "/" + perkIdString + "/" + prestigeString;
             return URL;
             

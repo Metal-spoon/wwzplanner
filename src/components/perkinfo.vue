@@ -9,7 +9,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-    name: 'perkinfo',
+    name: 'PerkInfo',
     props: {
         perk: {
             type: Object,
