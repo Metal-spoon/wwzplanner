@@ -19,16 +19,6 @@ import tooltip from './tooltip.vue'
 export default defineComponent({
     name: "BuildShareUrl",
     components: {tooltip},
-    props: {
-        classId: {
-            type: Number,
-            required: true
-        },
-        prestige: {
-            type: Number,
-            required: true
-        }
-    },
     data() {
         return {
             showTooltip: false,
