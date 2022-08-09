@@ -1,5 +1,5 @@
 <template>
-<div class='share-wrapper'>
+<div class='share-wrapper flex-column'>
     <b class="label">Share your build: </b>
     <tooltip :text="'Copied!'" :hover="false" :show="showTooltip">
     <input class="urltextbox" type="text" readonly v-bind:value="shareURL" v-on:focus="$event.target.select()" ref="urltextbox">

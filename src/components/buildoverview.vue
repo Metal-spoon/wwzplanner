@@ -138,7 +138,7 @@ export default defineComponent({
    .modal-content {
     display: flex;
     flex-direction: column;
-    background-color: #808080;
+    background-color: #141516;
     padding: 10px;
     margin: 20px;
     max-height: 100%;
@@ -150,27 +150,27 @@ export default defineComponent({
     right: 0;
     top: 0;
     display: flex;
-    color: white;
+    color: #F2BEBF;
     &:hover {
         cursor: pointer;
-        background-color: lighten(darkred, 10);
+        background-color: lighten(#6A2728, 10);
     }
     > svg {
         width: 1em;
     }
-    background-color: darkred;
+    background-color: #6A2728;
     z-index: 999;
    }
 
    .button {
-    background-color: darkred;
+    background-color: #6A2728;
     padding: 10px;
-    color: white;
+    color: #F2BEBF;
     font-weight: bold;
     max-width: fit-content;
     &:hover {
         cursor: pointer;
-        background-color: lighten(darkred, 10);
+        background-color: lighten(#6A2728, 10);
     }
    }
 

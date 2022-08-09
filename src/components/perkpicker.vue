@@ -159,7 +159,7 @@ export default defineComponent({
 .picker-perkinfo {
   position: sticky;
   bottom: 0px;
-  background-color: #817E7E;
+  background-color: @bg;
   padding: 5px;
 }
 
