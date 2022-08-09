@@ -1,12 +1,16 @@
 export class perk {
   Name: string = "";
   Description: string = "";
-  teamWide: boolean = false;
   icon: string = "";
   level: number = 0;
   isBase: boolean = false;
   prestige: number = 0;
   selected: boolean = false;
+
+  get teamWide(): boolean {
+    const regexp = /(?<=entire|whole|all)\steam/
+    return regexp.test(this.Description)
+  }
 
   get column(): number {
     let column = 0;
