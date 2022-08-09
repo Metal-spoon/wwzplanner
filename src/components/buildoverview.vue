@@ -6,13 +6,17 @@
             <div class="x-button" @click="showModal = false"><font-awesome-icon size="2x" icon="xmark" /></div>
             </div>
     <div class="flex-column">
-     <ul class="perk-grid baseperk-grid">
-        
+    <ul class="perk-grid baseperk-grid">
         <li class="perk-info" v-for="baseperk in basePerks" :key="baseperk">
             <img class="perk-icon" :src="baseperk.icon" />
             <div class="perk-text">
-            <b>{{baseperk.Name}}</b>
-            <span class="perk-description">{{baseperk.Description}}</span>
+                <div class="perk-title">    
+                    <b>{{baseperk.Name}}</b>
+                    <div v-show="baseperk.teamWide" class="teamwide-indicator"> 
+                        <font-awesome-icon icon="people-group" />
+                    </div>
+                </div>
+                <span class="perk-description">{{baseperk.Description}}</span>
             </div>
         </li>
      </ul>
@@ -20,11 +24,17 @@
         <li class="perk-info" v-for="perk in selectedPerks" :key="perk">
             <img class="perk-icon" :src="perk.icon" />
             <div class="perk-text perk-text-selected">
-            <b>{{perk.Name}}</b>
+                <div class="perk-title">    
+                    <b>{{perk.Name}}</b>
+                    <div v-show="perk.teamWide" class="teamwide-indicator"> 
+                        <font-awesome-icon icon="people-group" />
+                    </div>
+                </div>
             <span class="perk-description">{{perk.Description}}</span>
             </div>
         </li>
      </ul>
+     <div class="indicator-disclaimer"><font-awesome-icon icon="people-group" /> Indicates perks that give a bonus to the whole team</div>
      </div>
      <buildshareurl />
     </div>
@@ -83,6 +93,7 @@ export default defineComponent({
    }
 
    .perk-info {
+    position: relative;
     margin: 10px;
     display: flex;
     flex-direction: row;
@@ -162,4 +173,27 @@ export default defineComponent({
         background-color: lighten(darkred, 10);
     }
    }
+
+   .teamwide-indicator{
+    padding: 4px;
+    border-radius: 20px;
+   }
+
+   .icon-wrapper {
+    display: flex;
+    position: relative;
+   }
+
+    .perk-title {
+        font-size: 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .indicator-disclaimer {
+        text-align: right;
+    }
+  
 </style>

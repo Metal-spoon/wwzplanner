@@ -7,7 +7,6 @@
         {
           "Name": "Gimme a Reason",
           "Description": "Start with Frag Grenade and Compact SMG. Movement has no effect on weapon accuracy, recoil effect also reduced",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L0.png",
           "level": 0,
           "isBase": true,
@@ -16,7 +15,6 @@
         {
           "Name": "Swapping Mags II",
           "Description": "Reload speed increased by 10% on primary weapons",
-          "teamWide": false,
           "icon": "/assets/gunslinger/P1.png",
           "level": 0,
           "isBase": true,
@@ -25,7 +23,6 @@
         {
           "Name": "Fire in the Hole",
           "Description": "Frag Grenade can kill 25% more targets (base: 14)",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L1.png",
           "level": 1,
           "isBase": false,
@@ -34,7 +31,6 @@
         {
           "Name": "Impact Grenades",
           "Description": "Frag Grenades explode on impact. They deal 100% more damage but have 50% smaller explosion radius",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L2.png",
           "level": 2,
           "isBase": false,
@@ -43,7 +39,6 @@
         {
           "Name": "Power Nap",
           "Description": "Unequipped weapon automatically reloads after 7 seconds",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L3.png",
           "level": 3,
           "isBase": false,
@@ -52,7 +47,6 @@
         {
           "Name": "Swapping Mags!",
           "Description": "Reload speed increased by 25% on all weapons",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L4.png",
           "level": 4,
           "isBase": false,
@@ -61,7 +55,6 @@
         {
           "Name": "Front Line Supply",
           "Description": "Headshots made with primary or secondary weapons automatically restore 5% rounds to the magazine",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L5.png",
           "level": 5,
           "isBase": false,
@@ -70,7 +63,6 @@
         {
           "Name": "Adrenaline",
           "Description": "Reloading a weapon with less than 25% ammo in the magazine provides a 50% reload speed boost for 5 seconds",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L6.png",
           "level": 6,
           "isBase": false,
@@ -79,7 +71,6 @@
         {
           "Name": "Heavy Metal",
           "Description": "Start with improved MAG5 Machinegun that deals 50% more damage, and has 50% more ammo. All MAG5 machinegun pickups also improved",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L7.png",
           "level": 7,
           "isBase": false,
@@ -88,7 +79,6 @@
         {
           "Name": "Gunner",
           "Description": "Start with Sporting Carbine PAC-15",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L8.png",
           "level": 8,
           "isBase": false,
@@ -97,7 +87,6 @@
         {
           "Name": "This is My Rifle",
           "Description": "Start with ARK-103 Assault Rifle",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L9.png",
           "level": 9,
           "isBase": false,
@@ -106,7 +95,6 @@
         {
           "Name": "Seek and Destroy",
           "Description": "All active special zombies within a radius of 20 meters will be automatically marked",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L10.png",
           "level": 10,
           "isBase": true,
@@ -115,7 +103,6 @@
         {
           "Name": "Swapping Mags III",
           "Description": "Reload speed increased by 15% on secondary weapons",
-          "teamWide": false,
           "icon": "/assets/gunslinger/P2.png",
           "level": 0,
           "isBase": true,
@@ -124,7 +111,6 @@
         {
           "Name": "Bounty Hunter",
           "Description": "Deal 25% more damage to special zombies",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L11.png",
           "level": 11,
           "isBase": false,
@@ -133,7 +119,6 @@
         {
           "Name": "Wheatgrass",
           "Description": "Health increased by 25%",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L12.png",
           "level": 12,
           "isBase": false,
@@ -142,7 +127,6 @@
         {
           "Name": "Sleight of Hand",
           "Description": "Switch weapons 150% faster",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L13.png",
           "level": 13,
           "isBase": false,
@@ -151,7 +135,6 @@
         {
           "Name": "Gun Fanatic",
           "Description": "Draining primary and secondary weapons' magazines automatically reloads primary weapon",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L14.png",
           "level": 14,
           "isBase": false,
@@ -160,7 +143,6 @@
         {
           "Name": "Concentration",
           "Description": "Killing 5 zombies consecutively with only headshots grants temporary health boost (cooldown 30 seconds)",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L15.png",
           "level": 15,
           "isBase": false,
@@ -169,7 +151,6 @@
         {
           "Name": "Judo",
           "Description": "When pinned down by usual or special zombies you will automatically rise up and push your attackers back (cooldown 180 seconds)",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L16.png",
           "level": 16,
           "isBase": false,
@@ -178,7 +159,6 @@
         {
           "Name": "Welcoming Committee",
           "Description": "Stationary machinegun ammo increased by 25% for all teammates",
-          "teamWide": true,
           "icon": "/assets/gunslinger/L17.png",
           "level": 17,
           "isBase": false,
@@ -187,7 +167,6 @@
         {
           "Name": "S890 Shorty",
           "Description": "Start with a S890 Shorty in your secondary weapon slot",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L18.png",
           "level": 18,
           "isBase": false,
@@ -196,7 +175,6 @@
         {
           "Name": "Senjata",
           "Description": "Start with a Senjata PDW in your secondary weapon slot",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L19.png",
           "level": 19,
           "isBase": false,
@@ -205,7 +183,6 @@
         {
           "Name": "My Bad",
           "Description": "Deal 50% less friendly fire damage to your teammates",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L20.png",
           "level": 20,
           "isBase": true,
@@ -214,7 +191,6 @@
         {
           "Name": "Deep Pockets II",
           "Description": "Carried ammo capacity for primary and secondary weapons increased by 10%",
-          "teamWide": false,
           "icon": "/assets/gunslinger/P3.png",
           "level": 0,
           "isBase": true,
@@ -223,7 +199,6 @@
         {
           "Name": "Deep Pockets",
           "Description": "Carried ammo capacity for primary and secondary weapons increased by 25%",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L21.png",
           "level": 21,
           "isBase": false,
@@ -232,7 +207,6 @@
         {
           "Name": "Action Hero",
           "Description": "When you become the last of your team still standing you gain ability to shoot with your primary and secondary weapons without spending rounds in its magazines for 7 seconds",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L22.png",
           "level": 22,
           "isBase": false,
@@ -241,7 +215,6 @@
         {
           "Name": "Free Refill",
           "Description": "Restore 3% of primary weapon ammo for each kill made with equipment",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L23.png",
           "level": 23,
           "isBase": false,
@@ -250,7 +223,6 @@
         {
           "Name": "Work Belt",
           "Description": "Max number of Frag Grenades increased to 3",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L24.png",
           "level": 24,
           "isBase": false,
@@ -259,7 +231,6 @@
         {
           "Name": "Pocket Factory",
           "Description": "You won't be able to pick equipment bags on the mission, but your equipment will be constantly regenerating (150 seconds to replenish to maximum)",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L25.png",
           "level": 25,
           "isBase": false,
@@ -268,7 +239,6 @@
         {
           "Name": "Headhunter Reward",
           "Description": "Killing 5 zombies consecutively with only headshots refills one equipment charge (cooldown 15 seconds)",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L26.png",
           "level": 26,
           "isBase": false,
@@ -277,7 +247,6 @@
         {
           "Name": "Annihilator",
           "Description": "Primary, secondary and heavy weapons deal 15% more damage",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L27.png",
           "level": 27,
           "isBase": false,
@@ -286,7 +255,6 @@
         {
           "Name": "Switcheroo",
           "Description": "Switching to primary or secondary weapons increases firearm damage by 50% for 5 seconds",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L28.png",
           "level": 28,
           "isBase": false,
@@ -295,7 +263,6 @@
         {
           "Name": "Thrifty",
           "Description": "Reloading a weapon with less than 25% ammo in the magazine provides a 50% firearm damage boost for 3 seconds",
-          "teamWide": false,
           "icon": "/assets/gunslinger/L29.png",
           "level": 29,
           "isBase": false,
@@ -304,7 +271,6 @@
         {
           "Name": "War Face",
           "Description": "Killing 25 zombies in rapid succession grants 50% firearm damage boost to entire team for 20 seconds",
-          "teamWide": true,
           "icon": "/assets/gunslinger/L30.png",
           "level": 30,
           "isBase": true,
@@ -313,7 +279,6 @@
         {
           "Name": "Fire in The Hole II",
           "Description": "Frag Grenade can kill 20% more targets (base: 14)",
-          "teamWide": false,
           "icon": "/assets/gunslinger/P4.png",
           "level": 0,
           "isBase": true,
@@ -328,7 +293,6 @@
         {
           "Name": "Demoman",
           "Description": "baseperk",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L0.png",
           "level": 0,
           "isBase": true,
@@ -337,7 +301,6 @@
         {
           "Name": "Throwing Arm II",
           "Description": "Throw distance of a C4 increased by 25%",
-          "teamWide": false,
           "icon": "/assets/hellraiser/P1.png",
           "level": 0,
           "isBase": true,
@@ -346,7 +309,6 @@
         {
           "Name": "Throwing arm",
           "Description": "Throw distance of a C4 increased by 50%",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L1.png",
           "level": 1,
           "isBase": false,
@@ -355,7 +317,6 @@
         {
           "Name": "Here Kitty",
           "Description": "C4 will attract zombies for 5 seconds after being planted but can kill 35% less targets (base: 14)",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L2.png",
           "level": 2,
           "isBase": false,
@@ -364,7 +325,6 @@
         {
           "Name": "Not Today",
           "Description": "You may become incapacitated 1 additional time before dying",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L3.png",
           "level": 3,
           "isBase": false,
@@ -373,7 +333,6 @@
         {
           "Name": "Welcome Mat",
           "Description": "Upon trigger Claymores will attract zombies for 3 seconds before explosion. Start with Claymores",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L4.png",
           "level": 4,
           "isBase": false,
@@ -382,7 +341,6 @@
         {
           "Name": "Green Fingered",
           "Description": "Planting speed of Claymores is increased by 50%. 25% chance to plant the Claymore at no cost to your equipment. Start with Claymores",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L5.png",
           "level": 5,
           "isBase": false,
@@ -391,7 +349,6 @@
         {
           "Name": "Welcoming Committee",
           "Description": "Any mortar used by you or teammates can kill 25% more targets (base: 40)",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L6.png",
           "level": 6,
           "isBase": false,
@@ -400,7 +357,6 @@
         {
           "Name": "Unshakeable",
           "Description": "Self-inflicted explosive damage reduced by 100%",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L7.png",
           "level": 7,
           "isBase": false,
@@ -409,7 +365,6 @@
         {
           "Name": "Directed Blast",
           "Description": "You deal 100% more damage to zombies with all explosives",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L8.png",
           "level": 8,
           "isBase": false,
@@ -418,7 +373,6 @@
         {
           "Name": "Nimble Thumbs",
           "Description": "All shotguns' reload speed increased by 50%",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L9.png",
           "level": 9,
           "isBase": false,
@@ -427,7 +381,6 @@
         {
           "Name": "Demolition Squad",
           "Description": "Explosive equipment can kill 25% more targets. Applies for the whole team",
-          "teamWide": true,
           "icon": "/assets/hellraiser/L10.png",
           "level": 10,
           "isBase": true,
@@ -436,7 +389,6 @@
         {
           "Name": "Sleight of Hand",
           "Description": "Switch weapons 25% faster",
-          "teamWide": false,
           "icon": "/assets/hellraiser/P2.png",
           "level": 0,
           "isBase": true,
@@ -445,7 +397,6 @@
         {
           "Name": "Bounty Hunter",
           "Description": "Deal 25% more damage to special zombies",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L11.png",
           "level": 11,
           "isBase": false,
@@ -454,7 +405,6 @@
         {
           "Name": "Wheatgrass",
           "Description": "Health increased by 25%",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L12.png",
           "level": 12,
           "isBase": false,
@@ -463,7 +413,6 @@
         {
           "Name": "Walk Softly",
           "Description": "Start with a S890 shotgun",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L13.png",
           "level": 13,
           "isBase": false,
@@ -472,7 +421,6 @@
         {
           "Name": "Tooled Up",
           "Description": "Increase Claymore capacity to 4 and C4 capacity to 3",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L14.png",
           "level": 14,
           "isBase": false,
@@ -481,7 +429,6 @@
         {
           "Name": "Pickpocket",
           "Description": "Killing 15 zombies in rapid succession refills one equipment charge (cooldown 60 seconds)",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L15.png",
           "level": 15,
           "isBase": false,
@@ -490,7 +437,6 @@
         {
           "Name": "I’ll Take That",
           "Description": "Killing a special zombie restores one equipment charge (cooldown 60 seconds)",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L16.png",
           "level": 16,
           "isBase": false,
@@ -499,7 +445,6 @@
         {
           "Name": "Free Refill I",
           "Description": "Restores 1% of primary weapon ammo for each kill made with equipment",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L17.png",
           "level": 17,
           "isBase": false,
@@ -508,7 +453,6 @@
         {
           "Name": "Free Refill II",
           "Description": "Each kill made with equipment restores 1 round to your primary weapon magazine",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L18.png",
           "level": 18,
           "isBase": false,
@@ -517,7 +461,6 @@
         {
           "Name": "Third Hand",
           "Description": "Killing 15 zombies in rapid succession instantly reloads your primary weapon",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L19.png",
           "level": 19,
           "isBase": false,
@@ -526,7 +469,6 @@
         {
           "Name": "Hollywood",
           "Description": "Explosive and fire damage dealt to yourself and your teammates reduced by 30%",
-          "teamWide": true,
           "icon": "/assets/hellraiser/L20.png",
           "level": 20,
           "isBase": true,
@@ -535,7 +477,6 @@
         {
           "Name": "Directed Blast II",
           "Description": "Your explosives can kill 10% more targets",
-          "teamWide": false,
           "icon": "/assets/hellraiser/P3.png",
           "level": 0,
           "isBase": true,
@@ -544,7 +485,6 @@
         {
           "Name": "Scorched Earth",
           "Description": "Claymore and C4 explosions will set the nearby area on fire",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L21.png",
           "level": 21,
           "isBase": false,
@@ -553,7 +493,6 @@
         {
           "Name": "Deep Pockets",
           "Description": "Carried ammo capacity for heavy weapon increased by 35%",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L22.png",
           "level": 22,
           "isBase": false,
@@ -562,7 +501,6 @@
         {
           "Name": "Hole Punch",
           "Description": "Shotgun range increased by 50%",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L23.png",
           "level": 23,
           "isBase": false,
@@ -571,7 +509,6 @@
         {
           "Name": "Senjata",
           "Description": "Start with a Senjata PDW in your secondary weapon slot",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L24.png",
           "level": 24,
           "isBase": false,
@@ -580,7 +517,6 @@
         {
           "Name": "Thumper",
           "Description": "Start with a Thumper GL in your secondary weapon slot",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L25.png",
           "level": 25,
           "isBase": false,
@@ -589,7 +525,6 @@
         {
           "Name": "Heavy Rain",
           "Description": "Start with improved Hailstorm MGL that does 50% more damage, and has 50% more ammo. All Hailstorm MGL pickups for you also improved [base: 8 ammo]",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L26.png",
           "level": 26,
           "isBase": false,
@@ -598,7 +533,6 @@
         {
           "Name": "Knock Knock",
           "Description": "Start with a Breaching Charge",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L27.png",
           "level": 27,
           "isBase": false,
@@ -607,7 +541,6 @@
         {
           "Name": "Job Satisfaction",
           "Description": "Killing 15 zombies in rapid succession grants a temporary health boost",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L28.png",
           "level": 28,
           "isBase": false,
@@ -616,7 +549,6 @@
         {
           "Name": "Predator",
           "Description": "Killing special zombies boosts firearm damage by 50% for 10 seconds",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L29.png",
           "level": 29,
           "isBase": false,
@@ -625,7 +557,6 @@
         {
           "Name": "Technician",
           "Description": "C4, Claymore Landmines and MGL can kill 25% more targets",
-          "teamWide": false,
           "icon": "/assets/hellraiser/L30.png",
           "level": 30,
           "isBase": true,
@@ -634,7 +565,6 @@
         {
           "Name": "Thumper II",
           "Description": "Carried ammo capacity for Thumper GL increased by 1",
-          "teamWide": false,
           "icon": "/assets/hellraiser/P4.png",
           "level": 0,
           "isBase": true,
@@ -649,7 +579,6 @@
         {
           "Name": "Booster Shot",
           "Description": "Start with a Stim Pistol, Compact SMG and free Medkit. Using Medkit on a teammate will also apply 25% of its effect to you",
-          "teamWide": false,
           "icon": "/assets/medic/L0.png",
           "level": 0,
           "isBase": true,
@@ -658,7 +587,6 @@
         {
           "Name": "Painkiller II",
           "Description": "Stim Pistol effects last 25% longer",
-          "teamWide": false,
           "icon": "/assets/medic/P1.png",
           "level": 0,
           "isBase": true,
@@ -667,7 +595,6 @@
         {
           "Name": "Doctor in the House",
           "Description": "Medkits heal 10% more (base: 70%)",
-          "teamWide": false,
           "icon": "/assets/medic/L1.png",
           "level": 1,
           "isBase": false,
@@ -676,7 +603,6 @@
         {
           "Name": "Triage",
           "Description": "Apply Medkits 50% faster [base: 4 seconds]",
-          "teamWide": false,
           "icon": "/assets/medic/L2.png",
           "level": 2,
           "isBase": false,
@@ -685,7 +611,6 @@
         {
           "Name": "Sugar Coated",
           "Description": "Healing a teammate with a Medkit also grants them a temporary health boost",
-          "teamWide": false,
           "icon": "/assets/medic/L3.png",
           "level": 3,
           "isBase": false,
@@ -694,7 +619,6 @@
         {
           "Name": "Patch Up",
           "Description": "Restore 30% health to a teammate after reviving them (base: 20%)",
-          "teamWide": false,
           "icon": "/assets/medic/L4.png",
           "level": 4,
           "isBase": false,
@@ -703,7 +627,6 @@
         {
           "Name": "Paramedic",
           "Description": "Revive speed increased by 50%",
-          "teamWide": false,
           "icon": "/assets/medic/L5.png",
           "level": 5,
           "isBase": false,
@@ -712,7 +635,6 @@
         {
           "Name": "Pick Me Up",
           "Description": "When you revive a teammate, both of you gain temporary health boost",
-          "teamWide": false,
           "icon": "/assets/medic/L6.png",
           "level": 6,
           "isBase": false,
@@ -721,7 +643,6 @@
         {
           "Name": "Big Pharma",
           "Description": "Max number of Stim Pistol charges increased to 4 [base: 3 charges]",
-          "teamWide": false,
           "icon": "/assets/medic/L7.png",
           "level": 7,
           "isBase": false,
@@ -730,7 +651,6 @@
         {
           "Name": "Painkiller",
           "Description": "Stim Pistol gives 25% more temporary health and its effects last 50% longer",
-          "teamWide": false,
           "icon": "/assets/medic/L8.png",
           "level": 8,
           "isBase": false,
@@ -739,7 +659,6 @@
         {
           "Name": "Empathy",
           "Description": "Using the Stim Pistol on a teammate will also apply 50% of its effect to you",
-          "teamWide": false,
           "icon": "/assets/medic/L9.png",
           "level": 9,
           "isBase": false,
@@ -748,7 +667,6 @@
         {
           "Name": "Tenacity",
           "Description": "All incapacitated team members will stay alive for 30% longer (base: 40 seconds)",
-          "teamWide": false,
           "icon": "/assets/medic/L10.png",
           "level": 10,
           "isBase": true,
@@ -757,7 +675,6 @@
         {
           "Name": "Triage II",
           "Description": "Apply Medkits 25% faster [base: 4 seconds]",
-          "teamWide": false,
           "icon": "/assets/medic/P2.png",
           "level": 0,
           "isBase": true,
@@ -766,7 +683,6 @@
         {
           "Name": "Bounty Hunter",
           "Description": "Deal 25% more damage to special zombies",
-          "teamWide": false,
           "icon": "/assets/medic/L11.png",
           "level": 11,
           "isBase": false,
@@ -775,7 +691,6 @@
         {
           "Name": "Wheatgrass",
           "Description": "Health increased by 25%",
-          "teamWide": false,
           "icon": "/assets/medic/L12.png",
           "level": 12,
           "isBase": false,
@@ -784,7 +699,6 @@
         {
           "Name": "Navy Seal",
           "Description": "Start with SMG TMP5",
-          "teamWide": false,
           "icon": "/assets/medic/L13.png",
           "level": 13,
           "isBase": false,
@@ -793,7 +707,6 @@
         {
           "Name": "Efficiency",
           "Description": "30% chance of using a Medkit without depleting your supply",
-          "teamWide": false,
           "icon": "/assets/medic/L14.png",
           "level": 14,
           "isBase": false,
@@ -802,7 +715,6 @@
         {
           "Name": "Good Karma",
           "Description": "Using Medkit on a teammate will also apply 50% of its effect to you",
-          "teamWide": false,
           "icon": "/assets/medic/L15.png",
           "level": 15,
           "isBase": false,
@@ -811,7 +723,6 @@
         {
           "Name": "Combat Medic",
           "Description": "Kill 15 zombies in rapid succession gives 50% chance to receive a Medkit (cooldown 180 seconds)",
-          "teamWide": false,
           "icon": "/assets/medic/L16.png",
           "level": 16,
           "isBase": false,
@@ -820,7 +731,6 @@
         {
           "Name": "Free Hugs",
           "Description": "25% chance of using the Stim Pistol without depleting its charge",
-          "teamWide": false,
           "icon": "/assets/medic/L17.png",
           "level": 17,
           "isBase": false,
@@ -829,7 +739,6 @@
         {
           "Name": "Pickpocket",
           "Description": "Killing 15 zombies in rapid succession refills one equipment charge (cooldown 20 seconds)",
-          "teamWide": false,
           "icon": "/assets/medic/L18.png",
           "level": 18,
           "isBase": false,
@@ -838,7 +747,6 @@
         {
           "Name": "I'll Take That",
           "Description": "Killing a special zombie restores one equipment charge (cooldown 30 seconds)",
-          "teamWide": false,
           "icon": "/assets/medic/L19.png",
           "level": 19,
           "isBase": false,
@@ -847,7 +755,6 @@
         {
           "Name": "Fighting Chance",
           "Description": "Using the Stim Pistol on a teammate who is pinned will get them to their feet",
-          "teamWide": false,
           "icon": "/assets/medic/L20.png",
           "level": 20,
           "isBase": true,
@@ -856,7 +763,6 @@
         {
           "Name": "Remote Healthcare",
           "Description": "Stim Pistol range increased by 25%",
-          "teamWide": false,
           "icon": "/assets/medic/P3.png",
           "level": 0,
           "isBase": true,
@@ -865,7 +771,6 @@
         {
           "Name": "Forgive and Forget",
           "Description": "Friendly fire damage reduced by 25% for all team members",
-          "teamWide": false,
           "icon": "/assets/medic/L21.png",
           "level": 21,
           "isBase": false,
@@ -874,7 +779,6 @@
         {
           "Name": "In the Zone",
           "Description": "Using a Stim Pistol or Medkit adds a 50% firearm damage boost for 10 seconds",
-          "teamWide": false,
           "icon": "/assets/medic/L22.png",
           "level": 22,
           "isBase": false,
@@ -883,7 +787,6 @@
         {
           "Name": "Fighting Fit",
           "Description": "Firearm damage increased by 25% when your whole team have more than 50% health",
-          "teamWide": false,
           "icon": "/assets/medic/L23.png",
           "level": 23,
           "isBase": false,
@@ -892,7 +795,6 @@
         {
           "Name": "Battle Surgeon",
           "Description": "Stim Pistol heals 10% of health in addition to the boost effect",
-          "teamWide": false,
           "icon": "/assets/medic/L24.png",
           "level": 24,
           "isBase": false,
@@ -901,7 +803,6 @@
         {
           "Name": "Emergency Rescue",
           "Description": "When your health drops below 25%, you gain temporary health (cooldown 180 seconds)",
-          "teamWide": false,
           "icon": "/assets/medic/L25.png",
           "level": 25,
           "isBase": false,
@@ -910,7 +811,6 @@
         {
           "Name": "Secret Ingredient",
           "Description": "Stim Pistol grants additional masking effect lasting 5 seconds",
-          "teamWide": false,
           "icon": "/assets/medic/L26.png",
           "level": 26,
           "isBase": false,
@@ -919,7 +819,6 @@
         {
           "Name": "Lobotomy",
           "Description": "Restore 2 rounds in magazine for each headshot made with SMG",
-          "teamWide": false,
           "icon": "/assets/medic/L27.png",
           "level": 27,
           "isBase": false,
@@ -928,7 +827,6 @@
         {
           "Name": "Swapping Mags!",
           "Description": "SMGs' reload speed increased by 25%",
-          "teamWide": false,
           "icon": "/assets/medic/L28.png",
           "level": 28,
           "isBase": false,
@@ -937,7 +835,6 @@
         {
           "Name": "Adrenaline",
           "Description": "Reload speed increased by 50% when health is below 35%",
-          "teamWide": false,
           "icon": "/assets/medic/L29.png",
           "level": 29,
           "isBase": false,
@@ -946,7 +843,6 @@
         {
           "Name": "Doctor's Bag",
           "Description": "Medkits used by you and your teammates restore 10% more health",
-          "teamWide": false,
           "icon": "/assets/medic/L30.png",
           "level": 30,
           "isBase": true,
@@ -955,7 +851,6 @@
         {
           "Name": "Navy Seal II",
           "Description": "SMG range increased by 25%",
-          "teamWide": false,
           "icon": "/assets/medic/P4.png",
           "level": 0,
           "isBase": true,
@@ -970,7 +865,6 @@
         {
           "Name": "Mule",
           "Description": "Start with a Supply Bag and Scout Rifle. Increase carried ammo capacity for primary and secondary weapons by 10% for all teammates",
-          "teamWide": false,
           "icon": "/assets/fixer/L0.png",
           "level": 0,
           "isBase": true,
@@ -979,7 +873,6 @@
         {
           "Name": "Knock Knock II",
           "Description": "10% chance of using Breaching Charge without spending it",
-          "teamWide": false,
           "icon": "/assets/fixer/P1.png",
           "level": 0,
           "isBase": true,
@@ -988,7 +881,6 @@
         {
           "Name": "Kickback",
           "Description": "When a teammate uses your Supply Bag there is a 20% chance you will also gain explosive ammo",
-          "teamWide": false,
           "icon": "/assets/fixer/L1.png",
           "level": 1,
           "isBase": false,
@@ -997,7 +889,6 @@
         {
           "Name": "Armory",
           "Description": "Using a Supply Bag gives a 20% chance to restore one equipment charge. But the bag owner can only restore his equipment when someone else gains this benefit from his bag",
-          "teamWide": false,
           "icon": "/assets/fixer/L2.png",
           "level": 2,
           "isBase": false,
@@ -1006,7 +897,6 @@
         {
           "Name": "Stand by Me",
           "Description": "Increases firearm damage by 100% for 10 seconds when reviving or unpinning a teammate",
-          "teamWide": false,
           "icon": "/assets/fixer/L3.png",
           "level": 3,
           "isBase": false,
@@ -1015,7 +905,6 @@
         {
           "Name": "Night Owl",
           "Description": "Masking Grenades grant an additional temporary health boost. Start with Masking Grenades",
-          "teamWide": false,
           "icon": "/assets/fixer/L4.png",
           "level": 4,
           "isBase": false,
@@ -1024,7 +913,6 @@
         {
           "Name": "Side Effects",
           "Description": "Masking Grenade gas is lethal to zombies. Start with Masking Grenades",
-          "teamWide": false,
           "icon": "/assets/fixer/L5.png",
           "level": 5,
           "isBase": false,
@@ -1033,7 +921,6 @@
         {
           "Name": "Give 'em Hell",
           "Description": "Reviving a teammate grants explosive ammo for both of you",
-          "teamWide": false,
           "icon": "/assets/fixer/L6.png",
           "level": 6,
           "isBase": false,
@@ -1042,7 +929,6 @@
         {
           "Name": "Knock Knock",
           "Description": "You start with a Breaching Charge",
-          "teamWide": false,
           "icon": "/assets/fixer/L7.png",
           "level": 7,
           "isBase": false,
@@ -1051,7 +937,6 @@
         {
           "Name": "Paramedic",
           "Description": "Revive speed increased by 100%",
-          "teamWide": false,
           "icon": "/assets/fixer/L8.png",
           "level": 8,
           "isBase": false,
@@ -1060,7 +945,6 @@
         {
           "Name": "Cloakroom",
           "Description": "Reviving a teammate grants masking effect for 3 seconds for both of you",
-          "teamWide": false,
           "icon": "/assets/fixer/L9.png",
           "level": 9,
           "isBase": false,
@@ -1069,7 +953,6 @@
         {
           "Name": "Please Stand Up",
           "Description": "If everyone in a team is incapacitated or pinned by a zombie then the Fixer is able to stand up (cooldown 60 seconds)",
-          "teamWide": false,
           "icon": "/assets/fixer/L10.png",
           "level": 10,
           "isBase": true,
@@ -1078,7 +961,6 @@
         {
           "Name": "Paramedic II",
           "Description": "Revive speed increased by 25%",
-          "teamWide": false,
           "icon": "/assets/fixer/P2.png",
           "level": 0,
           "isBase": true,
@@ -1087,7 +969,6 @@
         {
           "Name": "My Round I",
           "Description": "Increase carried ammo capacity for primary and secondary weapons by 10% for you and all teammates",
-          "teamWide": false,
           "icon": "/assets/fixer/L11.png",
           "level": 11,
           "isBase": false,
@@ -1096,7 +977,6 @@
         {
           "Name": "Wheatgrass",
           "Description": "Health increased by 25%",
-          "teamWide": false,
           "icon": "/assets/fixer/L12.png",
           "level": 12,
           "isBase": false,
@@ -1105,7 +985,6 @@
         {
           "Name": "Gunner",
           "Description": "Start with Sporting Carbine Pac-15",
-          "teamWide": false,
           "icon": "/assets/fixer/L13.png",
           "level": 13,
           "isBase": false,
@@ -1114,7 +993,6 @@
         {
           "Name": "One for the Road",
           "Description": "Max Masking Grenade and Supply Bag capacity increased to 2. However Masking Grenade effect duration decreased by 3 seconds and Supply Bag contains 25% less explosive ammo",
-          "teamWide": false,
           "icon": "/assets/fixer/L14.png",
           "level": 14,
           "isBase": false,
@@ -1123,7 +1001,6 @@
         {
           "Name": "Pickpocket",
           "Description": "Kill 15 zombies in rapid succession refills one equipment charge (cooldown 90 seconds)",
-          "teamWide": false,
           "icon": "/assets/fixer/L15.png",
           "level": 15,
           "isBase": false,
@@ -1132,7 +1009,6 @@
         {
           "Name": "Scavenger",
           "Description": "Killing special zombie restores one equipment charge (cooldown 90 seconds)",
-          "teamWide": false,
           "icon": "/assets/fixer/L16.png",
           "level": 16,
           "isBase": false,
@@ -1141,7 +1017,6 @@
         {
           "Name": "Instant Replay",
           "Description": "Anyone that uses your supply bag restores 20% of their primary weapon ammunition (base 10%)",
-          "teamWide": false,
           "icon": "/assets/fixer/L17.png",
           "level": 17,
           "isBase": false,
@@ -1150,7 +1025,6 @@
         {
           "Name": "Under the Table",
           "Description": "Anyone entering Masking Grenade gas cloud restores 10% of primary weapon ammo",
-          "teamWide": false,
           "icon": "/assets/fixer/L18.png",
           "level": 18,
           "isBase": false,
@@ -1159,7 +1033,6 @@
         {
           "Name": "Go Get 'Em",
           "Description": "Reviving a teammate will restore 25% of primary weapon's ammunition for you and your teammate",
-          "teamWide": false,
           "icon": "/assets/fixer/L19.png",
           "level": 19,
           "isBase": false,
@@ -1168,7 +1041,6 @@
         {
           "Name": "Efficiency",
           "Description": "Supply bag contains 25% more explosive ammo. Masking grenade effect duration increased by 2 seconds",
-          "teamWide": false,
           "icon": "/assets/fixer/L20.png",
           "level": 20,
           "isBase": true,
@@ -1177,7 +1049,6 @@
         {
           "Name": "My Round III",
           "Description": "Carried ammo capacity increased for primary and secondary weapons by 5% for you and all teammates",
-          "teamWide": false,
           "icon": "/assets/fixer/P3.png",
           "level": 0,
           "isBase": true,
@@ -1186,7 +1057,6 @@
         {
           "Name": "Lightning Hands",
           "Description": "All semi automatic rifles’ reload speed increased by 25%",
-          "teamWide": false,
           "icon": "/assets/fixer/L21.png",
           "level": 21,
           "isBase": false,
@@ -1195,7 +1065,6 @@
         {
           "Name": "Power Shot",
           "Description": "All semi automatic rifles gain increased penetration",
-          "teamWide": false,
           "icon": "/assets/fixer/L22.png",
           "level": 22,
           "isBase": false,
@@ -1204,7 +1073,6 @@
         {
           "Name": "Casull 6",
           "Description": "Start with a Casull 6 in your secondary weapon slot",
-          "teamWide": false,
           "icon": "/assets/fixer/L23.png",
           "level": 23,
           "isBase": false,
@@ -1213,7 +1081,6 @@
         {
           "Name": "Fourth of July",
           "Description": "Your Supply Bag can be used 1 more time(s) before depleting (base 4 uses)",
-          "teamWide": false,
           "icon": "/assets/fixer/L24.png",
           "level": 24,
           "isBase": false,
@@ -1222,7 +1089,6 @@
         {
           "Name": "Shadow Walker",
           "Description": "Masking Grenade effect duration increased by 2 seconds (base 6 seconds)",
-          "teamWide": false,
           "icon": "/assets/fixer/L25.png",
           "level": 25,
           "isBase": false,
@@ -1231,7 +1097,6 @@
         {
           "Name": "Darkness Falls",
           "Description": "Masking Grenade gas cloud duration is increased by 7 seconds (base 5 seconds)",
-          "teamWide": false,
           "icon": "/assets/fixer/L26.png",
           "level": 26,
           "isBase": false,
@@ -1240,7 +1105,6 @@
         {
           "Name": "My Round II",
           "Description": "Increase carried ammo capacity for heavy weapons by 10% for all teammates",
-          "teamWide": false,
           "icon": "/assets/fixer/L27.png",
           "level": 27,
           "isBase": false,
@@ -1249,7 +1113,6 @@
         {
           "Name": "Bandolier",
           "Description": "Mortar and Stationary machinegun ammo capacity increased by 25% for all team. Durability of defenses increased by 25% for all team [base: 4 Mortar ammo, 200 machinegun ammo]",
-          "teamWide": false,
           "icon": "/assets/fixer/L28.png",
           "level": 28,
           "isBase": false,
@@ -1258,7 +1121,6 @@
         {
           "Name": "The Big Five 0",
           "Description": "Start with improved BF25 Payload Rifle that deals 50% more damage and has 50% more ammo. All BF25 Payload Rifle pickups for you also improved [base: 6 ammo]",
-          "teamWide": false,
           "icon": "/assets/fixer/L29.png",
           "level": 29,
           "isBase": false,
@@ -1267,7 +1129,6 @@
         {
           "Name": "Corporate Power Nap",
           "Description": "Unequipped weapon automatically reloads every 10 seconds for all teammates",
-          "teamWide": false,
           "icon": "/assets/fixer/L30.png",
           "level": 30,
           "isBase": true,
@@ -1276,7 +1137,6 @@
         {
           "Name": "Bounty Hunter",
           "Description": "Deal 10% more damage to special zombies",
-          "teamWide": false,
           "icon": "/assets/fixer/P4.png",
           "level": 0,
           "isBase": true,
@@ -1291,7 +1151,6 @@
         {
           "Name": "Shock Troops",
           "Description": "Start with Stun Gun and Compact SMG. Melee strikes damage two targets and do twice more damage when you're not tired. Melee attacks are not slower when tired",
-          "teamWide": false,
           "icon": "/assets/slasher/L0.png",
           "level": 0,
           "isBase": true,
@@ -1300,7 +1159,6 @@
         {
           "Name": "Juiced Up II",
           "Description": "Stun Gun effect duration increased by 15%",
-          "teamWide": false,
           "icon": "/assets/slasher/P1.png",
           "level": 0,
           "isBase": true,
@@ -1309,7 +1167,6 @@
         {
           "Name": "Crowd Control",
           "Description": "Push radius from melee attacks increased by 50%",
-          "teamWide": false,
           "icon": "/assets/slasher/L1.png",
           "level": 1,
           "isBase": false,
@@ -1318,7 +1175,6 @@
         {
           "Name": "All Elbows",
           "Description": "Movement speed penalty when zombies are very close reduced by 100%",
-          "teamWide": false,
           "icon": "/assets/slasher/L2.png",
           "level": 2,
           "isBase": false,
@@ -1327,7 +1183,6 @@
         {
           "Name": "Rooted",
           "Description": "You can never be pinned down by usual zombies (does not affect special zombies)",
-          "teamWide": false,
           "icon": "/assets/slasher/L3.png",
           "level": 3,
           "isBase": false,
@@ -1336,7 +1191,6 @@
         {
           "Name": "Juiced Up",
           "Description": "Stun Gun effect duration increased by 100%",
-          "teamWide": false,
           "icon": "/assets/slasher/L4.png",
           "level": 4,
           "isBase": false,
@@ -1345,7 +1199,6 @@
         {
           "Name": "Zeus",
           "Description": "Increase Stun Gun range by 50% and target count to 20 (base range: 12 m, base target count: 15)",
-          "teamWide": false,
           "icon": "/assets/slasher/L5.png",
           "level": 5,
           "isBase": false,
@@ -1354,7 +1207,6 @@
         {
           "Name": "High Voltage",
           "Description": "Stun Gun damage Increased by 150%",
-          "teamWide": false,
           "icon": "/assets/slasher/L6.png",
           "level": 6,
           "isBase": false,
@@ -1363,7 +1215,6 @@
         {
           "Name": "Bullet-dodger",
           "Description": "Take 100% less friendly fire from bullets while performing melee attacks",
-          "teamWide": false,
           "icon": "/assets/slasher/L7.png",
           "level": 7,
           "isBase": false,
@@ -1372,7 +1223,6 @@
         {
           "Name": "Nimble",
           "Description": "Take 50% less damage while performing melee attacks",
-          "teamWide": false,
           "icon": "/assets/slasher/L8.png",
           "level": 8,
           "isBase": false,
@@ -1381,7 +1231,6 @@
         {
           "Name": "With My Last Breath",
           "Description": "Melee strikes damage 2 more targets when health is below 35%",
-          "teamWide": false,
           "icon": "/assets/slasher/L9.png",
           "level": 9,
           "isBase": false,
@@ -1390,7 +1239,6 @@
         {
           "Name": "Slice and Dice",
           "Description": "You and all teammates can perform more melee strikes (+2) before becoming tired",
-          "teamWide": false,
           "icon": "/assets/slasher/L10.png",
           "level": 10,
           "isBase": true,
@@ -1399,7 +1247,6 @@
         {
           "Name": "Zeus II",
           "Description": "Increase Stun Gun range by 15% [base: 12 meters]",
-          "teamWide": false,
           "icon": "/assets/slasher/P2.png",
           "level": 0,
           "isBase": true,
@@ -1408,7 +1255,6 @@
         {
           "Name": "Trophy Hunter",
           "Description": "Deal 25% more damage to special zombies",
-          "teamWide": false,
           "icon": "/assets/slasher/L11.png",
           "level": 11,
           "isBase": false,
@@ -1417,7 +1263,6 @@
         {
           "Name": "Wheatgrass",
           "Description": "Health increased by 25%",
-          "teamWide": false,
           "icon": "/assets/slasher/L12.png",
           "level": 12,
           "isBase": false,
@@ -1426,7 +1271,6 @@
         {
           "Name": "Silent Killer",
           "Description": "Start with a TMP5 SMG with silencer upgrade",
-          "teamWide": false,
           "icon": "/assets/slasher/L13.png",
           "level": 13,
           "isBase": false,
@@ -1435,7 +1279,6 @@
         {
           "Name": "Vigour",
           "Description": "Killing 10 zombies in rapid succession with a melee weapon grants temporary health boost (cooldown 30 seconds)",
-          "teamWide": false,
           "icon": "/assets/slasher/L14.png",
           "level": 14,
           "isBase": false,
@@ -1444,7 +1287,6 @@
         {
           "Name": "Cloak and Dagger",
           "Description": "Killing 10 zombies in rapid succession with a melee weapon grants a masking effect (cooldown 30 seconds)",
-          "teamWide": false,
           "icon": "/assets/slasher/L15.png",
           "level": 15,
           "isBase": false,
@@ -1453,7 +1295,6 @@
         {
           "Name": "Third Hand",
           "Description": "Killing 5 zombies with melee strikes in rapid succession instantly reloads your primary weapon",
-          "teamWide": false,
           "icon": "/assets/slasher/L16.png",
           "level": 16,
           "isBase": false,
@@ -1462,7 +1303,6 @@
         {
           "Name": "Heavy Metal I",
           "Description": "Starts with improved Forrest Warrior Chainsaw deals 50% more damage and has 50% more fuel. All Forest Warrior Chainsaw pickups for you also improved [base: 8 fuel]",
-          "teamWide": false,
           "icon": "/assets/slasher/L17.png",
           "level": 17,
           "isBase": false,
@@ -1471,7 +1311,6 @@
         {
           "Name": "Heavy Metal II",
           "Description": "Starts with improved Taiga-12 Heavy Assault Shotgun that deals 25% more damage and has 25% more ammo. All Taiga-12 Heavy Assault Shotgun pickups for you also improved [base: 50 ammo]",
-          "teamWide": false,
           "icon": "/assets/slasher/L18.png",
           "level": 18,
           "isBase": false,
@@ -1480,7 +1319,6 @@
         {
           "Name": "Battle Cry",
           "Description": "Automatically stand up from being pinned after 5 seconds",
-          "teamWide": false,
           "icon": "/assets/slasher/L19.png",
           "level": 19,
           "isBase": false,
@@ -1489,7 +1327,6 @@
         {
           "Name": "Executioner",
           "Description": "Perform 1 more melee strike before becoming tired. Melee damage increased by 50%",
-          "teamWide": false,
           "icon": "/assets/slasher/L20.png",
           "level": 20,
           "isBase": true,
@@ -1498,7 +1335,6 @@
         {
           "Name": "Executioner III",
           "Description": "Perform 1 more melee strike before becoming tired",
-          "teamWide": false,
           "icon": "/assets/slasher/P3.png",
           "level": 0,
           "isBase": true,
@@ -1507,7 +1343,6 @@
         {
           "Name": "Shock Therapy",
           "Description": "You will not become fatigued when melee attacking zombies electrified by the Stun Gun",
-          "teamWide": false,
           "icon": "/assets/slasher/L21.png",
           "level": 21,
           "isBase": false,
@@ -1516,7 +1351,6 @@
         {
           "Name": "Samurai",
           "Description": "Killing 15 zombies in rapid succession allows you to hit 1 more target per melee strike for 10 seconds",
-          "teamWide": false,
           "icon": "/assets/slasher/L22.png",
           "level": 22,
           "isBase": false,
@@ -1525,7 +1359,6 @@
         {
           "Name": "Bloodlust",
           "Description": "Killing special zombies with a melee weapon will increase firearm damage by 100% for 15 seconds",
-          "teamWide": false,
           "icon": "/assets/slasher/L23.png",
           "level": 23,
           "isBase": false,
@@ -1534,7 +1367,6 @@
         {
           "Name": "Spare Batteries",
           "Description": "Max capacity for Stun Gun charges increased to 4 [base: 83 charges]",
-          "teamWide": false,
           "icon": "/assets/slasher/L24.png",
           "level": 24,
           "isBase": false,
@@ -1543,7 +1375,6 @@
         {
           "Name": "Pickpocket",
           "Description": "Killing 15 zombies in rapid succession refills one equipment charge (cooldown 60 seconds)",
-          "teamWide": false,
           "icon": "/assets/slasher/L25.png",
           "level": 25,
           "isBase": false,
@@ -1552,7 +1383,6 @@
         {
           "Name": "Loan Shark",
           "Description": "Killing a special zombie gives a 50% chance to restore one charge to your equipment",
-          "teamWide": false,
           "icon": "/assets/slasher/L26.png",
           "level": 26,
           "isBase": false,
@@ -1561,7 +1391,6 @@
         {
           "Name": "Flash Sale",
           "Description": "Using the Stun Gun restores 1% of your primary weapon's ammunition for every target you stun.",
-          "teamWide": false,
           "icon": "/assets/slasher/L27.png",
           "level": 27,
           "isBase": false,
@@ -1570,7 +1399,6 @@
         {
           "Name": "Swapping Mags!",
           "Description": "SMGs' reload speed is increased by 25%",
-          "teamWide": false,
           "icon": "/assets/slasher/L28.png",
           "level": 28,
           "isBase": false,
@@ -1579,7 +1407,6 @@
         {
           "Name": "Adrenaline",
           "Description": "Reload speed increased by 50% when health is below 35%",
-          "teamWide": false,
           "icon": "/assets/slasher/L29.png",
           "level": 29,
           "isBase": false,
@@ -1588,7 +1415,6 @@
         {
           "Name": "Blade Master",
           "Description": "Melee strikes damage 1 more target",
-          "teamWide": false,
           "icon": "/assets/slasher/L30.png",
           "level": 30,
           "isBase": true,
@@ -1597,7 +1423,6 @@
         {
           "Name": "Nimble II",
           "Description": "Take 10% less damage while performing melee attacks",
-          "teamWide": false,
           "icon": "/assets/slasher/P4.png",
           "level": 0,
           "isBase": true,
@@ -1612,7 +1437,6 @@
         {
           "Name": "Firestarter",
           "Description": "Start with Molotov and Shotgun. You deal 25% more damage during swarm attacks",
-          "teamWide": false,
           "icon": "/assets/exterminator/L0.png",
           "level": 0,
           "isBase": true,
@@ -1621,7 +1445,6 @@
         {
           "Name": "Wheatgrass II",
           "Description": "Health increased by 5%",
-          "teamWide": false,
           "icon": "/assets/exterminator/P1.png",
           "level": 0,
           "isBase": true,
@@ -1630,7 +1453,6 @@
         {
           "Name": "Pyromaniac",
           "Description": "Molotov's fire damage increased by 50%",
-          "teamWide": false,
           "icon": "/assets/exterminator/L1.png",
           "level": 1,
           "isBase": false,
@@ -1639,7 +1461,6 @@
         {
           "Name": "Hangover",
           "Description": "Molotovs burn 75% longer",
-          "teamWide": false,
           "icon": "/assets/exterminator/L2.png",
           "level": 2,
           "isBase": false,
@@ -1648,7 +1469,6 @@
         {
           "Name": "Crowd Control",
           "Description": "Push radius from melee attacks increased by 50%",
-          "teamWide": false,
           "icon": "/assets/exterminator/L3.png",
           "level": 3,
           "isBase": false,
@@ -1657,7 +1477,6 @@
         {
           "Name": "Rage Mode",
           "Description": "When pinned down by usual or special zombies you will automatically rise up and push your attackers back (cooldown 300 seconds)",
-          "teamWide": false,
           "icon": "/assets/exterminator/L4.png",
           "level": 4,
           "isBase": false,
@@ -1666,7 +1485,6 @@
         {
           "Name": "All Elbows",
           "Description": "Movement speed penalty when zombies are very close reduced by 100%",
-          "teamWide": false,
           "icon": "/assets/exterminator/L5.png",
           "level": 5,
           "isBase": false,
@@ -1675,7 +1493,6 @@
         {
           "Name": "Rooted",
           "Description": "You can never be pinned down by usual zombies (does not affect special zombies)",
-          "teamWide": false,
           "icon": "/assets/exterminator/L6.png",
           "level": 6,
           "isBase": false,
@@ -1684,7 +1501,6 @@
         {
           "Name": "Dragon Hide",
           "Description": "Fire resistance increased by 100%",
-          "teamWide": false,
           "icon": "/assets/exterminator/L7.png",
           "level": 7,
           "isBase": false,
@@ -1693,7 +1509,6 @@
         {
           "Name": "Heavy Metal",
           "Description": "Start with improved RPGL4 that deals 100% more damage. All RPGL4 pickups for you also improved",
-          "teamWide": false,
           "icon": "/assets/exterminator/L8.png",
           "level": 8,
           "isBase": false,
@@ -1702,7 +1517,6 @@
         {
           "Name": "Heavy Metal II",
           "Description": "Start with improved Taiga-12 Heavy Assault Shotgun that deals 25% more damage, and has 25% more ammo. All Taiga-12 Heavy Assault Shotgun pickups for you also improved",
-          "teamWide": false,
           "icon": "/assets/exterminator/L9.png",
           "level": 9,
           "isBase": false,
@@ -1710,8 +1524,7 @@
         },
         {
           "Name": "Bandolier",
-          "Description": "Mortar and Stationary machinegun ammo capacity increased by 25% for all team. Durability of defenses increased by 25% for all team",
-          "teamWide": false,
+          "Description": "Mortar and Stationary machinegun ammo capacity increased by 25% for all team. Durability of defenses increased by 25% for all teammates",
           "icon": "/assets/exterminator/L10.png",
           "level": 10,
           "isBase": true,
@@ -1720,7 +1533,6 @@
         {
           "Name": "Bullet Rain II",
           "Description": "Shotgun and semi automatic weapons reload speed increased by 10%",
-          "teamWide": false,
           "icon": "/assets/exterminator/P2.png",
           "level": 0,
           "isBase": true,
@@ -1729,7 +1541,6 @@
         {
           "Name": "Deep Pockets",
           "Description": "Carried ammo capacity for primary and secondary weapons increased by 25%",
-          "teamWide": false,
           "icon": "/assets/exterminator/L11.png",
           "level": 11,
           "isBase": false,
@@ -1738,7 +1549,6 @@
         {
           "Name": "Wheatgrass",
           "Description": "Health increased by 25%",
-          "teamWide": false,
           "icon": "/assets/exterminator/L12.png",
           "level": 12,
           "isBase": false,
@@ -1747,7 +1557,6 @@
         {
           "Name": "Rifleman",
           "Description": "Start with ARK-103 Assault Rifle",
-          "teamWide": false,
           "icon": "/assets/exterminator/L13.png",
           "level": 13,
           "isBase": false,
@@ -1756,7 +1565,6 @@
         {
           "Name": "Green Fingered",
           "Description": "Your Claymores are rigged to explode only when there are at least 5 targets in the blast area. Start with Claymore",
-          "teamWide": false,
           "icon": "/assets/exterminator/L14.png",
           "level": 14,
           "isBase": false,
@@ -1765,7 +1573,6 @@
         {
           "Name": "Fire Trap",
           "Description": "Claymore explosions set fire to surrounding area. Start with Claymore",
-          "teamWide": false,
           "icon": "/assets/exterminator/L15.png",
           "level": 15,
           "isBase": false,
@@ -1774,7 +1581,6 @@
         {
           "Name": "Combat Engineer",
           "Description": "20% chance to restore an expended Defense Kit. (10% for Horde Mode)",
-          "teamWide": false,
           "icon": "/assets/exterminator/L16.png",
           "level": 16,
           "isBase": false,
@@ -1783,7 +1589,6 @@
         {
           "Name": "Second Wind",
           "Description": "Instead of becoming incapacitated you will regain 25% health and keep going (cooldown 120 seconds)",
-          "teamWide": false,
           "icon": "/assets/exterminator/L17.png",
           "level": 17,
           "isBase": false,
@@ -1792,7 +1597,6 @@
         {
           "Name": "Job Satisfaction",
           "Description": "Killing 15 zombies in rapid succession grants temporary health boost (cooldown 30 seconds)",
-          "teamWide": false,
           "icon": "/assets/exterminator/L18.png",
           "level": 18,
           "isBase": false,
@@ -1801,7 +1605,6 @@
         {
           "Name": "Cloak and Dagger",
           "Description": "Killing 15 zombies in rapid succession grants masking effect for 3 seconds",
-          "teamWide": false,
           "icon": "/assets/exterminator/L19.png",
           "level": 19,
           "isBase": false,
@@ -1810,7 +1613,6 @@
         {
           "Name": "Hollywood II",
           "Description": "Explosives and fire damage dealt to yourself and your teammates reduced by 50%",
-          "teamWide": false,
           "icon": "/assets/exterminator/L20.png",
           "level": 20,
           "isBase": true,
@@ -1819,7 +1621,6 @@
         {
           "Name": "Know-How II",
           "Description": "Molotovs and Claymores can kill 10% more targets",
-          "teamWide": false,
           "icon": "/assets/exterminator/P3.png",
           "level": 0,
           "isBase": true,
@@ -1828,7 +1629,6 @@
         {
           "Name": "Broad Shoulders",
           "Description": "Heavy weapon ammo capacity increased by 25%",
-          "teamWide": false,
           "icon": "/assets/exterminator/L21.png",
           "level": 21,
           "isBase": false,
@@ -1837,7 +1637,6 @@
         {
           "Name": "Bullet Rain",
           "Description": "All fully automatic weapons' reload speed increased by 25%",
-          "teamWide": false,
           "icon": "/assets/exterminator/L22.png",
           "level": 22,
           "isBase": false,
@@ -1846,7 +1645,6 @@
         {
           "Name": "Third Hand",
           "Description": "Killing 15 zombies in rapid succession instantly reloads your primary weapon",
-          "teamWide": false,
           "icon": "/assets/exterminator/L23.png",
           "level": 23,
           "isBase": false,
@@ -1855,7 +1653,6 @@
         {
           "Name": "Party at my Place",
           "Description": "Maximum Molotov capacity increased to 3 and Claymore capacity to 4",
-          "teamWide": false,
           "icon": "/assets/exterminator/L24.png",
           "level": 24,
           "isBase": false,
@@ -1864,7 +1661,6 @@
         {
           "Name": "Pickpocket",
           "Description": "Killing 15 zombies in rapid succession refills one equipment charge (cooldown 60 seconds)",
-          "teamWide": false,
           "icon": "/assets/exterminator/L25.png",
           "level": 25,
           "isBase": false,
@@ -1873,7 +1669,6 @@
         {
           "Name": "Pocket Factory",
           "Description": "You won't be able to pick equipment bags on the mission but your equipment will be constantly regenerating (150 seconds to replenish to maximum)",
-          "teamWide": false,
           "icon": "/assets/exterminator/L26.png",
           "level": 26,
           "isBase": false,
@@ -1882,7 +1677,6 @@
         {
           "Name": "Know-How",
           "Description": "Molotovs and Claymores can kill 25% more targets",
-          "teamWide": false,
           "icon": "/assets/exterminator/L27.png",
           "level": 27,
           "isBase": false,
@@ -1891,7 +1685,6 @@
         {
           "Name": "Hot Sauce",
           "Description": "Molotov's splash damage increased by 100%",
-          "teamWide": false,
           "icon": "/assets/exterminator/L28.png",
           "level": 28,
           "isBase": false,
@@ -1900,7 +1693,6 @@
         {
           "Name": "Ghost",
           "Description": "Automatically receive masking effect if you are the last of your team still standing (does not apply if you are incapacitated or pinned)",
-          "teamWide": false,
           "icon": "/assets/exterminator/L29.png",
           "level": 29,
           "isBase": false,
@@ -1909,7 +1701,6 @@
         {
           "Name": "Daredevil",
           "Description": "When there are more than 30 zombies in the area, firearm damage is increased by 25% and number of melee strikes before becoming fatigued increased by 2",
-          "teamWide": false,
           "icon": "/assets/exterminator/L30.png",
           "level": 30,
           "isBase": true,
@@ -1918,7 +1709,6 @@
         {
           "Name": "Deep Pockets II",
           "Description": "Carried ammo capacity for primary weapons increased by 10%",
-          "teamWide": false,
           "icon": "/assets/exterminator/P4.png",
           "level": 0,
           "isBase": true,
@@ -1933,7 +1723,6 @@
         {
           "Name": "Flying Start",
           "Description": "Start with a Scout Rifle and Quadrocopter that will stun single zombies at short range. 12 shots per full charge but stunning a special zombie costs 5 shots",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L0.png",
           "level": 0,
           "isBase": true,
@@ -1942,7 +1731,6 @@
         {
           "Name": "Ammo Drop",
           "Description": "Person being followed regains 10% of primary ammo when Quadrocopter is depleted",
-          "teamWide": false,
           "icon": "/assets/dronemaster/P1.png",
           "level": 0,
           "isBase": true,
@@ -1951,7 +1739,6 @@
         {
           "Name": "Go The Distance",
           "Description": "Quadrocopter charge (the number of stun shots or kills the Quadrocopter can perform) is increased by 15%",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L1.png",
           "level": 1,
           "isBase": false,
@@ -1960,7 +1747,6 @@
         {
           "Name": "Take a Load Off",
           "Description": "Quadrocopter's charge increased by 30%, but you carry 20% less ammo for primary and secondary weapons",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L2.png",
           "level": 2,
           "isBase": false,
@@ -1969,7 +1755,6 @@
         {
           "Name": "Longshot",
           "Description": "Quadrocopter's attack range increased by 100% (base: 2 meters for stun gun, 15 meters for pistol)",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L3.png",
           "level": 3,
           "isBase": false,
@@ -1978,7 +1763,6 @@
         {
           "Name": "Silent Stinger",
           "Description": "Your Quadrocopter will be equipped with a silenced pistol and will attack zombies in a 15 meter radius. 15 kills per full charge",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L4.png",
           "level": 4,
           "isBase": false,
@@ -1987,7 +1771,6 @@
         {
           "Name": "Firecracker",
           "Description": "Your Quadrocopter will be equipped with an unsilenced pistol and will attack zombies in a 15 meter radius. Shot damage increased by 100%. 15 kills per full charge",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L5.png",
           "level": 5,
           "isBase": false,
@@ -1996,7 +1779,6 @@
         {
           "Name": "Lightning Storm",
           "Description": "Your Quadrocopter's stun gun's fire rate is increased by 50%",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L6.png",
           "level": 6,
           "isBase": false,
@@ -2005,7 +1787,6 @@
         {
           "Name": "Overdrive",
           "Description": "Tapping \"Use Equipment\" button increases Quadrocopter's rate of fire by 100% for 6 seconds. It cannot be depleted during this time but will be depleted as soon as the effect is over",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L7.png",
           "level": 7,
           "isBase": false,
@@ -2014,7 +1795,6 @@
         {
           "Name": "Well Trained",
           "Description": "Tapping \"Use Equipment\" button toggles active Quadrocopter between \"follow\" and \"stationary\" modes. Quadrocopter damage in stationary mode increased by 50% (applies to both stun gun and handgun versions)",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L8.png",
           "level": 8,
           "isBase": false,
@@ -2023,7 +1803,6 @@
         {
           "Name": "The Big Five 0",
           "Description": "Start with improved BF25 Payload Rifle that deals 50% more damage and has 50% more ammo. All BF25 Payload Rifle pickups for you also improved [base: 6 ammo]",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L9.png",
           "level": 9,
           "isBase": false,
@@ -2032,7 +1811,6 @@
         {
           "Name": "Rechargeable",
           "Description": "Active Quadrocopter will passively restore its charge by 1% per seconds after 5 seconds from its last shot",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L10.png",
           "level": 10,
           "isBase": true,
@@ -2041,7 +1819,6 @@
         {
           "Name": "Unfettered",
           "Description": "Movement speed penalty when zombies are very close reduced by 50% for person followed by your Quadrocopter",
-          "teamWide": false,
           "icon": "/assets/dronemaster/P2.png",
           "level": 0,
           "isBase": true,
@@ -2050,7 +1827,6 @@
         {
           "Name": "Burst Pro",
           "Description": "Reload speed of firearms with burst fire mode increased by 25%",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L11.png",
           "level": 11,
           "isBase": false,
@@ -2059,7 +1835,6 @@
         {
           "Name": "Wheatgrass",
           "Description": "Health increased by 25%",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L12.png",
           "level": 12,
           "isBase": false,
@@ -2068,7 +1843,6 @@
         {
           "Name": "Weapon of Choice",
           "Description": "Start with Le Clairon Bullpup Rifle",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L13.png",
           "level": 13,
           "isBase": false,
@@ -2077,7 +1851,6 @@
         {
           "Name": "Backup Plan",
           "Description": "When you are grabbed, if you have no Quadrocopter following you but have one in your inventory, a Quadrocopter will automatically be launched (cooldown 180 seconds)",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L14.png",
           "level": 14,
           "isBase": false,
@@ -2086,7 +1859,6 @@
         {
           "Name": "Parting Gift",
           "Description": "Receive small amount of temporary health when the Quadrocopter is depleted (applies to the person it's following)",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L15.png",
           "level": 15,
           "isBase": false,
@@ -2095,7 +1867,6 @@
         {
           "Name": "Saving Grace",
           "Description": "If a player followed by a Quadrocopter is hit and about to be incapacitated, the Quadrocopter will grant a masking effect for 6 seconds (cooldown 180 seconds)",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L16.png",
           "level": 16,
           "isBase": false,
@@ -2104,7 +1875,6 @@
         {
           "Name": "Pied Piper",
           "Description": "Holding \"Use Equipment\" button commands Quadrocopter to fly to the point you're aiming at. After it reaches that point it will attract zombies for 5 seconds and will then be depleted",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L17.png",
           "level": 17,
           "isBase": false,
@@ -2113,7 +1883,6 @@
         {
           "Name": "Sharing is Caring",
           "Description": "Holding \"Use Equipment\" button commands Quadrocopter to follow a teammate you're aiming at. You must have a spare Quadrocopter and you can't have more than two Quadrocopters active at the same time",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L18.png",
           "level": 18,
           "isBase": false,
@@ -2122,7 +1891,6 @@
         {
           "Name": "Coming in Hot",
           "Description": "Holding \"Use Equipment\" button commands Quadrocopter to fly to the point you're aiming at and explode there",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L19.png",
           "level": 19,
           "isBase": false,
@@ -2131,7 +1899,6 @@
         {
           "Name": "Payload Power-Up",
           "Description": "Quadrocopter equipped with stun gun can hit 2 targets per shot (base: 1) Each target hit carries a charge cost. Quadrocopter equipped with pistol deals 50% more damage",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L20.png",
           "level": 20,
           "isBase": true,
@@ -2140,7 +1907,6 @@
         {
           "Name": "Spotter",
           "Description": "Firearm damage increased by 15% for person followed by your Quadrocopter",
-          "teamWide": false,
           "icon": "/assets/dronemaster/P3.png",
           "level": 0,
           "isBase": true,
@@ -2149,7 +1915,6 @@
         {
           "Name": "Housekeeping",
           "Description": "Quadrocopter automatically defuses enemy landmines and captures hostile automatic turrets in 10 meters radius",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L21.png",
           "level": 21,
           "isBase": false,
@@ -2158,7 +1923,6 @@
         {
           "Name": "Keep It Down",
           "Description": "Active Quadrocopter will automatically target the Screamer if he's not killed within 20 seconds after his first scream. Quadrocopter will be depleted after the Screamer is dead",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L22.png",
           "level": 22,
           "isBase": false,
@@ -2167,7 +1931,6 @@
         {
           "Name": "Eye In The Sky",
           "Description": "All active special zombies within a radius 14 meters around your Quadrocopter will be automatically marked",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L23.png",
           "level": 23,
           "isBase": false,
@@ -2176,7 +1939,6 @@
         {
           "Name": "Pocket Factory",
           "Description": "You won't be able to pick equipment bags on the mission but your equipment will be constantly regenerating (150 seconds to replenish to maximum)",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L24.png",
           "level": 24,
           "isBase": false,
@@ -2185,7 +1947,6 @@
         {
           "Name": "Flight of Fury",
           "Description": "Killing 15 zombies in rapid succession restores one Quadrocopter to your inventory (cooldown 180 seconds)",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L25.png",
           "level": 25,
           "isBase": false,
@@ -2194,7 +1955,6 @@
         {
           "Name": "Special Prize",
           "Description": "Killing a special zombie restores one Quadrocopter to your inventory (cooldown 180 seconds)",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L26.png",
           "level": 26,
           "isBase": false,
@@ -2203,7 +1963,6 @@
         {
           "Name": "Multitasking",
           "Description": "Automatically reload primary weapon on Quadrocopter launch",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L27.png",
           "level": 27,
           "isBase": false,
@@ -2212,7 +1971,6 @@
         {
           "Name": "Not On My Watch",
           "Description": "Friendly fire taken is decreased by 100% for person followed by your Quadrocopter",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L28.png",
           "level": 28,
           "isBase": false,
@@ -2221,7 +1979,6 @@
         {
           "Name": "Next Best Thing",
           "Description": "Start with Geist 17MP machine pistol as secondary weapon",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L29.png",
           "level": 29,
           "isBase": false,
@@ -2230,7 +1987,6 @@
         {
           "Name": "Out With A Bang",
           "Description": "Quadrocopter stuns up to 10 zombies in 5 meters radius when it is depleted (also applies for handgun version)",
-          "teamWide": false,
           "icon": "/assets/dronemaster/L30.png",
           "level": 30,
           "isBase": true,
@@ -2239,7 +1995,6 @@
         {
           "Name": "Guardian Angel",
           "Description": "Person followed by your Quadrocopter will take 10% less damage",
-          "teamWide": false,
           "icon": "/assets/dronemaster/P4.png",
           "level": 0,
           "isBase": true,
@@ -2254,7 +2009,6 @@
         {
           "Name": "Safeguard",
           "Description": "Start with Mobile Shield and M500 Shotgun. Take 100% less friendly fire damage while using Shield Charge or Blocking",
-          "teamWide": false,
           "icon": "/assets/vanguard/L0.png",
           "level": 0,
           "isBase": true,
@@ -2263,7 +2017,6 @@
         {
           "Name": "Peripheral Vision",
           "Description": "Increase angle at which attacks will be blocked by your Shield by 10% (base: 220 deg)",
-          "teamWide": false,
           "icon": "/assets/vanguard/P1.png",
           "level": 0,
           "isBase": true,
@@ -2272,7 +2025,6 @@
         {
           "Name": "Quick Hands",
           "Description": "Blocking zombie hit or performing Shield Charge reloads your primary and secondary weapons",
-          "teamWide": false,
           "icon": "/assets/vanguard/L1.png",
           "level": 1,
           "isBase": false,
@@ -2281,7 +2033,6 @@
         {
           "Name": "Adrenaline Rush",
           "Description": "Blocking zombie hit or performing Shield Charge fully restores melee stamina",
-          "teamWide": false,
           "icon": "/assets/vanguard/L2.png",
           "level": 2,
           "isBase": false,
@@ -2290,7 +2041,6 @@
         {
           "Name": "Fancy Footwork",
           "Description": "Better maneuverability when using Shield Charge and you can move 30% faster while blocking",
-          "teamWide": false,
           "icon": "/assets/vanguard/L3.png",
           "level": 3,
           "isBase": false,
@@ -2299,7 +2049,6 @@
         {
           "Name": "Passive Aggression",
           "Description": "Shield Block can withstand incoming hits for 3 more seconds (base: 5 seconds)",
-          "teamWide": false,
           "icon": "/assets/vanguard/L4.png",
           "level": 4,
           "isBase": false,
@@ -2308,7 +2057,6 @@
         {
           "Name": "All-Round Defense",
           "Description": "For the first 3 seconds Shield Block protects you from all directions",
-          "teamWide": false,
           "icon": "/assets/vanguard/L5.png",
           "level": 5,
           "isBase": false,
@@ -2317,7 +2065,6 @@
         {
           "Name": "Residual Defense",
           "Description": "Take 50% less damage from zombies for 3 seconds after Shield Block ends",
-          "teamWide": false,
           "icon": "/assets/vanguard/L6.png",
           "level": 6,
           "isBase": false,
@@ -2326,7 +2073,6 @@
         {
           "Name": "Conditioning",
           "Description": "You can perform 2 more Shield Charges per full shield energy (base: 2 charges)",
-          "teamWide": false,
           "icon": "/assets/vanguard/L7.png",
           "level": 7,
           "isBase": false,
@@ -2335,7 +2081,6 @@
         {
           "Name": "Recuperation",
           "Description": "You won't be able to collect equipment bags, but your Shield energy will constantly recharge (140 seconds to replenish to maximum)",
-          "teamWide": false,
           "icon": "/assets/vanguard/L8.png",
           "level": 8,
           "isBase": false,
@@ -2344,7 +2089,6 @@
         {
           "Name": "Pickpocket",
           "Description": "Killing 15 zombies in rapid succession refills one equipment charge (cooldown 30 seconds)",
-          "teamWide": false,
           "icon": "/assets/vanguard/L9.png",
           "level": 9,
           "isBase": false,
@@ -2353,7 +2097,6 @@
         {
           "Name": "Armor Plated",
           "Description": "You gain passive shield protection for 3 seconds when you start interacting with something (cooldown 10 sec)",
-          "teamWide": false,
           "icon": "/assets/vanguard/L10.png",
           "level": 10,
           "isBase": true,
@@ -2362,7 +2105,6 @@
         {
           "Name": "Steadfast",
           "Description": "All zombie damage is reduced by 25% when using Shield Block",
-          "teamWide": false,
           "icon": "/assets/vanguard/P2.png",
           "level": 0,
           "isBase": true,
@@ -2371,7 +2113,6 @@
         {
           "Name": "Stronger Together",
           "Description": "Health for you and all teammates increased by 7.5%",
-          "teamWide": false,
           "icon": "/assets/vanguard/L11.png",
           "level": 11,
           "isBase": false,
@@ -2380,7 +2121,6 @@
         {
           "Name": "Outer Shell",
           "Description": "When your health is below 30% incoming damage depletes Shield energy before health. Full Shield energy prevents damage up to 50% of health",
-          "teamWide": false,
           "icon": "/assets/vanguard/L12.png",
           "level": 12,
           "isBase": false,
@@ -2389,7 +2129,6 @@
         {
           "Name": "Juggernaut",
           "Description": "Health increased by 35% but sprint stamina decreased by 50%",
-          "teamWide": false,
           "icon": "/assets/vanguard/L13.png",
           "level": 13,
           "isBase": false,
@@ -2398,7 +2137,6 @@
         {
           "Name": "Rolling Refill",
           "Description": "Passing near an Ammo Crate during a Shield Charge automatically refills your ammo",
-          "teamWide": false,
           "icon": "/assets/vanguard/L14.png",
           "level": 14,
           "isBase": false,
@@ -2407,7 +2145,6 @@
         {
           "Name": "Magnet",
           "Description": "Restore 2% of primary weapon ammo for each enemy killed with a Shield Charge",
-          "teamWide": false,
           "icon": "/assets/vanguard/L15.png",
           "level": 15,
           "isBase": false,
@@ -2416,7 +2153,6 @@
         {
           "Name": "Supply Train",
           "Description": "Passing near a teammate during a Shield Charge reloads their primary weapon. You receive 5% ammo for your primary weapon for each teammate reloaded",
-          "teamWide": false,
           "icon": "/assets/vanguard/L16.png",
           "level": 16,
           "isBase": false,
@@ -2425,7 +2161,6 @@
         {
           "Name": "Freight Train",
           "Description": "You can kill 40% more zombies with a shield charge (base: 14 zombies)",
-          "teamWide": false,
           "icon": "/assets/vanguard/L17.png",
           "level": 17,
           "isBase": false,
@@ -2434,7 +2169,6 @@
         {
           "Name": "Shake It Off",
           "Description": "Performing a Shield Charge removes all negative effects received from special zombies",
-          "teamWide": false,
           "icon": "/assets/vanguard/L18.png",
           "level": 18,
           "isBase": false,
@@ -2443,7 +2177,6 @@
         {
           "Name": "Long Run",
           "Description": "Your Shield Charge speed and covered distance increased by 20%",
-          "teamWide": false,
           "icon": "/assets/vanguard/L19.png",
           "level": 19,
           "isBase": false,
@@ -2452,7 +2185,6 @@
         {
           "Name": "On Your Feet",
           "Description": "A single incapacitated teammate within 2 meters of where you finish a Shield Charge will get back up on their feet",
-          "teamWide": false,
           "icon": "/assets/vanguard/L20.png",
           "level": 20,
           "isBase": true,
@@ -2461,7 +2193,6 @@
         {
           "Name": "Secret Stash",
           "Description": "Carried ammo capacity for secondary weapons increased by 15%",
-          "teamWide": false,
           "icon": "/assets/vanguard/P3.png",
           "level": 0,
           "isBase": true,
@@ -2470,7 +2201,6 @@
         {
           "Name": "Elbow Room",
           "Description": "When you, or a teammate within 2 meters of you, starts reviving an incapacitated character, surrounding enemies will be pushed back (cooldown 60 seconds)",
-          "teamWide": false,
           "icon": "/assets/vanguard/L21.png",
           "level": 21,
           "isBase": false,
@@ -2479,7 +2209,6 @@
         {
           "Name": "Placebo Effect",
           "Description": "Heal 10% of max health when someone uses a medkit within 2 meters of you and you're not the target of healing",
-          "teamWide": false,
           "icon": "/assets/vanguard/L22.png",
           "level": 22,
           "isBase": false,
@@ -2488,7 +2217,6 @@
         {
           "Name": "Inspirational",
           "Description": "Killing 15 zombies in rapid succession while you are the only member of your team still standing respawns a randomly selected dead teammate (cooldown 60 seconds)",
-          "teamWide": false,
           "icon": "/assets/vanguard/L23.png",
           "level": 23,
           "isBase": false,
@@ -2497,7 +2225,6 @@
         {
           "Name": "Sturdy",
           "Description": "When your Shield Block is completely expended, you gain a temporary health boost (cooldown 60 sec)",
-          "teamWide": false,
           "icon": "/assets/vanguard/L24.png",
           "level": 24,
           "isBase": false,
@@ -2506,7 +2233,6 @@
         {
           "Name": "Hurry Back",
           "Description": "Respawn time for the whole team decreased by 15%",
-          "teamWide": false,
           "icon": "/assets/vanguard/L25.png",
           "level": 25,
           "isBase": false,
@@ -2515,7 +2241,6 @@
         {
           "Name": "Centre of Attention",
           "Description": "Activating Shield Block will force all zombies within 3 meters in front of you to target you instead of your teammates",
-          "teamWide": false,
           "icon": "/assets/vanguard/L26.png",
           "level": 26,
           "isBase": false,
@@ -2524,7 +2249,6 @@
         {
           "Name": "Trail Blazer",
           "Description": "Finishing a Shield Charge sets enemies in front of you on fire (distance 2 meters)",
-          "teamWide": false,
           "icon": "/assets/vanguard/L27.png",
           "level": 27,
           "isBase": false,
@@ -2533,7 +2257,6 @@
         {
           "Name": "You Made me Mad",
           "Description": "Melee attacks and firearms deal 50% more damage for 5 seconds after you holster the Shield",
-          "teamWide": false,
           "icon": "/assets/vanguard/L28.png",
           "level": 28,
           "isBase": false,
@@ -2542,7 +2265,6 @@
         {
           "Name": "Avenger",
           "Description": "Firearm damage increased by 20% for each dead or incapacitated teammate",
-          "teamWide": false,
           "icon": "/assets/vanguard/L29.png",
           "level": 29,
           "isBase": false,
@@ -2551,7 +2273,6 @@
         {
           "Name": "Breathing Room",
           "Description": "Automatically push back nearby zombies when you are hit and about to be incapacitated (cooldown 60 seconds)",
-          "teamWide": false,
           "icon": "/assets/vanguard/L30.png",
           "level": 30,
           "isBase": true,
@@ -2560,7 +2281,6 @@
         {
           "Name": "Linebacker",
           "Description": "Shield Charge allows you to run for an additional 1 seconds (base: 5 seconds)",
-          "teamWide": false,
           "icon": "/assets/vanguard/P4.png",
           "level": 0,
           "isBase": true,
