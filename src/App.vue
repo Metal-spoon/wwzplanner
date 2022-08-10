@@ -18,7 +18,7 @@ export default class App extends Vue {}
 @import "@/style/common"; 
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

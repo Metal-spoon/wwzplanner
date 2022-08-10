@@ -9,4 +9,7 @@ module.exports = {
       },
     },
   },
+  devServer: {
+    server: 'https'
+  }
 };
