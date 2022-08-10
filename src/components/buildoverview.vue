@@ -155,27 +155,27 @@ export default defineComponent({
 
 .x-button {
   display: flex;
-  color: #f2bebf;
+  color: @redforeground;
   &:hover {
     cursor: pointer;
-    background-color: lighten(#6a2728, 10);
+    background-color: lighten(@redbg, 10);
   }
   > svg {
     width: 1em;
   }
-  background-color: #6a2728;
+  background-color: @redbg;
   z-index: 999;
 }
 
 .button {
-  background-color: #6a2728;
+  background-color: @redbg;
   padding: 10px;
-  color: #f2bebf;
+  color: @redforeground;
   font-weight: bold;
   max-width: fit-content;
   &:hover {
     cursor: pointer;
-    background-color: lighten(#6a2728, 10);
+    background-color: lighten(@redbg, 10);
   }
 }
 

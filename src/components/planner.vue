@@ -1,7 +1,8 @@
 <template>
   <div class="flex-column flex-center">
     <h1>World War Z build planner</h1>
-    <div class="content-wrapper">
+    <div class="content-wrapper flex-column flex-center">
+    <div class="picker-wrapper">
       <div class="flex-row">
         <div>
           <select
@@ -17,7 +18,6 @@
             </option>
           </select>
           <span>Prestige:</span>
-
           <input type="number" min="0" max="4" v-model="store.prestige" />
         </div>
         <buildoverview :selectedClass="selectedClass" />
@@ -27,23 +27,17 @@
         :prestige="store.prestige"
         :perkParam="perkParam"
       />
+     
     </div>
-    <div></div>
+    
+       <perkinfo class="picker-perkinfo" :perk="store.hoveredPerk" />
+    </div>
+
     <div>
       <buildshareurl />
     </div>
   </div>
 </template>
-
-<style lang="less" scoped>
-.flex-row {
-  justify-content: space-between;
-}
-
-.content-wrapper {
-  max-width: fit-content;
-}
-</style>
 
 <script lang='ts'>
 import { defineComponent } from "vue";
@@ -54,11 +48,12 @@ import buildoverview from "./buildoverview.vue";
 import { wwzclass } from "@/models/wwzclass";
 import { plainToInstance } from "class-transformer";
 import { store } from "../store";
+import perkinfo from "./perkinfo.vue"
 
 export default defineComponent({
   // eslint-disable-next-line
   name: "Planner",
-  components: { perkpicker, buildshareurl, buildoverview },
+  components: { perkpicker, buildshareurl, buildoverview, perkinfo },
   data(): {
     classData: wwzclass[];
     selectedClass: wwzclass;
@@ -133,3 +128,32 @@ export default defineComponent({
   },
 });
 </script>
+
+
+<style lang="less" scoped>
+.picker-perkinfo {
+  position: sticky;
+  bottom: 0px;
+  background-color: @bg;
+  width: 100%;
+}
+
+.flex-row {
+  justify-content: space-between;
+}
+
+.picker-wrapper {
+  max-width: fit-content;
+}
+
+.content-wrapper {
+  width: 100%;
+  
+}
+@media (max-width: 800px) {
+  .picker-perkinfo {
+    border-top: 2px solid @foreground;
+  }
+ }
+
+</style>

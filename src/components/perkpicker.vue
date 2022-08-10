@@ -1,5 +1,5 @@
 <template>
-  <div class="perk-selection flex-row flex-center">
+  <div class="perk-selection flex-row">
     <ul
       class="perk-column flex-column"
       v-for="(column, columnIndex) in groupedPerks"
@@ -10,26 +10,23 @@
           class="image-wrapper"
           v-bind:class="{ selectedperk: perk.selected }"
           @click="selectPerk(perkIndex, column, columnIndex)"
-          @mouseenter="hoveredPerk = perk"
-          @mouseleave="hoveredPerk = defaultHoveredPerk"
+          @mouseenter="store.hoveredPerk = perk"
+          @mouseleave="store.hoveredPerk = store.defaultHoveredPerk"
         >
           <img class="perk-image" :src="perk.icon" />
         </div>
       </li>
     </ul>
   </div>
-  <perkinfo class="picker-perkinfo" :perk="hoveredPerk" />
 </template>
 
 <script lang='ts'>
 import { defineComponent } from "vue";
 import { store } from "@/store";
-import Perkinfo from "./perkinfo.vue";
 import { perk } from "@/models/perk";
 import { wwzclass } from "@/models/wwzclass";
 export default defineComponent({
   name: "PerkPicker",
-  components: { Perkinfo },
   props: {
     selectedClass: {
       type: wwzclass,
@@ -46,15 +43,7 @@ export default defineComponent({
   },
   data() {
     return {
-      store,
-      defaultHoveredPerk: {
-        Name: "Nothing",
-        Description: "Hover over a perk to see it's info",
-      },
-      hoveredPerk: {
-        Name: "Nothing",
-        Description: "Hover over a perk to see it's info",
-      },
+      store
     };
   },
   created() {
@@ -143,7 +132,7 @@ export default defineComponent({
     },
     selectedClass: {
       handler() {
-        this.hoveredPerk = this.defaultHoveredPerk;
+        store.hoveredPerk = store.defaultHoveredPerk;
         this.updateBaseperks();
         this.updatePerks();
       },
@@ -154,15 +143,11 @@ export default defineComponent({
 </script>
 
 <style lang='less' scoped>
-.picker-perkinfo {
-  position: sticky;
-  bottom: 0px;
-  background-color: @bg;
-  padding: 5px;
-}
+
 
 .perk-selection {
   max-width: 100%;
+  align-content: center;
 }
 
 .perk-column {
