@@ -1,14 +1,26 @@
 .flex-row {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .flex-center {
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .flex-column {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  background-color: @redbg;
+  padding: 10px;
+  color: @redforeground;
+  font-weight: bold;
+  max-width: fit-content;
+  &:hover {
+    cursor: pointer;
+    background-color: lighten(@redbg, 10);
+  }
 }

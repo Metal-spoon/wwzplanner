@@ -54,24 +54,17 @@
       </div>
     </div>
   </div>
-  <div class="button" @click="showModal = true">Show build summary</div>
+    <div class="button" @click="showModal = true">Show build summary</div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import { store } from "@/store";
-import { wwzclass } from "@/models/wwzclass";
 import buildshareurl from "./buildshareurl.vue";
 
 export default defineComponent({
   components: { buildshareurl },
   name: "BuildOverview",
-  props: {
-    selectedClass: {
-      type: wwzclass,
-      required: true,
-    },
-  },
   data() {
     return {
       store,
@@ -80,12 +73,12 @@ export default defineComponent({
   },
   computed: {
     basePerks: function () {
-      return this.selectedClass.perks
+      return store.selectedClass.perks
         .filter((perk) => perk.isBase && perk.selected)
         .sort();
     },
     selectedPerks: function () {
-      return this.selectedClass.perks.filter(
+      return store.selectedClass.perks.filter(
         (perk) => !perk.isBase && perk.selected
       );
     },
