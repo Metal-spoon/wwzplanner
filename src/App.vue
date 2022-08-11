@@ -14,19 +14,21 @@ import planner from './components/planner.vue';
 export default class App extends Vue {}
 </script>
 
-<style>
+<style lang='less'>
+@import "@/style/common"; 
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: @foreground;
   height: 100%;
 }
 
 body {
   height: 100vh;
-  background-color:rgb(129, 126, 126);
+  background-color: @bg;
   margin: 0;
 }
 

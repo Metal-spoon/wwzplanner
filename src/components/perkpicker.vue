@@ -1,67 +1,57 @@
 <template>
-  <div class="perk-selection">
-      <ul class="perk-column"
+  <div class="perk-selection flex-row">
+    <ul
+      class="perk-column flex-column"
       v-for="(column, columnIndex) in groupedPerks"
-      :key="columnIndex">
-        <li v-for="(perk, perkIndex) in column" :key="perkIndex">
-          <div
-            class="image-wrapper"
-            v-bind:class="{ selectedperk: perk.selected }"
-            @click="selectPerk(perkIndex, column, columnIndex)"
-            @mouseenter="hoveredPerk = perk"
-            @mouseleave="hoveredPerk = defaultHoveredPerk"
-          >
-              <img
-                class="perk-image"
-                :src="perk.icon"
-              />
-          </div>
-        </li>
-      </ul>
-
+      :key="columnIndex"
+    >
+      <li v-for="(perk, perkIndex) in column" :key="perkIndex">
+        <div
+          class="image-wrapper"
+          v-bind:class="{ selectedperk: perk.selected }"
+          @click="selectPerk(perkIndex, column, columnIndex)"
+          @mouseenter="store.hoveredPerk = perk"
+          @mouseleave="store.hoveredPerk = store.defaultHoveredPerk"
+        >
+          <img class="perk-image" :src="perk.icon" />
+        </div>
+      </li>
+    </ul>
   </div>
-    <perkinfo class="picker-perkinfo" :perk="hoveredPerk"/>
 </template>
 
 <script lang='ts'>
 import { defineComponent } from "vue";
-import { store } from "@/store"
-import Perkinfo from "./perkinfo.vue";
-import { perk } from "@/models/perk"
+import { store } from "@/store";
+import { perk } from "@/models/perk";
 import { wwzclass } from "@/models/wwzclass";
 export default defineComponent({
   name: "PerkPicker",
-  components: {Perkinfo},
   props: {
     selectedClass: {
       type: wwzclass,
-      required: true
+      required: true,
     },
     prestige: {
       type: Number,
-      required: true
+      required: true,
     },
     perkParam: {
       type: String,
-      required: true
+      required: true,
+    },
+  },
+  data() {
+    return {
+      store
+    };
+  },
+  created() {
+    if (this.perkParam) {
+      this.updatePerksFromParam(this.perkParam);
     }
-
-    },
-    data() {
-      return {
-        store,
-        defaultHoveredPerk: {Name: 'Nothing', Description: "Hover over a perk to see it's info"},
-        hoveredPerk: {Name: 'Nothing', Description: "Hover over a perk to see it's info"}
-        
-      }
-    },
-    created() {
-      if (this.perkParam) {
-        this.updatePerksFromParam(this.perkParam)
-      }
-    },
+  },
   methods: {
-        
     selectPerk: function (
       perkIndex: number,
       column: Array<any>,
@@ -103,34 +93,32 @@ export default defineComponent({
         });
       }
     },
-    updatePerks: function(){
+    updatePerks: function () {
       store.selectedPerkIds.forEach((perkId, index) => {
-        if (Number(perkId) !== 0) { 
+        if (Number(perkId) !== 0) {
           let columnIndexOffset = Math.ceil((index + 1) / 3);
           let column = this.groupedPerks[index + columnIndexOffset];
           let perkIndex = Number(perkId) - 1;
           column[perkIndex].selected = true;
           store.selectedPerks[index] = column[perkIndex];
-          
         }
       });
     },
     updatePerksFromParam: function (perkParam: string) {
       let perkParamArray = perkParam.split(",");
       perkParamArray.forEach((perkIndexString, index) => {
-        if (Number(perkIndexString) !== 0) { 
+        if (Number(perkIndexString) !== 0) {
           let columnIndexOffset = Math.ceil((index + 1) / 3);
           let column = this.groupedPerks[index + columnIndexOffset];
           let perkIndex = Number(perkIndexString) - 1;
           column[perkIndex].selected = true;
           store.selectedPerks[index] = column[perkIndex];
-          
         }
         store.selectedPerkIds[index] = Number(perkIndexString);
       });
-    }
+    },
   },
-    computed: {
+  computed: {
     groupedPerks(): Array<Array<any>> {
       return this.groupPerks(this.selectedClass.perks);
     },
@@ -144,56 +132,45 @@ export default defineComponent({
     },
     selectedClass: {
       handler() {
-        this.hoveredPerk = this.defaultHoveredPerk;
+        store.hoveredPerk = store.defaultHoveredPerk;
         this.updateBaseperks();
         this.updatePerks();
       },
       immediate: true,
     },
-  }
   },
-);
+});
 </script>
 
 <style lang='less' scoped>
-.picker-perkinfo {
-  position: sticky;
-  bottom: 0px;
-  background-color: #817E7E;
-  padding: 5px;
-}
+
 
 .perk-selection {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
   max-width: 100%;
+  align-content: center;
 }
 
-.perk-column { 
-    display: flex;
-  flex-direction: column;
-    list-style-type: none;
-    padding: 0px;
-  
+.perk-column {
+  list-style-type: none;
+  padding: 0px;
+
   .image-wrapper {
     display: block;
     padding: 5px;
-    
+
     > img {
       filter: brightness(0.5);
       width: 100%;
-    max-width: 100px;
-    min-width: 50px;
-    height: auto;
+      max-width: 100px;
+      min-width: 50px;
+      height: auto;
     }
     &:hover {
       cursor: pointer;
       > img {
-      filter: brightness(1.5) drop-shadow(2px 2px 0 white)
-        drop-shadow(-2px 2px 0 white) drop-shadow(2px -2px 0 white)
-        drop-shadow(-2px -2px 0 white);
+        filter: brightness(1.5) drop-shadow(2px 2px 0 white)
+          drop-shadow(-2px 2px 0 white) drop-shadow(2px -2px 0 white)
+          drop-shadow(-2px -2px 0 white);
       }
     }
   }
@@ -214,22 +191,20 @@ export default defineComponent({
       top: 0%;
     }
   }
-
-  
-
 }
 @media (max-width: 800px) {
   .perk-selection {
     flex-direction: column;
     flex-wrap: wrap;
   }
-  
-    .perk-column {
-      flex-direction: row;
-      margin: 0;
-    }
 
-    
+  .perk-column {
+    flex-direction: row;
+    margin: 0;
   }
 
+  .picker-perkinfo {
+    border-top: 2px solid @foreground;
+  }
+}
 </style>

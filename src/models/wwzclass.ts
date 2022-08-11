@@ -1,17 +1,17 @@
-import { Type } from "class-transformer"
-import { perk } from "./perk"
+import { Type } from "class-transformer";
+import { perk } from "./perk";
 
 export class wwzclass {
-    name: string = ""
+  name: string = "";
 
-    icon: string = ""
+  icon: string = "";
 
-    @Type(() => perk)
-    perks: Array<perk> = []
+  @Type(() => perk)
+  perks: Array<perk> = [];
 
-    resetPerks() {
-        this.perks.forEach((perk) => {
-            perk.selected = false;
-        })
-    }
+  resetPerks() {
+    this.perks.forEach((perk) => {
+      perk.selected = false;
+    });
+  }
 }
