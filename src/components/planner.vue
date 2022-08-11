@@ -6,8 +6,7 @@
         <div class="flex-row controls-bar">
           <div class="flex-row controls-bar">
             <classpicker :classdata="classData" />
-            <span>Prestige:</span>
-            <input type="number" min="0" max="4" v-model="store.prestige" />
+            <prestigepicker :prestige="store.prestige"/>
           </div>
           <buildoverview />
         </div>
@@ -33,6 +32,7 @@ import buildshareurl from "./buildshareurl.vue";
 import json from "../assets/data.json";
 import buildoverview from "./buildoverview.vue";
 import classpicker from "./classpicker.vue";
+import prestigepicker from "./prestigepicker.vue"
 import { wwzclass } from "@/models/wwzclass";
 import { plainToInstance } from "class-transformer";
 import { store } from "../store";
@@ -47,6 +47,7 @@ export default defineComponent({
     buildoverview,
     perkinfo,
     classpicker,
+    prestigepicker
   },
   data(): {
     classData: Array<wwzclass>;
@@ -138,6 +139,7 @@ export default defineComponent({
 
 .controls-bar {
   align-items: flex-end;
+  gap: 10px;
 }
 
 @media (max-width: 800px) {

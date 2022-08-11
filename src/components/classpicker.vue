@@ -6,7 +6,7 @@
       </div>
         <ul class="class-list flex-column">
           <li v-for="(wwzclass, classIndex) in classdata" :key="wwzclass" class="flex-row class-item" :class="{ selected: isSelected(classIndex)}" @click="selectClass(wwzclass, classIndex)">
-            <font-awesome-icon :icon="wwzclass.icon" size="4x" fixedWidth=true class="class-icon"/>
+            <font-awesome-icon :icon="wwzclass.icon" size="4x" class="class-icon"/>
             <div class="flex-column class-info">
               <b>{{wwzclass.name}}</b>
               <span>{{wwzclass.description}}</span>
@@ -25,7 +25,7 @@
   <div class="flex-column label">
     <span>Selected class:</span>
     <div class="flex-row selectedclass-info">
-  <font-awesome-icon :icon="store.selectedClass.icon" size="3x" fixedWidth=true class="class-icon"/>
+  <font-awesome-icon :icon="store.selectedClass.icon" size="3x" class="class-icon"/>
   <span class="selectedclass-name"> {{store.selectedClass.name}} </span>
   
   </div> 
@@ -50,8 +50,6 @@ export default defineComponent({
   },
   methods: {
     isSelected: function (id: number) {
-      console.log(id);
-      console.log(store.selectedClassId);
       return (store.selectedClassId === id);
     },
     selectClass: function(wwzclass: wwzclass, classId: number) {
@@ -149,8 +147,4 @@ export default defineComponent({
   margin-top: 5px;
 }
 
-.button {
-  margin-left: 10px;
-  margin-right: 10px;
-}
 </style>
