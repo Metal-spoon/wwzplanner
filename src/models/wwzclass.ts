@@ -6,6 +6,8 @@ export class wwzclass {
 
   icon: string = "";
 
+  description: string = "";
+
   @Type(() => perk)
   perks: Array<perk> = [];
 

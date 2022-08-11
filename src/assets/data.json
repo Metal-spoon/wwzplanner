@@ -2,7 +2,8 @@
   "classdata": [
     {
       "name": "Gunslinger",
-      "icon": "/assets/gunslinger/L1.png",
+      "icon": "person-rifle",
+      "description": "For those who skip the questions and shoot first, the Gunslinger is loaded with an arsenal of weapon damage and ammo-boosting perks to mow down the dead.",
       "perks": [
         {
           "Name": "Gimme a Reason",
@@ -288,7 +289,8 @@
     },
     {
       "name": "Hellraiser",
-      "icon": "/assets/gunslinger/L1.png",
+      "icon": "explosion",
+      "description": "Enough explosives can solve any problem! Hellraisers come armed with explosive tools for effective crowd control.",
       "perks": [
         {
           "Name": "Demoman",
@@ -574,7 +576,8 @@
     },
     {
       "name": "Medic",
-      "icon": "/assets/gunslinger/L1.png",
+      "icon": "suitcase-medical",
+      "description": "Sometimes the best way to fight the undead is keeping your teammates from becoming one of them. Armed with a Stim Pistol, Medics can heal fellow survivors from a distance and help keep the chaos under control.",
       "perks": [
         {
           "Name": "Booster Shot",
@@ -860,7 +863,8 @@
     },
     {
       "name": "Fixer",
-      "icon": "/assets/gunslinger/L1.png",
+      "icon": "toolbox",
+      "description": "When versatility in any situation is the highest priority, the Fixer is there for you, starting out with an explosive ammo case and several teammate ammo-restoring perks.",
       "perks": [
         {
           "Name": "Mule",
@@ -1146,7 +1150,8 @@
     },
     {
       "name": "Slasher",
-      "icon": "/assets/gunslinger/L1.png",
+      "icon": "hand-fist",
+      "description": "For warriors with a sense of elegance, the best way to kill is with your trusty blade. Slashers have perks that increase melee damage and effectiveness while their armed tasers deliver electrifying results.",
       "perks": [
         {
           "Name": "Shock Troops",
@@ -1432,7 +1437,8 @@
     },
     {
       "name": "Exterminator",
-      "icon": "/assets/gunslinger/L1.png",
+      "icon": "fire",
+      "description": "Fire is the answer! Armed with Molotov cocktails and increased fire damage, the Exterminator just wants to watch the undead burn.",
       "perks": [
         {
           "Name": "Firestarter",
@@ -1718,7 +1724,8 @@
     },
     {
       "name": "Dronemaster",
-      "icon": "/assets/gunslinger/L1.png",
+      "icon": "bolt",
+      "description": "As the Dronemaster, command your Quadrocopter to follow you around, hold an area, or protect an ally, providing useful buffs!",
       "perks": [
         {
           "Name": "Flying Start",
@@ -2004,7 +2011,8 @@
     },
     {
       "name": "Vanguard",
-      "icon": "/assets/gunslinger/L1.png",
+      "icon": "shield",
+      "description": "Vanguards wield a devastating electric shield that can punch a hole right through the zombie horde.",
       "perks": [
         {
           "Name": "Safeguard",
