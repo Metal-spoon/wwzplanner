@@ -3,16 +3,15 @@
     <h1>World War Z build planner</h1>
     <div class="content-wrapper flex-column flex-center">
       <div class="picker-wrapper">
-        <div class="flex-row">
-          <div>
+        <div class="flex-row controls-bar">
+          <div class="flex-row controls-bar">
             <classpicker :classdata="classData" />
             <span>Prestige:</span>
             <input type="number" min="0" max="4" v-model="store.prestige" />
           </div>
-          <buildoverview :selectedClass="selectedClass" />
+          <buildoverview />
         </div>
         <perkpicker
-          :selectedClass="selectedClass"
           :prestige="store.prestige"
           :perkParam="perkParam"
         />
@@ -51,19 +50,17 @@ export default defineComponent({
   },
   data(): {
     classData: Array<wwzclass>;
-    selectedClass: wwzclass;
     perkParam: string;
     store: any;
   } {
     return {
       classData: plainToInstance(wwzclass, json.classdata),
-      selectedClass: new wwzclass(),
       perkParam: "",
       store,
     };
   },
   created() {
-    this.selectedClass = this.classData[0];
+    store.selectedClass = this.classData[0];
     if (this.$route.path === "/") return;
     let classParam = String(this.$route.params.class);
     let perkParam = String(this.$route.params.perks);
@@ -71,7 +68,7 @@ export default defineComponent({
 
     if (this.verifyParameters(classParam, perkParam, prestigeParam)) {
       store.prestige = Number(prestigeParam);
-      this.selectedClass = this.classData[Number(classParam)] as wwzclass;
+      store.selectedClass = this.classData[Number(classParam)] as wwzclass;
       this.perkParam = String(perkParam);
     } else {
       this.$router.push("/");
@@ -113,13 +110,7 @@ export default defineComponent({
       }
 
       return true;
-    },
-    selectClass: function (classIndex: number) {
-      console.log(classIndex);
-      this.selectedClass.resetPerks();
-      store.selectedClassId = classIndex;
-      this.selectedClass = this.classData[classIndex];
-    },
+    }
   },
 });
 </script>
@@ -144,6 +135,11 @@ export default defineComponent({
 .content-wrapper {
   width: 100%;
 }
+
+.controls-bar {
+  align-items: flex-end;
+}
+
 @media (max-width: 800px) {
   .picker-perkinfo {
     border-top: 2px solid @foreground;

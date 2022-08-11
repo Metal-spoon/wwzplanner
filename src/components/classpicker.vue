@@ -5,7 +5,7 @@
           <b> Pick a class: </b>
       </div>
         <ul class="class-list flex-column">
-          <li v-for="wwzclass in classdata" :key="wwzclass" class="flex-row class-item">
+          <li v-for="(wwzclass, classIndex) in classdata" :key="wwzclass" class="flex-row class-item" :class="{ selected: isSelected(classIndex)}" @click="selectClass(wwzclass, classIndex)">
             <font-awesome-icon :icon="wwzclass.icon" size="4x" fixedWidth=true class="class-icon"/>
             <div class="flex-column class-info">
               <b>{{wwzclass.name}}</b>
@@ -22,15 +22,25 @@
   </div>
   </div>
   </div>
-  <div class="button" @click="showModal = true">
-    Click me
+  <div class="flex-column label">
+    <span>Selected class:</span>
+    <div class="flex-row selectedclass-info">
+  <font-awesome-icon :icon="store.selectedClass.icon" size="3x" fixedWidth=true class="class-icon"/>
+  <span class="selectedclass-name"> {{store.selectedClass.name}} </span>
+  
   </div> 
+  </div>
+  <div class="button" @click="showModal = true">
+    Change
+  </div>
 </template>
 
 <script lang='ts'>
 import { store } from "@/store";
+import { wwzclass } from '@/models/wwzclass';
+import { defineComponent } from "vue";
 
-export default {
+export default defineComponent({
   name: "classPicker",
   data() {
     return {
@@ -38,13 +48,31 @@ export default {
       showModal: false,
     };
   },
+  methods: {
+    isSelected: function (id: number) {
+      console.log(id);
+      console.log(store.selectedClassId);
+      return (store.selectedClassId === id);
+    },
+    selectClass: function(wwzclass: wwzclass, classId: number) {
+      if(store.selectedClassId === classId) {
+        this.showModal = false;
+        return;
+      }
+      store.selectedClassId = classId;
+      store.selectedClass.resetPerks();
+      store.selectedClass = wwzclass;
+      this.showModal = false;
+    }
+
+  },
   props: {
     classdata: {
       type: Array,
       required: true,
     },
   },
-};
+});
 </script>
 
 <style lang="less" scoped>
@@ -83,6 +111,7 @@ export default {
     background-color: lighten(@bg, 10);
     cursor: pointer;
   }
+  border: 2px solid transparent;
 }
 
 .class-info {
@@ -99,5 +128,29 @@ export default {
 
 .modal-controls {
   justify-content: flex-end;
+}
+
+.selected {
+  border-color: @redbg;
+}
+
+.selectedclass-name {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.label {
+  align-items: flex-start;
+  
+}
+
+.selectedclass-info {
+  align-items: center;
+  margin-top: 5px;
+}
+
+.button {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 </style>

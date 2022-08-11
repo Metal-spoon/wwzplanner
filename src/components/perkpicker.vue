@@ -24,14 +24,9 @@
 import { defineComponent } from "vue";
 import { store } from "@/store";
 import { perk } from "@/models/perk";
-import { wwzclass } from "@/models/wwzclass";
 export default defineComponent({
   name: "PerkPicker",
   props: {
-    selectedClass: {
-      type: wwzclass,
-      required: true,
-    },
     prestige: {
       type: Number,
       required: true,
@@ -120,7 +115,7 @@ export default defineComponent({
   },
   computed: {
     groupedPerks(): Array<Array<any>> {
-      return this.groupPerks(this.selectedClass.perks);
+      return this.groupPerks(store.selectedClass.perks);
     },
   },
   watch: {
@@ -130,13 +125,12 @@ export default defineComponent({
       },
       immediate: true,
     },
-    selectedClass: {
+    'store.selectedClass': {
       handler() {
         store.hoveredPerk = store.defaultHoveredPerk;
         this.updateBaseperks();
         this.updatePerks();
-      },
-      immediate: true,
+      }
     },
   },
 });

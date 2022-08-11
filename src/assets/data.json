@@ -294,7 +294,7 @@
       "perks": [
         {
           "Name": "Demoman",
-          "Description": "baseperk",
+          "Description": "Start with C4, Shotgun and Hailstorm MGL",
           "icon": "/assets/hellraiser/L0.png",
           "level": 0,
           "isBase": true,
