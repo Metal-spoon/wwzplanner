@@ -6,7 +6,7 @@
         <div class="flex-row controls-bar">
           <div class="flex-row controls-bar">
             <classpicker :classdata="classData" />
-            <prestigepicker :prestige="store.prestige"/>
+            <prestigepicker />
           </div>
           <buildoverview />
         </div>

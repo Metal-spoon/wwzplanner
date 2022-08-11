@@ -21,13 +21,6 @@ import { store } from "@/store";
 
 export default defineComponent({
   name: "prestigePicker",
-  props: {
-    prestige: {
-      type: Number,
-      required: true,
-    },
-    
-  },
   data() {
     return {
       store
