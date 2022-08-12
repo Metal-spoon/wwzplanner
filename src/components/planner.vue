@@ -6,19 +6,14 @@
         <div class="flex-row controls-bar">
           <div class="flex-row controls-bar">
             <classpicker :classdata="classData" />
-            <prestigepicker />
           </div>
-          <buildoverview />
+          <prestigepicker />
         </div>
-        <perkpicker
-          :prestige="store.prestige"
-          :perkParam="perkParam"
-        />
+        <perkpicker :prestige="store.prestige" :perkParam="perkParam" />
       </div>
-
       <perkinfo class="picker-perkinfo" :perk="store.hoveredPerk" />
     </div>
-
+    <buildoverview />
     <div>
       <buildshareurl />
     </div>
@@ -32,7 +27,7 @@ import buildshareurl from "./buildshareurl.vue";
 import json from "../assets/data.json";
 import buildoverview from "./buildoverview.vue";
 import classpicker from "./classpicker.vue";
-import prestigepicker from "./prestigepicker.vue"
+import prestigepicker from "./prestigepicker.vue";
 import { wwzclass } from "@/models/wwzclass";
 import { plainToInstance } from "class-transformer";
 import { store } from "../store";
@@ -47,7 +42,7 @@ export default defineComponent({
     buildoverview,
     perkinfo,
     classpicker,
-    prestigepicker
+    prestigepicker,
   },
   data(): {
     classData: Array<wwzclass>;
@@ -111,7 +106,7 @@ export default defineComponent({
       }
 
       return true;
-    }
+    },
   },
 });
 </script>

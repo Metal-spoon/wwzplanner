@@ -2,42 +2,52 @@
   <div class="modal flex-column flex-center" v-show="showModal">
     <div class="modal-content">
       <div class="modal-title flex-row">
-          <b> Pick a class: </b>
+        <b> Pick a class: </b>
       </div>
-        <ul class="class-list flex-column">
-          <li v-for="(wwzclass, classIndex) in classdata" :key="wwzclass" class="flex-row class-item" :class="{ selected: isSelected(classIndex)}" @click="selectClass(wwzclass, classIndex)">
-            <font-awesome-icon :icon="wwzclass.icon" size="4x" class="class-icon"/>
-            <div class="flex-column class-info">
-              <b>{{wwzclass.name}}</b>
-              <span>{{wwzclass.description}}</span>
-            </div>
-          </li>
-        </ul>
-        <div class="flex-row modal-controls">
-          <div class="button" @click="showModal = false">
+      <ul class="class-list flex-column">
+        <li
+          v-for="(wwzclass, classIndex) in classdata"
+          :key="wwzclass"
+          class="flex-row class-item"
+          :class="{ selected: isSelected(classIndex) }"
+          @click="selectClass(wwzclass, classIndex)"
+        >
+          <font-awesome-icon
+            :icon="wwzclass.icon"
+            size="4x"
+            class="class-icon"
+          />
+          <div class="flex-column class-info">
+            <b>{{ wwzclass.name }}</b>
+            <span>{{ wwzclass.description }}</span>
+          </div>
+        </li>
+      </ul>
+      <div class="flex-row modal-controls">
+        <div class="button" @click="showModal = false">
           Cancel
-          <div> 
+          <div></div>
         </div>
+      </div>
     </div>
-  </div>
-  </div>
   </div>
   <div class="flex-column label">
     <span>Selected class:</span>
     <div class="flex-row selectedclass-info">
-  <font-awesome-icon :icon="store.selectedClass.icon" size="3x" class="class-icon"/>
-  <span class="selectedclass-name"> {{store.selectedClass.name}} </span>
-  
-  </div> 
+      <font-awesome-icon
+        :icon="store.selectedClass.icon"
+        size="3x"
+        class="class-icon"
+      />
+      <span class="selectedclass-name"> {{ store.selectedClass.name }} </span>
+    </div>
   </div>
-  <div class="button" @click="showModal = true">
-    Change
-  </div>
+  <div class="button" @click="showModal = true">Change</div>
 </template>
 
 <script lang='ts'>
 import { store } from "@/store";
-import { wwzclass } from '@/models/wwzclass';
+import { wwzclass } from "@/models/wwzclass";
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -50,10 +60,10 @@ export default defineComponent({
   },
   methods: {
     isSelected: function (id: number) {
-      return (store.selectedClassId === id);
+      return store.selectedClassId === id;
     },
-    selectClass: function(wwzclass: wwzclass, classId: number) {
-      if(store.selectedClassId === classId) {
+    selectClass: function (wwzclass: wwzclass, classId: number) {
+      if (store.selectedClassId === classId) {
         this.showModal = false;
         return;
       }
@@ -61,8 +71,7 @@ export default defineComponent({
       store.selectedClass.resetPerks();
       store.selectedClass = wwzclass;
       this.showModal = false;
-    }
-
+    },
   },
   props: {
     classdata: {
@@ -139,12 +148,11 @@ export default defineComponent({
 
 .label {
   align-items: flex-start;
-  
 }
 
 .selectedclass-info {
   align-items: center;
   margin-top: 5px;
+  gap: 5px;
 }
-
 </style>
