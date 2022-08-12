@@ -27,10 +27,6 @@ import { perk } from "@/models/perk";
 export default defineComponent({
   name: "PerkPicker",
   props: {
-    prestige: {
-      type: Number,
-      required: true,
-    },
     perkParam: {
       type: String,
       required: true,
@@ -72,7 +68,7 @@ export default defineComponent({
       ) {
         const column = this.groupedPerks[index];
         column.forEach((basePerk) => {
-          if (this.prestige >= basePerk.prestige) {
+          if (store.prestige >= basePerk.prestige) {
             basePerk.selected = true;
           } else {
             basePerk.selected = false;
@@ -83,11 +79,12 @@ export default defineComponent({
     updatePerksFromParam: function (perkParam: string) {
       let perkParamArray = perkParam.split(",");
       perkParamArray.forEach((perkIndexString, index) => {
-        if (Number(perkIndexString) !== 0) {
+        //-1 so were actually working with 0 based numbers, can go negative hence the check.
+        let perkColumnIndex = Number(perkIndexString) - 1
+        if (perkColumnIndex >= 0) {
           let columnIndexOffset = Math.ceil((index + 1) / 3);
-          let column = this.groupedPerks[index + columnIndexOffset];
-          let perkIndex = Number(perkIndexString) - 1;
-          column[perkIndex].selected = true;
+          let perk = this.groupedPerks[index + columnIndexOffset][perkColumnIndex];
+          perk.selected = true;
         }
       });
     },
