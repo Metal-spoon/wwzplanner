@@ -2,9 +2,9 @@
   <div class="perkinfo flex-column flex-center">
     <div class="flex-column wrapper">
       <span
-        ><b>{{ perk.Name }}</b></span
+        ><b>{{ perk.name }}</b></span
       >
-      <span>{{ perk.Description }}</span>
+      <span>{{ perk.description }}</span>
     </div>
   </div>
 </template>

@@ -7,11 +7,11 @@ export const store = reactive({
   selectedClass: new wwzclass(),
   prestige: 0,
   defaultHoveredPerk: plainToInstance(perk, {
-    Name: "Nothing",
-    Description: "Hover over a perk to see it's info"
+    name: "Nothing",
+    description: "Hover over a perk to see it's info"
   }),
   hoveredPerk: plainToInstance(perk, {
-    Name: "Nothing",
-    Description: "Hover over a perk to see it's info"
+    name: "Nothing",
+    description: "Hover over a perk to see it's info"
   })
 });
