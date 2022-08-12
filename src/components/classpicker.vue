@@ -16,6 +16,7 @@
             :icon="wwzclass.icon"
             size="4x"
             class="class-icon"
+            :fixedWidth=true
           />
           <div class="flex-column class-info">
             <b>{{ wwzclass.name }}</b>

@@ -10,13 +10,14 @@
 </template>
 
 <script lang='ts'>
+import { perk } from "@/models/perk";
 import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "PerkInfo",
   props: {
     perk: {
-      type: Object,
+      type: perk,
       required: true,
     },
   },

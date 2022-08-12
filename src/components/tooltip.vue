@@ -2,10 +2,7 @@
   <div :class="[{ showOnHover: hover }, { show: show }, 'tooltip-container']">
     <slot />
     <div class="tooltip" ref="tooltip">
-      <span v-if="perk" class="text">
-        {{ perk.Description }}
-      </span>
-      <span v-if="text" class="text">
+      <span class="text">
         {{ text }}
       </span>
     </div>
@@ -18,13 +15,9 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: "ToolTip",
   props: {
-    perk: {
-      type: Object,
-      required: false,
-    },
     text: {
       type: String,
-      required: false,
+      required: true,
     },
     hover: {
       type: Boolean,

@@ -45,7 +45,7 @@ export default defineComponent({
   methods: {
     selectPerk: function (
       perkIndex: number,
-      column: Array<any>
+      column: Array<perk>
     ) {
       if (column[perkIndex].isBase) return;
       column.forEach((perk) => {
@@ -95,7 +95,7 @@ export default defineComponent({
     },
   },
   watch: {
-    prestige: {
+    'store.prestige': {
       handler() {
         this.updateBaseperks();
       },
