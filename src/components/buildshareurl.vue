@@ -33,7 +33,7 @@ export default defineComponent({
       let host = window.location.host;
       let classString = String(store.selectedClassId);
       let perkIdString = /^([0-3]{1})(,[0-3]{1}){0,}?$/.exec(
-        String(store.selectedPerkIds)
+        String(this.selectedPerkIds)
       )![0];
       let prestigeString = String(store.prestige);
       let URL =
@@ -56,6 +56,13 @@ export default defineComponent({
     shareURL(): any {
       return this.buildURL();
     },
+    selectedPerkIds(): Array<number> {
+      let result = new Array<number>(9).fill(0);
+      store.selectedClass.perks.filter((x) => x.selected && !x.isBase).forEach((selectedPerk) => {
+        result[selectedPerk.column - (Math.ceil((selectedPerk.level / 10)) - 1) - 1] = selectedPerk.columnIndex
+      });
+      return result
+    }
   },
 });
 </script>

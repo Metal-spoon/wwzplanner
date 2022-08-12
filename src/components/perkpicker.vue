@@ -9,7 +9,7 @@
         <div
           class="image-wrapper"
           v-bind:class="{ selectedperk: perk.selected }"
-          @click="selectPerk(perkIndex, column, columnIndex)"
+          @click="selectPerk(perkIndex, column)"
           @mouseenter="store.hoveredPerk = perk"
           @mouseleave="store.hoveredPerk = store.defaultHoveredPerk"
         >
@@ -49,25 +49,17 @@ export default defineComponent({
   methods: {
     selectPerk: function (
       perkIndex: number,
-      column: Array<any>,
-      columnIndex: number
+      column: Array<any>
     ) {
       if (column[perkIndex].isBase) return;
-      let columnIndexOffset = Math.ceil(columnIndex / 4);
       column.forEach((perk) => {
         perk.selected = false;
       });
       column[perkIndex].selected = true;
-      store.selectedPerks[columnIndex - columnIndexOffset] = column[perkIndex];
-      store.selectedPerkIds[columnIndex - columnIndexOffset] = perkIndex + 1;
     },
-
-    groupPerks: function (array: Array<perk>) {
-      var result: Array<Array<perk>> = [];
-      for (let index = 0; index < 13; index++) {
-        result.push([]);
-      }
-      array.forEach((perk) => {
+    groupPerks: function (perks: Array<perk>) {
+      let result = Array.from(Array(13), () => new Array());
+      perks.forEach((perk) => {
         result[perk.column].push(perk);
       });
       return result;
@@ -88,17 +80,6 @@ export default defineComponent({
         });
       }
     },
-    updatePerks: function () {
-      store.selectedPerkIds.forEach((perkId, index) => {
-        if (Number(perkId) !== 0) {
-          let columnIndexOffset = Math.ceil((index + 1) / 3);
-          let column = this.groupedPerks[index + columnIndexOffset];
-          let perkIndex = Number(perkId) - 1;
-          column[perkIndex].selected = true;
-          store.selectedPerks[index] = column[perkIndex];
-        }
-      });
-    },
     updatePerksFromParam: function (perkParam: string) {
       let perkParamArray = perkParam.split(",");
       perkParamArray.forEach((perkIndexString, index) => {
@@ -107,9 +88,7 @@ export default defineComponent({
           let column = this.groupedPerks[index + columnIndexOffset];
           let perkIndex = Number(perkIndexString) - 1;
           column[perkIndex].selected = true;
-          store.selectedPerks[index] = column[perkIndex];
         }
-        store.selectedPerkIds[index] = Number(perkIndexString);
       });
     },
   },
@@ -129,7 +108,6 @@ export default defineComponent({
       handler() {
         store.hoveredPerk = store.defaultHoveredPerk;
         this.updateBaseperks();
-        this.updatePerks();
       }
     },
   },

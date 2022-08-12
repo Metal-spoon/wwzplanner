@@ -23,4 +23,9 @@ export class perk {
     }
     return column;
   }
+
+  get columnIndex(): number {
+    const offset = Math.ceil(this.level / 10) - 1
+    return ((this.level - offset - 1) % 3) + 1
+  }
 }
