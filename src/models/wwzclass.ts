@@ -2,6 +2,8 @@ import { Type } from "class-transformer";
 import { perk } from "./perk";
 
 export class wwzclass {
+  id: number = 0;
+
   name: string = "";
 
   icon: string = "";

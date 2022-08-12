@@ -31,7 +31,7 @@ export default defineComponent({
   methods: {
     buildURL: function () {
       let host = window.location.host;
-      let classString = String(store.selectedClassId);
+      let classString = String(store.selectedClass.id);
       let perkIdString = /^([0-3]{1})(,[0-3]{1}){0,}?$/.exec(
         String(this.selectedPerkIds)
       )![0];

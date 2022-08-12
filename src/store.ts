@@ -3,7 +3,6 @@ import { perk } from "@/models/perk";
 import { wwzclass } from "./models/wwzclass";
 
 export const store = reactive({
-  selectedClassId: 0,
   selectedClass: new wwzclass(),
   prestige: 0,
   defaultHoveredPerk: {

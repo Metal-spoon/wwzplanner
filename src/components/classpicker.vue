@@ -6,11 +6,11 @@
       </div>
       <ul class="class-list flex-column">
         <li
-          v-for="(wwzclass, classIndex) in classdata"
+          v-for="wwzclass in classdata"
           :key="wwzclass"
           class="flex-row class-item"
-          :class="{ selected: isSelected(classIndex) }"
-          @click="selectClass(wwzclass, classIndex)"
+          :class="{ selected: isSelected(wwzclass.id) }"
+          @click="selectClass(wwzclass)"
         >
           <font-awesome-icon
             :icon="wwzclass.icon"
@@ -48,7 +48,7 @@
 <script lang='ts'>
 import { store } from "@/store";
 import { wwzclass } from "@/models/wwzclass";
-import { defineComponent } from "vue";
+import { defineComponent, PropType } from "vue";
 
 export default defineComponent({
   name: "classPicker",
@@ -60,14 +60,13 @@ export default defineComponent({
   },
   methods: {
     isSelected: function (id: number) {
-      return store.selectedClassId === id;
+      return store.selectedClass.id === id;
     },
-    selectClass: function (wwzclass: wwzclass, classId: number) {
-      if (store.selectedClassId === classId) {
+    selectClass: function (wwzclass: wwzclass) {
+      if (store.selectedClass.id === wwzclass.id) {
         this.showModal = false;
         return;
       }
-      store.selectedClassId = classId;
       store.selectedClass.resetPerks();
       store.selectedClass = wwzclass;
       this.showModal = false;
@@ -75,7 +74,7 @@ export default defineComponent({
   },
   props: {
     classdata: {
-      type: Array,
+      type: Array as PropType<wwzclass[]>,
       required: true,
     },
   },

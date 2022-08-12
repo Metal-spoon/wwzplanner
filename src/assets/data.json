@@ -1,6 +1,7 @@
 {
   "classdata": [
     {
+      "id": 0,
       "name": "Gunslinger",
       "icon": "person-rifle",
       "description": "For those who skip the questions and shoot first, the Gunslinger is loaded with an arsenal of weapon damage and ammo-boosting perks to mow down the dead.",
@@ -288,6 +289,7 @@
       ]
     },
     {
+      "id": 1,
       "name": "Hellraiser",
       "icon": "explosion",
       "description": "Enough explosives can solve any problem! Hellraisers come armed with explosive tools for effective crowd control.",
@@ -575,6 +577,7 @@
       ]
     },
     {
+      "id": 2,
       "name": "Medic",
       "icon": "suitcase-medical",
       "description": "Sometimes the best way to fight the undead is keeping your teammates from becoming one of them. Armed with a Stim Pistol, Medics can heal fellow survivors from a distance and help keep the chaos under control.",
@@ -862,6 +865,7 @@
       ]
     },
     {
+      "id": 3,
       "name": "Fixer",
       "icon": "toolbox",
       "description": "When versatility in any situation is the highest priority, the Fixer is there for you, starting out with an explosive ammo case and several teammate ammo-restoring perks.",
@@ -1149,6 +1153,7 @@
       ]
     },
     {
+      "id": 4,
       "name": "Slasher",
       "icon": "hand-fist",
       "description": "For warriors with a sense of elegance, the best way to kill is with your trusty blade. Slashers have perks that increase melee damage and effectiveness while their armed tasers deliver electrifying results.",
@@ -1436,6 +1441,7 @@
       ]
     },
     {
+      "id": 5,
       "name": "Exterminator",
       "icon": "fire",
       "description": "Fire is the answer! Armed with Molotov cocktails and increased fire damage, the Exterminator just wants to watch the undead burn.",
@@ -1723,6 +1729,7 @@
       ]
     },
     {
+      "id": 6,
       "name": "Dronemaster",
       "icon": "bolt",
       "description": "As the Dronemaster, command your Quadrocopter to follow you around, hold an area, or protect an ally, providing useful buffs!",
@@ -2010,6 +2017,7 @@
       ]
     },
     {
+      "id": 7,
       "name": "Vanguard",
       "icon": "shield",
       "description": "Vanguards wield a devastating electric shield that can punch a hole right through the zombie horde.",
