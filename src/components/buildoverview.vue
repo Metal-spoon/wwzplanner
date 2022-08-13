@@ -3,9 +3,6 @@
     <div class="modal-content">
       <div class="flex-row modal-title">
         <span class="modal-title-text">Build overview</span>
-        <div class="x-button" @click="showModal = false">
-          <font-awesome-icon size="2x" icon="xmark" />
-        </div>
       </div>
       <div class="flex-column">
         <ul class="perk-grid baseperk-grid">
@@ -34,6 +31,9 @@
       <div class="flex-column flex-center">
         <buildshareurl />
       </div>
+      <div class="flex-row modal-controls">
+        <div class="button" @click="showModal = false">Close</div>
+        </div>
     </div>
   </div>
     <div class="button" @click="showModal = true">Show build summary</div>
@@ -80,6 +80,7 @@ export default defineComponent({
   font-weight: bold;
   font-size: 30px;
 }
+
 .perk-grid {
   display: grid;
   list-style: none;
@@ -127,32 +128,7 @@ export default defineComponent({
   max-height: 100%;
   overflow-y: auto;
   border: 2px solid @foreground;
-}
-
-.x-button {
-  display: flex;
-  color: @redforeground;
-  &:hover {
-    cursor: pointer;
-    background-color: lighten(@redbg, 10);
-  }
-  > svg {
-    width: 1em;
-  }
-  background-color: @redbg;
-  z-index: 999;
-}
-
-.button {
-  background-color: @redbg;
-  padding: 10px;
-  color: @redforeground;
-  font-weight: bold;
-  max-width: fit-content;
-  &:hover {
-    cursor: pointer;
-    background-color: lighten(@redbg, 10);
-  }
+  gap: 10px;
 }
 
 .teamwide-indicator {
@@ -165,15 +141,11 @@ export default defineComponent({
   position: relative;
 }
 
-.perk-title {
-  font-size: 16px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .indicator-disclaimer {
   text-align: right;
+}
+
+.modal-controls {
+  justify-content: right;
 }
 </style>
