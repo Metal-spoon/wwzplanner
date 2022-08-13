@@ -10,38 +10,20 @@
       <div class="flex-column">
         <ul class="perk-grid baseperk-grid">
           <li
-            class="perk-info flex-row flex-center"
+            class="perk-grid-item"
             v-for="baseperk in basePerks"
             :key="baseperk"
           >
-            <img class="perk-icon" :src="baseperk.icon" />
-            <div class="perk-text">
-              <div class="perk-title">
-                <b>{{ baseperk.name }}</b>
-                <div v-show="baseperk.teamWide" class="teamwide-indicator">
-                  <font-awesome-icon icon="people-group" />
-                </div>
-              </div>
-              <span class="perk-description" v-html="numberHighlightFilter(baseperk.description)"></span>
-            </div>
+            <perkinfo :perk="baseperk" :showIcon="true" :iconWidth="75" :showIndicator="true"/>
           </li>
         </ul>
         <ul class="perk-grid">
           <li
-            class="perk-info flex-row flex-center"
+            class="perk-grid-item"
             v-for="perk in selectedPerks"
             :key="perk"
           >
-            <img class="perk-icon" :src="perk.icon" />
-            <div class="perk-text perk-text-selected">
-              <div class="perk-title">
-                <b>{{ perk.name }}</b>
-                <div v-show="perk.teamWide" class="teamwide-indicator">
-                  <font-awesome-icon icon="people-group" />
-                </div>
-              </div>
-              <span class="perk-description" v-html="numberHighlightFilter(perk.description)"></span>
-            </div>
+            <perkinfo :perk="perk" :showIcon="true" :iconWidth="75" :showIndicator="true"/>
           </li>
         </ul>
         <div class="indicator-disclaimer">
@@ -61,22 +43,16 @@
 import { defineComponent } from "vue";
 import { store } from "@/store";
 import buildshareurl from "./buildshareurl.vue";
+import Perkinfo from "./perkinfo.vue";
 
 export default defineComponent({
-  components: { buildshareurl },
+  components: { buildshareurl, Perkinfo },
   name: "BuildOverview",
   data() {
     return {
       store,
       showModal: false,
     };
-  },
-  methods: {
-    numberHighlightFilter: function(text: string){
-      const exp = /(?<=[\s(]|^)[0-9%]+(?=[\s)]|$)/gm;
-      const result = text.replace(exp, '<b class="highlight">$&</b>');
-      return result;
-    }
   },
   computed: {
     basePerks: function () {
@@ -111,6 +87,11 @@ export default defineComponent({
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   padding-left: 0px;
   margin: 0;
+  align-items: center;
+}
+
+.perk-grid-item {
+  margin: 5px;
 }
 
 .baseperk-grid {
@@ -119,12 +100,6 @@ export default defineComponent({
 
 .perk-icon {
   max-width: 75px;
-}
-
-.perk-info {
-  position: relative;
-  margin: 10px;
-  justify-content: flex-start;
 }
 
 .perk-text {

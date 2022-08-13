@@ -118,10 +118,7 @@ export default defineComponent({
   bottom: 0px;
   background-color: @bg;
   width: 100%;
-}
-
-.flex-row {
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .picker-wrapper {
@@ -135,6 +132,7 @@ export default defineComponent({
 .controls-bar {
   align-items: flex-end;
   gap: 10px;
+  justify-content: space-between;
 }
 
 @media (max-width: 800px) {
