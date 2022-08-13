@@ -32,6 +32,8 @@ body {
   margin: 0;
 }
 
-
+.highlight {
+  color: lightgreen;
+}
 
 </style>
