@@ -74,9 +74,7 @@ export default defineComponent({
   methods: {
     numberHighlightFilter: function(text: string){
       const exp = /(?<=[\s(]|^)[0-9%]+(?=[\s)]|$)/gm;
-      const result = text.replace(exp, (match) => {
-        return '<b class="highlight">' + match + '</b>';
-      });
+      const result = text.replace(exp, '<b class="highlight">$&</b>');
       return result;
     }
   },
