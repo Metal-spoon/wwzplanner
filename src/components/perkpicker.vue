@@ -9,7 +9,7 @@
         <div
           class="image-wrapper"
           v-bind:class="{ selectedperk: perk.selected }"
-          @click="selectPerk(perkIndex, column, columnIndex)"
+          @click="selectPerk(perkIndex, column)"
           @mouseenter="store.hoveredPerk = perk"
           @mouseleave="store.hoveredPerk = store.defaultHoveredPerk"
         >
@@ -27,10 +27,6 @@ import { perk } from "@/models/perk";
 export default defineComponent({
   name: "PerkPicker",
   props: {
-    prestige: {
-      type: Number,
-      required: true,
-    },
     perkParam: {
       type: String,
       required: true,
@@ -49,25 +45,17 @@ export default defineComponent({
   methods: {
     selectPerk: function (
       perkIndex: number,
-      column: Array<any>,
-      columnIndex: number
+      column: Array<perk>
     ) {
       if (column[perkIndex].isBase) return;
-      let columnIndexOffset = Math.ceil(columnIndex / 4);
       column.forEach((perk) => {
         perk.selected = false;
       });
       column[perkIndex].selected = true;
-      store.selectedPerks[columnIndex - columnIndexOffset] = column[perkIndex];
-      store.selectedPerkIds[columnIndex - columnIndexOffset] = perkIndex + 1;
     },
-
-    groupPerks: function (array: Array<perk>) {
-      var result: Array<Array<perk>> = [];
-      for (let index = 0; index < 13; index++) {
-        result.push([]);
-      }
-      array.forEach((perk) => {
+    groupPerks: function (perks: Array<perk>) {
+      let result = Array.from(Array(13), () => new Array());
+      perks.forEach((perk) => {
         result[perk.column].push(perk);
       });
       return result;
@@ -80,7 +68,7 @@ export default defineComponent({
       ) {
         const column = this.groupedPerks[index];
         column.forEach((basePerk) => {
-          if (this.prestige >= basePerk.prestige) {
+          if (store.prestige >= basePerk.prestige) {
             basePerk.selected = true;
           } else {
             basePerk.selected = false;
@@ -88,28 +76,16 @@ export default defineComponent({
         });
       }
     },
-    updatePerks: function () {
-      store.selectedPerkIds.forEach((perkId, index) => {
-        if (Number(perkId) !== 0) {
-          let columnIndexOffset = Math.ceil((index + 1) / 3);
-          let column = this.groupedPerks[index + columnIndexOffset];
-          let perkIndex = Number(perkId) - 1;
-          column[perkIndex].selected = true;
-          store.selectedPerks[index] = column[perkIndex];
-        }
-      });
-    },
     updatePerksFromParam: function (perkParam: string) {
       let perkParamArray = perkParam.split(",");
       perkParamArray.forEach((perkIndexString, index) => {
-        if (Number(perkIndexString) !== 0) {
+        //-1 so were actually working with 0 based numbers, can go negative hence the check.
+        let perkColumnIndex = Number(perkIndexString) - 1
+        if (perkColumnIndex >= 0) {
           let columnIndexOffset = Math.ceil((index + 1) / 3);
-          let column = this.groupedPerks[index + columnIndexOffset];
-          let perkIndex = Number(perkIndexString) - 1;
-          column[perkIndex].selected = true;
-          store.selectedPerks[index] = column[perkIndex];
+          let perk = this.groupedPerks[index + columnIndexOffset][perkColumnIndex];
+          perk.selected = true;
         }
-        store.selectedPerkIds[index] = Number(perkIndexString);
       });
     },
   },
@@ -119,7 +95,7 @@ export default defineComponent({
     },
   },
   watch: {
-    prestige: {
+    'store.prestige': {
       handler() {
         this.updateBaseperks();
       },
@@ -129,7 +105,6 @@ export default defineComponent({
       handler() {
         store.hoveredPerk = store.defaultHoveredPerk;
         this.updateBaseperks();
-        this.updatePerks();
       }
     },
   },

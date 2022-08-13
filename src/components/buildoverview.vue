@@ -17,12 +17,12 @@
             <img class="perk-icon" :src="baseperk.icon" />
             <div class="perk-text">
               <div class="perk-title">
-                <b>{{ baseperk.Name }}</b>
+                <b>{{ baseperk.name }}</b>
                 <div v-show="baseperk.teamWide" class="teamwide-indicator">
                   <font-awesome-icon icon="people-group" />
                 </div>
               </div>
-              <span class="perk-description">{{ baseperk.Description }}</span>
+              <span class="perk-description">{{ baseperk.description }}</span>
             </div>
           </li>
         </ul>
@@ -35,12 +35,12 @@
             <img class="perk-icon" :src="perk.icon" />
             <div class="perk-text perk-text-selected">
               <div class="perk-title">
-                <b>{{ perk.Name }}</b>
+                <b>{{ perk.name }}</b>
                 <div v-show="perk.teamWide" class="teamwide-indicator">
                   <font-awesome-icon icon="people-group" />
                 </div>
               </div>
-              <span class="perk-description">{{ perk.Description }}</span>
+              <span class="perk-description">{{ perk.description }}</span>
             </div>
           </li>
         </ul>

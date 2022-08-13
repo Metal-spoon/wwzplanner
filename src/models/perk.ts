@@ -1,6 +1,6 @@
 export class perk {
-  Name: string = "";
-  Description: string = "";
+  name: string = "";
+  description: string = "";
   icon: string = "";
   level: number = 0;
   isBase: boolean = false;
@@ -9,7 +9,7 @@ export class perk {
 
   get teamWide(): boolean {
     const regexp = /(?<=entire|whole|all)\steam/
-    return regexp.test(this.Description)
+    return regexp.test(this.description)
   }
 
   get column(): number {
@@ -22,5 +22,10 @@ export class perk {
       column = column + offset
     }
     return column;
+  }
+
+  get columnIndex(): number {
+    const offset = Math.ceil(this.level / 10) - 1
+    return ((this.level - offset - 1) % 3) + 1
   }
 }

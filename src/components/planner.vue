@@ -9,7 +9,7 @@
           </div>
           <prestigepicker />
         </div>
-        <perkpicker :prestige="store.prestige" :perkParam="perkParam" />
+        <perkpicker :perkParam="perkParam" />
       </div>
       <perkinfo class="picker-perkinfo" :perk="store.hoveredPerk" />
     </div>
