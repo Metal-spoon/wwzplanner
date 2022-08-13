@@ -22,7 +22,7 @@
                   <font-awesome-icon icon="people-group" />
                 </div>
               </div>
-              <span class="perk-description">{{ baseperk.description }}</span>
+              <span class="perk-description" v-html="numberHighlightFilter(baseperk.description)"></span>
             </div>
           </li>
         </ul>
@@ -40,7 +40,7 @@
                   <font-awesome-icon icon="people-group" />
                 </div>
               </div>
-              <span class="perk-description">{{ perk.description }}</span>
+              <span class="perk-description" v-html="numberHighlightFilter(perk.description)"></span>
             </div>
           </li>
         </ul>
@@ -71,6 +71,15 @@ export default defineComponent({
       showModal: false,
     };
   },
+  methods: {
+    numberHighlightFilter: function(text: string){
+      const exp = /(?<=[\s(]|^)[0-9%]+(?=[\s)]|$)/gm;
+      const result = text.replace(exp, (match) => {
+        return '<b class="highlight">' + match + '</b>';
+      });
+      return result;
+    }
+  },
   computed: {
     basePerks: function () {
       return store.selectedClass.perks
@@ -87,6 +96,7 @@ export default defineComponent({
 </script>
 
 <style lang="less" scoped>
+
 .modal-title {
   justify-content: space-between;
   align-items: center;
