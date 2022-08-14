@@ -17,7 +17,7 @@ To be able to run the project you need to install some dependencies first, you c
 ```
 npm install
 ```
-If it fails with an error about dependency version mismatches try running
+If it fails with an error about dependency version mismatches try running:
 ```
 npm install --legacy-peer-deps
 ```
