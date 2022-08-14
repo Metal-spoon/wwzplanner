@@ -56,7 +56,8 @@ I found an existing build planner that somehow had them, i wrote a simple bash s
 
 ### How did you get the perk data?
 As i said, ripped from the wiki using a script. </br>
-I might include the script later on so the dataset can be updated easily, it requires a few hoops to run properly at the moment
+I might include the script later on so the dataset can be updated easily, it requires a few hoops to jump through to run properly at the moment. </br>
+Wiki data may also be out of date so it might be better to just update it manually.
 
 ## Licensing
 This project is not associated with World War Z: Aftermath (the game, nor the movie) or Saber interactive, all rights belong to their respective owners.
