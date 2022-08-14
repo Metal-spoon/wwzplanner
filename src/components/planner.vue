@@ -2,7 +2,7 @@
   <div class="flex-column flex-center planner">
     <h1>World War Z build planner</h1>
     <div class="content-wrapper flex-column flex-center">
-      <div class="picker-wrapper">
+      <div class="picker-wrapper flex-column">
         <div class="flex-row controls-bar">
           <div class="flex-row controls-bar">
             <classpicker :classdata="classData" />
@@ -128,6 +128,9 @@ export default defineComponent({
 
 .picker-wrapper {
   max-width: fit-content;
+  gap: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .content-wrapper {
