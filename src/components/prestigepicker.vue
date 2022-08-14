@@ -1,16 +1,15 @@
 <template>
-  <div class="flex-column">
+  <div class="flex-column prestige-wrapper">
     <span>Prestige:</span>
-    <div class="flex-row space-between flex-center">
+    <div class="flex-row flex-center prestige-picker">
+      <div class="button" @click="lowerPrestige()" :class="{ 'disabled' : store.prestige === 0}">
+          <font-awesome-icon icon="angle-left" size="1x" />
+        </div>
       <span class="prestige-text">{{ store.prestige }}</span>
-      <div class="flex-column">
-        <div class="button" @click="addPrestige()">
-          <font-awesome-icon icon="angle-up" size="1x" />
+        <div class="button" @click="addPrestige()" :class="{ 'disabled': store.prestige === 4 }">
+          <font-awesome-icon icon="angle-right" size="1x" />
         </div>
-        <div class="button" @click="lowerPrestige()">
-          <font-awesome-icon icon="angle-down" size="1x" />
-        </div>
-      </div>
+        
     </div>
   </div>
 </template>
@@ -44,5 +43,21 @@ export default defineComponent({
 
   .prestige-text {
     font-size: 30px;
+  }
+
+  .disabled {
+    background-color: @foreground;
+    color: darken(@foreground, 40);
+    &:hover {
+      background-color: @foreground;
+    }
+  }
+
+  .prestige-picker {
+    gap: 5px;
+  }
+
+  .prestige-wrapper {
+    align-items: flex-start;
   }
 </style>

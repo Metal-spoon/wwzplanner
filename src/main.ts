@@ -5,8 +5,8 @@ import planner from "./components/planner.vue";
 import { createRouter, createWebHistory } from "vue-router";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
-  faAngleDown,
-  faAngleUp,
+  faAngleLeft,
+  faAngleRight,
   faBolt,
   faClipboard,
   faExplosion,
@@ -32,8 +32,8 @@ library.add(faHandFist);
 library.add(faFire);
 library.add(faBolt);
 library.add(faShield);
-library.add(faAngleUp);
-library.add(faAngleDown);
+library.add(faAngleRight);
+library.add(faAngleLeft);
 
 const routes = [
   { path: "/:class?/:perks?/:prestige?", component: planner },
