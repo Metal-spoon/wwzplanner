@@ -6,7 +6,7 @@
 
 WWZ planner is a simple build planner for World War Z: Aftermath.</br>
 I started this project because i wanted to learn Vue and couldn't really find any other build planners that had the features i was looking for. </br>
-It aims to stay as close as possible to the in game UI so replicating a build is easy to do.</br>
+It aims to stay as close as possible to the in game UI so that replicating a build in game is easy to do.</br>
 Another goal is to keep it compatible with mobile phones because the game is fairly popular on consoles and it would be convenient to view/plan a build on your phone.</br>
 Besides the application itself, this repo also contains a dataset of the classes and their respective perks. </br>
 The data was put together using various scripts that rip data from the wiki.
