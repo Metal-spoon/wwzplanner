@@ -45,9 +45,9 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import { store } from "@/store";
-import buildshareurl from "./buildshareurl.vue";
-import Perkinfo from "./perkinfo.vue";
-import modaldialog from "./modaldialog.vue"
+import buildshareurl from "./subcomponents/buildshareurl.vue";
+import Perkinfo from "@/components/subcomponents/perkinfo.vue";
+import modaldialog from "@/components/subcomponents/modaldialog.vue"
 
 export default defineComponent({
   components: { buildshareurl, Perkinfo, modaldialog },

@@ -15,7 +15,7 @@
 
 <script lang='ts'>
 import { defineComponent } from "vue";
-import modaldialog from "./modaldialog.vue";
+import modaldialog from "@/components/subcomponents/modaldialog.vue";
 
 export default defineComponent({
   name: 'aboutComponent',

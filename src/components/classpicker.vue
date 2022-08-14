@@ -46,7 +46,7 @@
 import { store } from "@/store";
 import { wwzclass } from "@/models/wwzclass";
 import { defineComponent, PropType } from "vue";
-import modaldialog from "./modaldialog.vue";
+import modaldialog from "@/components/subcomponents/modaldialog.vue";
 
 export default defineComponent({
   components: { modaldialog },

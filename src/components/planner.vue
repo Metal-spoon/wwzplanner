@@ -26,7 +26,7 @@
 <script lang='ts'>
 import { defineComponent } from "vue";
 import perkpicker from "./perkpicker.vue";
-import buildshareurl from "./buildshareurl.vue";
+import buildshareurl from "./subcomponents/buildshareurl.vue";
 import json from "../assets/data.json";
 import buildoverview from "./buildoverview.vue";
 import classpicker from "./classpicker.vue";
@@ -34,7 +34,7 @@ import prestigepicker from "./prestigepicker.vue";
 import { wwzclass } from "@/models/wwzclass";
 import { plainToInstance } from "class-transformer";
 import { store } from "../store";
-import perkinfo from "./perkinfo.vue";
+import perkinfo from "./subcomponents/perkinfo.vue";
 import creditscomponent from "@/components/aboutcomponent.vue"
 
 export default defineComponent({
