@@ -1,6 +1,6 @@
 <template>
   <modaldialog title="About" :show="showModal"> 
-    <span>WWZ planner v0.1.0</span>
+    <span>WWZ planner v1.0.0</span>
     <span>Made by <a href="https://github.com/Metal-spoon">David a.k.a metal-spoon</a></span>
     <span>Source code available at: <a href="https://github.com/Metal-spoon/wwzplanner">https://github.com/Metal-spoon/wwzplanner</a></span>
     <span>If you have any suggestions or find a bug, feel free to open an issue on github</span>
