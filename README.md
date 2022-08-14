@@ -60,5 +60,7 @@ I might include the script later on so the dataset can be updated easily, it req
 Wiki data may also be out of date so it might be better to just update it manually.
 
 ## Licensing
-This project is not associated with World War Z: Aftermath (the game, nor the movie) or Saber interactive, all rights belong to their respective owners.
+GPL v3.0
+
+This project is not associated with World War Z: Aftermath (the game, nor the movie) or Saber interactive, all rights belong to their respective owners. </br>
 All image assets (logos and icons) are not owned by me, all rights belong to their respective owners.
