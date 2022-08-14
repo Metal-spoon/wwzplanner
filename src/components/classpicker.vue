@@ -1,37 +1,32 @@
 <template>
-  <div class="modal flex-column flex-center" v-show="showModal">
-    <div class="modal-content">
-      <div class="modal-title flex-row">
-        <b> Pick a class: </b>
-      </div>
-      <ul class="class-list flex-column">
-        <li
-          v-for="wwzclass in classdata"
-          :key="wwzclass"
-          class="flex-row class-item"
-          :class="{ selected: isSelected(wwzclass.id) }"
-          @click="selectClass(wwzclass)"
-        >
-          <font-awesome-icon
-            :icon="wwzclass.icon"
-            size="4x"
-            class="class-icon"
-            :fixedWidth=true
-          />
-          <div class="flex-column class-info">
-            <b>{{ wwzclass.name }}</b>
-            <span>{{ wwzclass.description }}</span>
-          </div>
-        </li>
-      </ul>
-      <div class="flex-row modal-controls">
-        <div class="button" @click="showModal = false">
-          Cancel
-          <div></div>
+  <modaldialog :show="showModal" title="Pick a class">
+    <ul class="class-list flex-column">
+      <li
+        v-for="wwzclass in classdata"
+        :key="wwzclass"
+        class="flex-row class-item"
+        :class="{ selected: isSelected(wwzclass.id) }"
+        @click="selectClass(wwzclass)"
+      >
+        <font-awesome-icon
+          :icon="wwzclass.icon"
+          size="4x"
+          class="class-icon"
+          :fixedWidth="true"
+        />
+        <div class="flex-column class-info">
+          <b>{{ wwzclass.name }}</b>
+          <span>{{ wwzclass.description }}</span>
         </div>
+      </li>
+    </ul>
+    <template #modal-controls>
+      <div class="button" @click="showModal = false">
+        Cancel
       </div>
-    </div>
-  </div>
+    </template>
+  </modaldialog>
+
   <div class="flex-column label">
     <span>Selected class:</span>
     <div class="flex-row selectedclass-info">
@@ -44,14 +39,17 @@
     </div>
   </div>
   <div class="button" @click="showModal = true">Change</div>
+
 </template>
 
 <script lang='ts'>
 import { store } from "@/store";
 import { wwzclass } from "@/models/wwzclass";
 import { defineComponent, PropType } from "vue";
+import modaldialog from "./modaldialog.vue";
 
 export default defineComponent({
+  components: { modaldialog },
   name: "classPicker",
   data() {
     return {
@@ -83,27 +81,6 @@ export default defineComponent({
 </script>
 
 <style lang="less" scoped>
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 999;
-}
-
-.modal-content {
-  display: flex;
-  flex-direction: column;
-  background-color: #141516;
-  padding: 10px;
-  margin: 20px;
-  max-height: 100%;
-  overflow-y: auto;
-  border: 2px solid @foreground;
-}
-
 .class-list {
   list-style: none;
   text-align: left;
@@ -127,14 +104,6 @@ export default defineComponent({
 
 .class-icon {
   flex-shrink: 0;
-}
-
-.modal-title {
-  font-size: 24px;
-}
-
-.modal-controls {
-  justify-content: flex-end;
 }
 
 .selected {
