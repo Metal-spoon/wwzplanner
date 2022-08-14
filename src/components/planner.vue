@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-column flex-center">
+  <div class="flex-column flex-center planner">
     <h1>World War Z build planner</h1>
     <div class="content-wrapper flex-column flex-center">
       <div class="picker-wrapper">
@@ -17,6 +17,9 @@
     <div>
       <buildshareurl />
     </div>
+    <div>
+      <creditscomponent />
+    </div>
   </div>
 </template>
 
@@ -32,6 +35,7 @@ import { wwzclass } from "@/models/wwzclass";
 import { plainToInstance } from "class-transformer";
 import { store } from "../store";
 import perkinfo from "./perkinfo.vue";
+import creditscomponent from "@/components/aboutcomponent.vue"
 
 export default defineComponent({
   // eslint-disable-next-line
@@ -43,6 +47,7 @@ export default defineComponent({
     perkinfo,
     classpicker,
     prestigepicker,
+    creditscomponent
   },
   data(): {
     classData: Array<wwzclass>;
@@ -133,6 +138,10 @@ export default defineComponent({
   align-items: flex-end;
   gap: 10px;
   justify-content: space-between;
+}
+
+.planner {
+  gap: 10px;
 }
 
 @media (max-width: 800px) {
