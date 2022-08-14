@@ -1,7 +1,13 @@
 <template>
   <div class="modal flex-column flex-center" v-show="show">
     <div class="modal-content">
+      <div class="modal-title">
+      <span class="modal-title-text">{{ title }}</span>
+    </div>
       <slot></slot>
+    <div class="flex-row modal-controls">
+      <slot name="modal-controls"></slot>
+    </div>
     </div>
   </div>
 </template>
@@ -15,6 +21,10 @@ export default defineComponent({
       type: Boolean,
       required: true,
     },
+    title: {
+      type: String,
+      required: true
+    }
   },
 });
 </script>
@@ -40,5 +50,14 @@ export default defineComponent({
   overflow-y: auto;
   border: 2px solid @foreground;
   gap: 10px;
+}
+
+.modal-title-text {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.modal-controls {
+  justify-content: right;
 }
 </style>

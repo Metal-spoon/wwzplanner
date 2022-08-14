@@ -1,8 +1,5 @@
 <template>
-  <modaldialog :show="showModal">
-    <div class="modal-title flex-row">
-      <b> Pick a class: </b>
-    </div>
+  <modaldialog :show="showModal" title="Pick a class">
     <ul class="class-list flex-column">
       <li
         v-for="wwzclass in classdata"
@@ -23,13 +20,13 @@
         </div>
       </li>
     </ul>
-    <div class="flex-row modal-controls">
+    <template #modal-controls>
       <div class="button" @click="showModal = false">
         Cancel
-        <div></div>
       </div>
-    </div>
+    </template>
   </modaldialog>
+
   <div class="flex-column label">
     <span>Selected class:</span>
     <div class="flex-row selectedclass-info">
@@ -42,6 +39,7 @@
     </div>
   </div>
   <div class="button" @click="showModal = true">Change</div>
+
 </template>
 
 <script lang='ts'>
@@ -106,14 +104,6 @@ export default defineComponent({
 
 .class-icon {
   flex-shrink: 0;
-}
-
-.modal-title {
-  font-size: 24px;
-}
-
-.modal-controls {
-  justify-content: flex-end;
 }
 
 .selected {

@@ -1,8 +1,5 @@
 <template>
-  <modaldialog :show="showModal">
-    <div class="flex-row modal-title">
-      <span class="modal-title-text">Build overview</span>
-    </div>
+  <modaldialog :show="showModal" title="Build overview">
     <div class="flex-column">
       <ul class="perk-grid baseperk-grid">
         <li
@@ -36,11 +33,13 @@
     <div class="flex-column flex-center">
       <buildshareurl />
     </div>
-    <div class="flex-row modal-controls">
+    <template #modal-controls>
       <div class="button" @click="showModal = false">Close</div>
-    </div>
+    </template>
   </modaldialog>
+
   <div class="button" @click="showModal = true">Show build summary</div>
+  
 </template>
 
 <script lang="ts">
@@ -73,17 +72,7 @@ export default defineComponent({
   },
 });
 </script>
-
 <style lang="less" scoped>
-.modal-title {
-  justify-content: space-between;
-  align-items: center;
-}
-
-.modal-title-text {
-  font-weight: bold;
-  font-size: 30px;
-}
 
 .perk-grid {
   display: grid;
@@ -125,9 +114,5 @@ export default defineComponent({
 
 .indicator-disclaimer {
   text-align: right;
-}
-
-.modal-controls {
-  justify-content: right;
 }
 </style>
