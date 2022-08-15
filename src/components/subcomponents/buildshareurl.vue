@@ -37,8 +37,8 @@ export default defineComponent({
       )![0];
       let prestigeString = String(store.prestige);
       let URL =
-        host + store.baseroute + classString + "/" + perkIdString + "/" + prestigeString;
-      this.$router.replace({path: store.baseroute + classString + '/' + perkIdString + '/' + prestigeString})
+        host + process.env.BASE_URL + classString + "/" + perkIdString + "/" + prestigeString;
+      this.$router.replace({path: process.env.BASE_URL + classString + '/' + perkIdString + '/' + prestigeString})
       return URL;
     },
     copyURL: function () {

@@ -9,11 +9,11 @@
         <div
           class="image-wrapper"
           v-bind:class="{ selectedperk: perk.selected }"
-          @click="selectPerk(perkIndex, column)"
+          @click="selectPerk(column, perk)"
           @mouseenter="store.hoveredPerk = perk"
           @mouseleave="store.hoveredPerk = store.defaultHoveredPerk"
         >
-          <img class="perk-image" :src="store.baseroute + perk.icon" />
+          <img class="perk-image" :src="perk.getIconPath(store.selectedClass.name)" />
         </div>
       </li>
     </ul>
@@ -34,7 +34,7 @@ export default defineComponent({
   },
   data() {
     return {
-      store
+      store,
     };
   },
   created() {
@@ -44,14 +44,14 @@ export default defineComponent({
   },
   methods: {
     selectPerk: function (
-      perkIndex: number,
-      column: Array<perk>
+      column: Array<perk>,
+      perk: perk
     ) {
-      if (column[perkIndex].isBase) return;
+      if (perk.isBase) return;
       column.forEach((perk) => {
         perk.selected = false;
       });
-      column[perkIndex].selected = true;
+      perk.selected = true
     },
     groupPerks: function (perks: Array<perk>) {
       let result = Array.from(Array(13), () => new Array());

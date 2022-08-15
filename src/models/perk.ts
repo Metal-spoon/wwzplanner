@@ -1,7 +1,6 @@
 export class perk {
   name: string = "";
   description: string = "";
-  icon: string = "";
   level: number = 0;
   isBase: boolean = false;
   prestige: number = 0;
@@ -27,5 +26,10 @@ export class perk {
   get columnIndex(): number {
     const offset = Math.ceil(this.level / 10) - 1
     return ((this.level - offset - 1) % 3) + 1
+  }
+
+  getIconPath(className: string): string {
+    const filename = this.prestige > 0 ? 'P' + this.prestige + '.png' : 'L' + this.level + '.png'
+    return process.env.BASE_URL + 'assets/' + className.toLowerCase() + '/' + filename;
   }
 }

@@ -1,9 +1,9 @@
 <template>
   <div class="flex-row perk-info">
     <img
-      v-if="showIcon && perk.icon"
+      v-if="showIcon"
       class="perk-icon"
-      :src="perk.icon"
+      :src="perk.getIconPath(store.selectedClass.name)"
       :width="iconWidth"
     />
     <div class="perk-text" :class="{ 'align-left': showIcon }">
@@ -19,6 +19,7 @@
 <script lang='ts'>
 import { perk } from "@/models/perk";
 import { defineComponent } from "vue";
+import { store } from "@/store"
 
 export default defineComponent({
   name: "PerkInfo",
@@ -41,6 +42,11 @@ export default defineComponent({
       type: Boolean,
       required: false,
       default: false
+    }
+  },
+  data() {
+    return {
+      store
     }
   },
   methods: {

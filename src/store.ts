@@ -13,6 +13,5 @@ export const store = reactive({
   hoveredPerk: plainToInstance(perk, {
     name: "Nothing",
     description: "Hover over a perk to see it's info"
-  }),
-  baseroute: process.env.NODE_ENV === 'production' ? '/wwzplanner/' : '/'
+  })
 });

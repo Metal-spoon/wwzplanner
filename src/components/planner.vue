@@ -62,7 +62,7 @@ export default defineComponent({
   },
   created() {
     store.selectedClass = this.classData[0];
-    if (this.$route.path === store.baseroute) return;
+    if (this.$route.path === process.env.BASE_URL) return;
     let classParam = String(this.$route.params.class);
     let perkParam = String(this.$route.params.perks);
     let prestigeParam = String(this.$route.params.prestige);
@@ -72,7 +72,7 @@ export default defineComponent({
       store.selectedClass = this.classData[Number(classParam)] as wwzclass;
       this.perkParam = String(perkParam);
     } else {
-      this.$router.push(store.baseroute);
+      this.$router.push(process.env.BASE_URL);
     }
   },
   methods: {
