@@ -30,7 +30,7 @@ export default defineComponent({
   },
   methods: {
     buildURL: function () {
-      let host = window.location.host;
+      let host = window.location.origin;
       let classString = String(store.selectedClass.id);
       let perkIdString = /^([0-3]{1})(,[0-3]{1}){0,}?$/.exec(
         String(this.selectedPerkIds)
