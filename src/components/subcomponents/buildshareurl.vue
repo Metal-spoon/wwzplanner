@@ -31,7 +31,6 @@ export default defineComponent({
   methods: {
     buildURL: function () {
       let host = window.location.host;
-      host = 'https://metal-spoon.github.io/wwzplanner/'
       let classString = String(store.selectedClass.id);
       let perkIdString = /^([0-3]{1})(,[0-3]{1}){0,}?$/.exec(
         String(this.selectedPerkIds)
