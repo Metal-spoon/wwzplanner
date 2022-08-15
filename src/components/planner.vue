@@ -94,7 +94,7 @@ export default defineComponent({
         return false;
       }
 
-      let isPrestigeParamValid = /^([0-5])?$/.test(prestigeParam);
+      let isPrestigeParamValid = /^([0-4])?$/.test(prestigeParam);
       if (!isPrestigeParamValid) {
         console.error(
           "invalid build URL: prestige parameter is invalid: " + prestigeParam
