@@ -14,9 +14,9 @@
       <perkinfo class="picker-perkinfo" :perk="store.hoveredPerk" />
     </div>
     <buildoverview />
-    <div>
-      <buildshareurl />
-    </div>
+
+    <buildshareurl />
+
     <div>
       <creditscomponent />
     </div>
@@ -35,7 +35,7 @@ import { wwzclass } from "@/models/wwzclass";
 import { plainToInstance } from "class-transformer";
 import { store } from "../store";
 import perkinfo from "./subcomponents/perkinfo.vue";
-import creditscomponent from "@/components/aboutcomponent.vue"
+import creditscomponent from "@/components/aboutcomponent.vue";
 
 export default defineComponent({
   // eslint-disable-next-line
@@ -47,7 +47,7 @@ export default defineComponent({
     perkinfo,
     classpicker,
     prestigepicker,
-    creditscomponent
+    creditscomponent,
   },
   data(): {
     classData: Array<wwzclass>;

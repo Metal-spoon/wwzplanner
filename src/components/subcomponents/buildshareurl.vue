@@ -31,6 +31,7 @@ export default defineComponent({
   methods: {
     buildURL: function () {
       let host = window.location.host;
+      host = 'https://metal-spoon.github.io/wwzplanner/'
       let classString = String(store.selectedClass.id);
       let perkIdString = /^([0-3]{1})(,[0-3]{1}){0,}?$/.exec(
         String(this.selectedPerkIds)
@@ -71,6 +72,8 @@ export default defineComponent({
 <style lang="less" scoped>
 .share-wrapper {
   margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .label {
   display: block;
@@ -88,6 +91,7 @@ export default defineComponent({
   color: black;
   padding: 5px;
   align-content: center;
+  word-break: break-all;
 }
 
 .iconwrapper {
