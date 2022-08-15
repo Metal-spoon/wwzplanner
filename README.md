@@ -1,6 +1,7 @@
 <div align="center"><img src="/public/favicon.ico" width=64/></div>
 <h1 align="center">WWZ planner</h1>
 <p align="center">A simple build planner for World War Z: Aftermath made with Vue</p>
+<p align="center">Live version available here: <a href="https://metal-spoon.github.io/wwzplanner/">https://metal-spoon.github.io/wwzplanner/</a></p>
 
 ## About
 
