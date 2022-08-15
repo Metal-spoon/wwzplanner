@@ -13,7 +13,7 @@
           @mouseenter="store.hoveredPerk = perk"
           @mouseleave="store.hoveredPerk = store.defaultHoveredPerk"
         >
-          <img class="perk-image" :src="perk.icon" />
+          <img class="perk-image" :src="store.baseroute + perk.icon" />
         </div>
       </li>
     </ul>

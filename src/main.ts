@@ -35,9 +35,11 @@ library.add(faShield);
 library.add(faAngleRight);
 library.add(faAngleLeft);
 
+const baseroute = process.env.NODE_ENV === 'production' ? '/wwzplanner/' : '/';
+
 const routes = [
-  { path: "/:class?/:perks?/:prestige?", component: planner },
-  { path: "/", component: planner },
+  { path: baseroute + ":class?/:perks?/:prestige?", component: planner },
+  { path: baseroute, component: planner },
 ];
 
 const router = createRouter({
