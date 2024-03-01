@@ -42,51 +42,72 @@
           "prestige": 0
         },
         {
+          "name": "Special mag",
+          "description": "Penetration of all weapons is increased by 1 for 5 seconds after killing by grenade",
+          "level": 4,
+          "isBase": false,
+          "prestige": 0
+        },
+        {
           "name": "Swapping Mags!",
           "description": "Reload speed increased by 25% on all weapons",
-          "level": 4,
+          "level": 5,
           "isBase": false,
           "prestige": 0
         },
         {
           "name": "Front Line Supply",
           "description": "Headshots made with primary or secondary weapons automatically restore 5% rounds to the magazine",
-          "level": 5,
+          "level": 6,
           "isBase": false,
           "prestige": 0
         },
         {
           "name": "Adrenaline",
           "description": "Reloading a weapon with less than 25% ammo in the magazine provides a 50% reload speed boost for 5 seconds",
-          "level": 6,
+          "level": 7,
+          "isBase": false,
+          "prestige": 0
+        },
+        {
+          "name": "Re-filling",
+          "description": "When reloading a fully unloaded primary weapon, the magazine fills up by an additional 15% of its size",
+          "level": 8,
           "isBase": false,
           "prestige": 0
         },
         {
           "name": "Heavy Metal",
           "description": "Start with improved MAG5 Machinegun that deals 50% more damage, and has 50% more ammo. All MAG5 machinegun pickups also improved",
-          "level": 7,
+          "level": 9,
           "isBase": false,
           "prestige": 0
         },
         {
           "name": "Gunner",
           "description": "Start with Sporting Carbine PAC-15",
-          "level": 8,
+          "level": 10,
           "isBase": false,
           "prestige": 0
         },
         {
           "name": "This is My Rifle",
           "description": "Start with ARK-103 Assault Rifle",
-          "level": 9,
+          "level": 11,
+          "isBase": false,
+          "prestige": 0
+        },
+        {
+          "name": "S890",
+          "description": "Start with an S890 Combat Shotgun",
+          "level": 12,
           "isBase": false,
           "prestige": 0
         },
         {
           "name": "Seek and Destroy",
           "description": "All active special zombies within a radius of 20 meters will be automatically marked",
-          "level": 10,
+          "level": 13,
           "isBase": true,
           "prestige": 0
         },
@@ -100,70 +121,91 @@
         {
           "name": "Bounty Hunter",
           "description": "Deal 25% more damage to special zombies",
-          "level": 11,
+          "level": 14,
           "isBase": false,
           "prestige": 0
         },
         {
           "name": "Wheatgrass",
           "description": "Health increased by 25%",
-          "level": 12,
+          "level": 15,
           "isBase": false,
           "prestige": 0
         },
         {
           "name": "Sleight of Hand",
           "description": "Switch weapons 150% faster",
-          "level": 13,
+          "level": 16,
+          "isBase": false,
+          "prestige": 0
+        },
+        {
+          "name": "Sort it all out",
+          "description": "Emptying the magazine of the primary weapon loads the secondary weapon with explosive rounds",
+          "level": 17,
           "isBase": false,
           "prestige": 0
         },
         {
           "name": "Gun Fanatic",
           "description": "Draining primary and secondary weapons' magazines automatically reloads primary weapon",
-          "level": 14,
+          "level": 18,
           "isBase": false,
           "prestige": 0
         },
         {
           "name": "Concentration",
           "description": "Killing 5 zombies consecutively with only headshots grants temporary health boost (cooldown 30 seconds)",
-          "level": 15,
+          "level": 19,
           "isBase": false,
           "prestige": 0
         },
         {
           "name": "Judo",
           "description": "When pinned down by usual or special zombies you will automatically rise up and push your attackers back (cooldown 180 seconds)",
-          "level": 16,
+          "level": 20,
+          "isBase": false,
+          "prestige": 0
+        },
+        {
+          "name": "Encore",
+          "description": "Instead of becoming incapacitated, you grand 75% temporary health boost and keep going (cooldown 180 seconds)",
+          "level": 21,
           "isBase": false,
           "prestige": 0
         },
         {
           "name": "Welcoming Committee",
           "description": "Stationary machinegun ammo increased by 25% for all teammates",
-          "level": 17,
+          "level": 22,
           "isBase": false,
           "prestige": 0
         },
         {
           "name": "S890 Shorty",
           "description": "Start with a S890 Shorty in your secondary weapon slot",
-          "level": 18,
+          "level": 23,
           "isBase": false,
           "prestige": 0
         },
         {
           "name": "Senjata",
           "description": "Start with a Senjata PDW in your secondary weapon slot",
-          "level": 19,
+          "level": 24,
+          "isBase": false,
+          "prestige": 0
+        },
+        {
+          "name": "Bad odor",
+          "description": "When killing a special zombie, there is a chance of dropping a primary weapon (cooldown 180 seconds)",
+          "level": 25,
           "isBase": false,
           "prestige": 0
         },
         {
           "name": "My Bad",
           "description": "Deal 50% less friendly fire damage to your teammates",
-          "level": 20,
+          "level": 26,
           "isBase": true,
           "prestige": 0
         },
@@ -177,70 +219,91 @@
         {
           "name": "Deep Pockets",
           "description": "Carried ammo capacity for primary and secondary weapons increased by 25%",
-          "level": 21,
+          "level": 27,
           "isBase": false,
           "prestige": 0
         },
         {
           "name": "Action Hero",
           "description": "When you become the last of your team still standing you gain ability to shoot with your primary and secondary weapons without spending rounds in its magazines for 7 seconds",
-          "level": 22,
+          "level": 28,
           "isBase": false,
           "prestige": 0
         },
         {
           "name": "Free Refill",
           "description": "Restore 3% of primary weapon ammo for each kill made with equipment",
-          "level": 23,
+          "level": 29,
+          "isBase": false,
+          "prestige": 0
+        },
+        {
+          "name": "The more, the merrier",
+          "description": "Carried ammo capacity for primary and secondary weapons is increased by 5% for the entire team",
+          "level": 30,
           "isBase": false,
           "prestige": 0
         },
         {
           "name": "Work Belt",
           "description": "Max number of Frag Grenades increased to 3",
-          "level": 24,
+          "level": 31,
           "isBase": false,
           "prestige": 0
         },
         {
           "name": "Pocket Factory",
           "description": "You won't be able to pick equipment bags on the mission, but your equipment will be constantly regenerating (150 seconds to replenish to maximum)",
-          "level": 25,
+          "level": 32,
           "isBase": false,
           "prestige": 0
         },
         {
           "name": "Headhunter Reward",
           "description": "Killing 5 zombies consecutively with only headshots refills one equipment charge (cooldown 15 seconds)",
-          "level": 26,
+          "level": 33,
+          "isBase": false,
+          "prestige": 0
+        },
+        {
+          "name": "It's not over",
+          "description": "When you become the last of your team still standing your equipment is fully refilled (cooldown 180 seconds)",
+          "level": 34,
           "isBase": false,
           "prestige": 0
         },
         {
           "name": "Annihilator",
           "description": "Primary, secondary and heavy weapons deal 15% more damage",
-          "level": 27,
+          "level": 35,
           "isBase": false,
           "prestige": 0
         },
         {
           "name": "Switcheroo",
           "description": "Switching to primary or secondary weapons increases firearm damage by 50% for 5 seconds",
-          "level": 28,
+          "level": 36,
           "isBase": false,
           "prestige": 0
         },
         {
           "name": "Thrifty",
           "description": "Reloading a weapon with less than 25% ammo in the magazine provides a 50% firearm damage boost for 3 seconds",
-          "level": 29,
+          "level": 37,
+          "isBase": false,
+          "prestige": 0
+        },
+        {
+          "name": "I'm not alone",
+          "description": "Firearm damage increased by 10% for you and your team",
+          "level": 38,
           "isBase": false,
           "prestige": 0
         },
         {
           "name": "War Face",
           "description": "Killing 25 zombies in rapid succession grants 50% firearm damage boost to entire team for 20 seconds",
-          "level": 30,
+          "level": 39,
           "isBase": true,
           "prestige": 0
         },
